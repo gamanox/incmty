@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
 
       user.name = auth.info.name
+      user.profilepic = auth.info.image
+      user.email = auth.info.email
 
       user.oauth_token = auth.credentials.token
 
