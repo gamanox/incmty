@@ -14,8 +14,8 @@
     Welcome <strong><%= current_user.name %></strong>!
 
     <%= link_to "Sign out", signout_path, id: "sign_out" %>
-
-    <%= image_tag(current_user.profilepic, :alt=>"test") %>
+    <img src="<%= current_user.profilepic %>" alt="">
+    
 
   <% else %>
 
