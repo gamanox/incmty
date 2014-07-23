@@ -13,7 +13,11 @@
  *= require_tree .
  *= require_self
  */
-#canvas {
+#canvas, #canvas2 {
   width: 400px;
   height: 400px;
+}
+
+#profile, #profile2 {
+  display: none;
 }
