@@ -1,3 +1,14 @@
-%h1 TANGRAM
 
 
+- if current_user
+  
+- else
+  %svg#svg
+
+  .logo
+    = image_tag "logo.png"
+  %p.centertitle
+    CREA EL MEJOR INCMTY<br>
+    <span>Y GANA UNA ENTRADA <br>PARA NUESTRO <br>EVENTO 2014</span>
+    = link_to "/auth/facebook", id: "sign_in" do
+      = image_tag "login.png"

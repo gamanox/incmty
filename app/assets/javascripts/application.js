@@ -13,7 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require tmax
 //= require snap.svg-min
+//= require delaunay
 //= require paper-full.min
 //= require_tree .
 
