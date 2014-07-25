@@ -25,11 +25,11 @@
 
 @font-face {
     font-family: 'condensed';
-    src: url('fonts/condensed-webfont.eot');
-    src: url('fonts/condensed-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/condensed-webfont.woff') format('woff'),
-         url('fonts/condensed-webfont.ttf') format('truetype'),
-         url('fonts/condensed-webfont.svg#curse_casual_jveregular') format('svg');
+    src: url('condensed-webfont.eot');
+    src: url('condensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('condensed-webfont.woff') format('woff'),
+         url('condensed-webfont.ttf') format('truetype'),
+         url('condensed-webfont.svg#curse_casual_jveregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -40,11 +40,11 @@
 
 @font-face {
     font-family: 'big';
-    src: url('fonts/big-webfont.eot');
-    src: url('fonts/big-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/big-webfont.woff') format('woff'),
-         url('fonts/big-webfont.ttf') format('truetype'),
-         url('fonts/big-webfont.svg#ccupupandawayregular') format('svg');
+    src: url('big-webfont.eot');
+    src: url('big-webfont.eot?#iefix') format('embedded-opentype'),
+         url('big-webfont.woff') format('woff'),
+         url('big-webfont.ttf') format('truetype'),
+         url('big-webfont.svg#ccupupandawayregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
