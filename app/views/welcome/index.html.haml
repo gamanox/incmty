@@ -1,6 +1,6 @@
 .logo
   = image_tag "logo.png"
-- if
+- if current_user
   #main
   #nav-right
     %p.righttitle
@@ -16,7 +16,7 @@
             =cat.name
     
 
-- else current_user
+- else 
   %svg#svg
 
   
