@@ -1,14 +1,27 @@
-
+.logo
+  = image_tag "logo.png"
 
 - if current_user
-  
-- else
   %svg#svg
 
-  .logo
-    = image_tag "logo.png"
+  
   %p.centertitle
     CREA EL MEJOR INCMTY<br>
     <span>Y GANA UNA ENTRADA <br>PARA NUESTRO <br>EVENTO 2014</span>
     = link_to "/auth/facebook", id: "sign_in" do
       = image_tag "login.png"
+- else
+  #main
+  #nav-right
+    %p.righttitle
+      CREA EL MEJOR INCMTY<br>
+      <span>Y GANA UNA ENTRADA<br>PARA NUESTRO<br>EVENTO 2014</span>
+  %ul#nav-category
+    - @category.each_with_index do |cat, index|
+      
+      %li
+        %a.btn_cat{:href => "#", :id=>"cat-#{index+1}"}
+          %span
+          %p 
+            =cat.name
+    
