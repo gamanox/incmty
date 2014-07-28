@@ -1,7 +1,38 @@
+%script{:type=>'text/paperscript', :canvas=>'canvas'}
+  var raster = new Raster('profile');
+
+  raster.visible = false;
+
+  var gridSize = 15;
+
+  var spacing = .5;
+
+  raster.on('load', function() {
+  raster.size = new Size(25, 25);
+
+  for (var y = 0; y < raster.height; y++) {
+  for(var x = 0; x < raster.width; x++) {
+  var color = raster.getPixel(x, y);
+
+  var triangle = new Path.RegularPolygon(new Point(x, y) * gridSize, 3, gridSize / 2 / spacing);
+  
+  
+
+
+  triangle.fillColor = color;
+  }
+  }
+
+  project.activeLayer.position = view.center;
+  });
+
+  project.activeLayer.position = view.center;
 .logo
   = image_tag "logo.png"
 - if current_user
   #main
+    = image_tag("profile.jpg", :id=>"profile")
+    %canvas#canvas
   #nav-right
     %p.righttitle
       CREA EL MEJOR INCMTY<br>
