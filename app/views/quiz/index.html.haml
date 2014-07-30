@@ -1,0 +1,8 @@
+%p Quiz
+- if current_user
+  %p
+
+    Bienvenido #{current_user.name}
+
+- else
+  = link_to "loggin", "/auth/facebook"

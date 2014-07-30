@@ -1,9 +1,6 @@
-class WelcomeController < ApplicationController
+class QuizController < ApplicationController
   protect_from_forgery with: :exception
-  def index
-    @category = Category.all
-
-  end
+  
   private
   def current_user
 
@@ -11,5 +8,5 @@ class WelcomeController < ApplicationController
 
   end
 
-  helper_method :current_user
+  helper_method :current_user  
 end

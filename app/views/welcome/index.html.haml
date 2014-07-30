@@ -32,12 +32,17 @@
 - if current_user
   #main
     = image_tag("profile.jpg", :id=>"profile")
-    %canvas#canvas
+    %canvas#canvas   
+
   #nav-right
+
     %p.righttitle
       CREA EL MEJOR INCMTY<br>
       <span>Y GANA UNA ENTRADA<br>PARA NUESTRO<br>EVENTO 2014</span>
+
   %ul#nav-category
+    %p.lefttitle
+      TEMAS
     - @category.each_with_index do |cat, index|
       
       %li

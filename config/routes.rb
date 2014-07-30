@@ -54,7 +54,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root 'welcome#index'
+  root 'quiz#index'
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
 
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
