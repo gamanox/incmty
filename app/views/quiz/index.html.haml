@@ -4,5 +4,7 @@
 
     Bienvenido #{current_user.name}
 
+  = link_to "post to facebook", "#", :id=>"postfb"
+
 - else
   = link_to "loggin", "/auth/facebook"
