@@ -19,3 +19,12 @@
 //= require paper-full.min
 //= require_tree .
 
+$(function() {
+  return $('#postfb').on('click', function(e) {
+    e.preventDefault();
+    FB.api('/me/feed', 'post', {
+      message: 'Hello, world!'
+    });
+    return console.log("click");
+  });
+});
