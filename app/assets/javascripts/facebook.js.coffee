@@ -6,7 +6,7 @@ $ ->
 
   $.ajax
 
-    url: "#{window.location.protocol}//connect.facebook.net/en_US/all.js"
+    url: "#{window.location.protocol}//connect.facebook.net/es_LA/all.js"
 
     dataType: 'script'
 
@@ -29,7 +29,8 @@ window.fbAsyncInit = ->
     FB.login (response) ->
 
       window.location = '/auth/facebook/callback' if response.authResponse
-
+    , 
+      scope: 'publish_actions'
 
 
   $('#sign_out').click (e) ->
