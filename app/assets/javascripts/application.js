@@ -19,12 +19,12 @@
 //= require paper-full.min
 //= require_tree .
 
-$(function() {
-  $('.btn').on('click', function(e) {
-    e.preventDefault();
-    FB.api('/me/feed', 'post', {
-      message: 'Hello, world!'
-    });
-    console.log("click");
-  });
-});
+// $(function() {
+//   $('.btn').on('click', function(e) {
+//     e.preventDefault();
+//     FB.api('/me/feed', 'post', {
+//       message: 'Hello, world!'
+//     });
+//     console.log("click");
+//   });
+// });
