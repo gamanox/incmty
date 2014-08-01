@@ -5,5 +5,10 @@ $ ->
   $('.btn').on 'click', ->
     FB.api('/me/feed', 'post', {
       message: 'Hello, world!'
-    })
+    }, (response)->
+      if not response or response.error
+        alert "Error occured"
+      else
+        alert "Action was successful! Action ID: " + response.id
+    )
     console.log "click"
