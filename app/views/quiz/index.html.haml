@@ -1,4 +1,4 @@
-%p Quiz
+
 - if current_user
   %p
 
@@ -8,4 +8,9 @@
     boton
 
 - else
-  = link_to "loggin", "/auth/facebook"
+  / = link_to "loggin", "/auth/facebook"
+  .main
+    .container
+      =image_tag("quiz-title.png", :class=>"quiz-title")
+      %p.quiz-subtitle
+        ( Descubre que tipo de emprendedor eres... )
