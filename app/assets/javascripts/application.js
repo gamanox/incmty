@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery-ui.min
 //= require jquery.scrollTo.min
+//= require serialScroll
 //= require turbolinks
 //= require tmax
 //= require snap.svg-min

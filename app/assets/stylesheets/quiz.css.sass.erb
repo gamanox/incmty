@@ -15,13 +15,16 @@
     -webkit-filter: blur(3px)
   100%
     -webkit-filter: blur(0px)
+svg
+  display: block
 
-html, body
+html, body, #screen
   width: 100%
   height: 100%
   margin: 0
   padding: 0
-
+#screen
+  position: relative
 a
   text-decoration: none
   outline: 0
@@ -34,35 +37,334 @@ ul
     margin: 0
     padding: 0
 
-
+#footer
+  width: 100%
+  height: 30px
+  background-color: #FFF
+  position: fixed
+  bottom: 0
+  left: 0
 .main
   width: 100%
   height: 100%
+  overflow: hidden
+  position: relative
   background-color: #4a8aae
   background-image: url("<%= asset_path("bg-ruler.png")%>")
   background-repeat: no-repeat
   background-position: 50% 50%
+.container-cinco
+  background-color: #3dc0d4
+  .briefcase
+    width: 300px
+    height: 240px
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -150px
+    margin-top: -200px
+  ul.briefcase-container
+    width: 250px
+    height: 300px
+    position: absolute
+    top: 50%
+    left: 50%
+    li
+      position: relative
+      float: left
+      &.dosXdos
+        width: 100px
+        height: 100px
+      &.unoXdos
+        width: 50px
+        height: 100px
+      &.unoXuno
+        width: 50px
+        height: 50px
+      &.dosXuno
+        width: 100px
+        height: 50px
+      &.tresXdos
+        width: 150px
+        height: 100px
+      &.tresXcuatro
+        width: 150px
+        height: 200px
+      &.book
+        background-color: #3ee08d
+      &.cafe
+        background-color: #aeb39a
+      &.hoja
+        background-color: #3fc4d4
+      &.jobs
+        background-color: #3ecaea
+      &.rubik
+        background-color: #76e073
+      &.usb
+        background-color: #3fbad5
+      &.postit
+        background-color: #27d0ea
+      &.coin
+        background-color: #9eb273
+      &.foco
+        background-color: #27c2ea
+      &.printer
+        background-color: #2eb9cd
+      &.mp3
+        background-color: #9ec66a
+      &.vhs
+        background-color: #9ec66a
+      &.lab
+        background-color: #2eb9cd
+      &.lab2
+        background-color: #5bd0c8
+      &.pencil
+        background-color: #81e179
+      &.cray
+        background-color: #1ec6ea
+      &.game
+        background-color: #96ac70
+      &.lap
+        background-color: #3ecaea
+      &.wacom
+        background-color: #58c7d6
+      svg
+        // background-color: #FFF
+        margin: auto
+      #case5-book
+        height: 96px
+        margin-top: 2px
+      #case5-cafe
+        width: 77px
+        margin-top: 14px
+      #case5-hoja
+        height: 81px
+        margin-top: 9.5px
+      #case5-jobs
+        height: 96px
+        margin-top: 2px
+      #case6_x5F_rubik
+        height: 49px
+        margin-top: 0.5px
+      #case5-usb
+        height: 37px
+        margin-top: 6.5px
+      #case5-postit
+        height: 42px
+        margin-top: 4px
+      #case5-coin
+        width: 44px
+        margin-top: 4.5px
+      #case5-foco
+        height: 48px
+        margin-top: 1px
+      #case5-printer
+        height: 100px
+      #case5-mp3
+        height: 99px
+        margin-top: 0.5px
+      #case5-vhs
+        width: 77px
+        margin-top: 2px
+      #case5-lab
+        height: 84px
+        margin-top: 8px
+      #case5-lab2
+        height: 83px
+        margin-top: 8.5px
+      #case5-pencil
+        height: 77px
+        margin-top: 11.5px
+      #case5-cray
+        width: 91px
+      #case5-game
+        width: 122px
+      #case5-lap
+        height: 150px
+        // margin-top: 20px
+      #case5-wacom
+        width: 140px
+
+    &.left
+      margin-top: -175px
+      margin-left: -450px
+    &.right
+      margin-top: -175px
+      margin-left: 225px
+
+.container-seis
+  background-color: #86bce3
+  .mono
+    width: 184px
+    height: 350px
+    margin-left: -63px
+    margin-top: -197px
+    top: 50%
+    left: 50%
+    position: absolute
+    display: none
+  .mona
+    width: 200px
+    margin-left: -76px
+    margin-top: -197px
+    top: 50%
+    left: 50%
+    position: absolute
+  ul.ropa-container
+    width: 335px
+    height: 395px
+    position: absolute
+    top: 50%
+    left: 50%
+    &.left
+      margin-top: -175px
+      margin-left: -450px
+      // background-color: #FFF
+    &.right
+      margin-top: -175px
+      margin-left: 135px
+      // background-color: #FFF
+    li.ropa
+      float: left
+      &.pantalon
+        width: 80px
+      &.vestido
+        width: 70px
+      &.lentes
+        width: 108px
+      &.falda
+        width: 88px
+      &.telefono
+        width: 42px
+      &.short
+        width: 70px
+      &.skirt
+        width: 80px
+      &.playeranaranja
+        width: 81px
+      &.blusanegra
+        width: 82px
+      &.monorojo
+        width: 24px
+      &.scarf
+        width: 46px
+      &.playera
+        width: 97px
+      &.gorra
+        width: 150px
+      &.traje
+        width: 150px
+
+
+
+
+
+
+  
 .container-cuatro
   background-color: #b67ba6
+  ul.chess-container
+    width: 960px
+    height: 120px
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -170px
+    margin-left: -480px
+    li.pieza
+      float: left
+
+      width: 150px
+      height: 200px
+      svg
+        margin: auto
+      #case4-king
+        height: 182px
+        margin-top: 18px
+      #case4-reina
+        height: 147px
+        margin-top: 53px
+      #case4-alfil
+        height: 123px
+        margin-top: 77px
+      #case4-horse
+        height: 112px
+        margin-top: 88px
+      #case4-torre
+        height: 99px
+        margin-top: 101px
+      #case4-peon
+        height: 80px
+        margin-top: 120px
 .container-tres
   background-color: #a4c060
+  ul.networking-container
+    width: 960px
+    height: 181px
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -480px
+    margin-top: -100px
+    li.entrepeneur
+      float: left
+      height: 200px
+      width: 150px
+      position: relative
+      svg
+        margin: auto
+      #case3-men
+        height: 171px
+        margin-top: 29px
+      #case3-boy
+        height: 171px
+        margin-top: 29px
+      #case3-cat
+        height: 135px
+        margin-top: 65px
+      #case3-girl
+        height: 181px
+        margin-top: 19px
+      #case3-skype
+        height: 165px
+        margin-top: 35px
+      #case3-mesero
+        height: 171px
+        margin-top: 29px
+
+
+
 .container-dos
   background-color: #ed6e5e
 
 
   ul.drag-container
-    width: 800px
+    width: 930px
     height: 80px
     position: absolute
     top: 50%
     left: 50%
-    margin-left: -400px
+    margin-left: -465px
     margin-top: -110px
     li
       cursor: move
       float: left
-      margin-left: 15px
-      margin-right: 15px
+      position: relative
+      
+      width: 155px
+      height: 150px
+      p.nombre
+        font-family: 'chunk'
+        font-size: 15px
+        color: #fff
+        width: 100%
+        position: absolute
+        bottom: 0
+        height: 20px
+        text-align: center
+      svg
+        margin: auto
+        vertical-align: bottom
   .case1-scale
     width: 942px
     height: 32px
@@ -70,7 +372,7 @@ ul
     top: 50%
     left: 50%
     margin-left: -471px
-    margin-top: 50px
+    margin-top: 100px
 
  
 
@@ -78,20 +380,23 @@ ul
 
 
 
-.container
+.containerscreen
   background-image: url('<%= asset_path("blueprint.png")%>')
   background-repeat: no-repeat
   background-position: 50% 50%
   width: 100%
   height: 100%
   position: relative
+  display: block
+  float: left
+  // height: 720px
   .case-next
     width: 107px
     height: 108px
     position: absolute
-    top: 50% 
+    bottom: 60px 
     left: 50%
-    margin-top: 120px
+    // margin-top: 120px
     margin-left: -54px
     cursor: pointer
     -webkit-transition: all 0.2s ease-in-out
@@ -102,7 +407,7 @@ ul
     -webkit-filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.25))
     &:hover
       
-      margin-top: 122px
+      bottom: 58px
       -webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.25))
 
   .case-title
@@ -180,4 +485,32 @@ ul
       margin-top: 102px
 
       -webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.25))  
+
+#case5-book
+  width: 70px
+  height: 92px
+  margin: auto
+  // margin-top: 4px
+  // margin-bottom: 4px
+  // background-color: #FFF
+
+#case2-moleskine
+  width: 75px
+  height: 91px
+#case2-smartphone
+  // width: 52px
+  height: 83px
+#case2-ipod
+  width: 97px
+  height: 109px
+#caase2-pc
+  // width: 97px
+  height: 114px
+#case2-wii
+  width: 105px
+  // height: 91px
+#case2-tablet
+  width: 86px
+
+
 
