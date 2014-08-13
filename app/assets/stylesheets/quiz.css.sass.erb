@@ -53,6 +53,8 @@ ul
   background-image: url("<%= asset_path("bg-ruler.png")%>")
   background-repeat: no-repeat
   background-position: 50% 50%
+.container-uno
+  background-color: #4c72a2
 .container-cinco
   background-color: #3dc0d4
   .briefcase
@@ -273,9 +275,18 @@ ul
     margin-left: -480px
     li.pieza
       float: left
-
+      position: relative
       width: 150px
       height: 200px
+      p.nombre
+        font-family: 'chunk'
+        font-size: 15px
+        color: #fff
+        width: 100%
+        position: absolute
+        bottom: -45px
+        height: 20px
+        text-align: center
       svg
         margin: auto
       #case4-king
@@ -305,12 +316,58 @@ ul
     top: 50%
     left: 50%
     margin-left: -480px
-    margin-top: -100px
+    margin-top: -150px
     li.entrepeneur
       float: left
       height: 200px
       width: 150px
       position: relative
+      cursor: pointer
+      -webkit-filter: grayscale(50%)
+      -moz-filter: grayscale(50%)
+      -ms-filter: grayscale(50%)
+      -o-filter: grayscale(50%)
+      filter: grayscale(50%)
+      filter: url(grayscale.svg) /* Firefox 4+ */
+      filter: gray /* IE 6-9 */
+      
+      -webkit-transition: all 0.2s ease-in-out
+      -moz-transition: all 0.2s ease-in-out
+      -ms-transition: all 0.2s ease-in-out
+      -o-transition: all 0.2s ease-in-out
+      transition: all 0.2s ease-in-out
+      &.active
+        -webkit-filter: grayscale(0%)
+        -moz-filter: grayscale(0%)
+        -ms-filter: grayscale(0%)
+        -o-filter: grayscale(0%)
+        filter: grayscale(0%)
+        &:hover
+          -webkit-filter: grayscale(0%)
+          -moz-filter: grayscale(0%)
+          -ms-filter: grayscale(0%)
+          -o-filter: grayscale(0%)
+          filter: grayscale(0%)
+      &:hover
+        -webkit-filter: grayscale(0%)
+        -moz-filter: grayscale(0%)
+        -ms-filter: grayscale(0%)
+        -o-filter: grayscale(0%)
+        filter: grayscale(0%)
+        
+        
+
+      p.nombre
+        font-family: 'chunk'
+        font-size: 16px
+        font-weight: 200
+        color: #fff
+        width: 100%
+        position: absolute
+        bottom: -45px
+        height: 20px
+        text-align: center
+
       svg
         margin: auto
       #case3-men

@@ -36,6 +36,11 @@ $ ->
   $('.case4-next').on 'click', ->
     $('.main').scrollTo('.container-seis', 600)
 
+
+  $('.entrepeneur').on 'click', ->
+    $('.entrepeneur').removeClass 'active'
+    $(this).addClass 'active'
+
   $('.drag-container').sortable()
   $('.briefcase-container').sortable()
   $('.square').draggable()
