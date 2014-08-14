@@ -49,14 +49,19 @@ ul
   height: 100%
   overflow: hidden
   position: relative
-  background-color: #4a8aae
+  background-color: #4c72a2
   background-image: url("<%= asset_path("bg-ruler.png")%>")
   background-repeat: no-repeat
   background-position: 50% 50%
+  -webkit-transition: background-color 0.3s ease-in-out
+  -moz-transition: background-color 0.3s ease-in-out
+  -o-transition: background-color 0.3s ease-in-out
+  -ms-transition: background-color 0.3s ease-in-out
+  transition: background-color 0.3s ease-in-out
 .container-uno
-  background-color: #4c72a2
+  // background-color: #4c72a2
 .container-cinco
-  background-color: #3dc0d4
+  // background-color: #3dc0d4
   .briefcase
     width: 300px
     height: 240px
@@ -195,7 +200,7 @@ ul
       margin-left: 225px
 
 .container-seis
-  background-color: #86bce3
+  // background-color: #86bce3
   .mono
     width: 184px
     height: 350px
@@ -264,7 +269,7 @@ ul
 
   
 .container-cuatro
-  background-color: #b67ba6
+  // background-color: #b67ba6
   ul.chess-container
     width: 960px
     height: 120px
@@ -308,7 +313,7 @@ ul
         height: 80px
         margin-top: 120px
 .container-tres
-  background-color: #a4c060
+  // background-color: #a4c060
   ul.networking-container
     width: 960px
     height: 181px
@@ -323,37 +328,32 @@ ul
       width: 150px
       position: relative
       cursor: pointer
-      -webkit-filter: grayscale(50%)
-      -moz-filter: grayscale(50%)
-      -ms-filter: grayscale(50%)
-      -o-filter: grayscale(50%)
-      filter: grayscale(50%)
-      filter: url(grayscale.svg) /* Firefox 4+ */
-      filter: gray /* IE 6-9 */
+      // -webkit-filter: grayscale(50%)
+      // -moz-filter: grayscale(50%)
+      // -ms-filter: grayscale(50%)
+      // -o-filter: grayscale(50%)
+      // filter: grayscale(50%)
+      // filter: url(grayscale.svg) /* Firefox 4+ */
+      // filter: gray /* IE 6-9 */
       
       -webkit-transition: all 0.2s ease-in-out
       -moz-transition: all 0.2s ease-in-out
       -ms-transition: all 0.2s ease-in-out
       -o-transition: all 0.2s ease-in-out
       transition: all 0.2s ease-in-out
-      &.active
-        -webkit-filter: grayscale(0%)
-        -moz-filter: grayscale(0%)
-        -ms-filter: grayscale(0%)
-        -o-filter: grayscale(0%)
-        filter: grayscale(0%)
-        &:hover
-          -webkit-filter: grayscale(0%)
-          -moz-filter: grayscale(0%)
-          -ms-filter: grayscale(0%)
-          -o-filter: grayscale(0%)
-          filter: grayscale(0%)
-      &:hover
-        -webkit-filter: grayscale(0%)
-        -moz-filter: grayscale(0%)
-        -ms-filter: grayscale(0%)
-        -o-filter: grayscale(0%)
-        filter: grayscale(0%)
+      // &.active
+      //   -webkit-filter: grayscale(0%)
+      //   -moz-filter: grayscale(0%)
+      //   -ms-filter: grayscale(0%)
+      //   -o-filter: grayscale(0%)
+      //   filter: grayscale(0%)
+       
+      // &:hover
+      //   -webkit-filter: grayscale(0%)
+      //   -moz-filter: grayscale(0%)
+      //   -ms-filter: grayscale(0%)
+      //   -o-filter: grayscale(0%)
+      //   filter: grayscale(0%)
         
         
 
@@ -392,7 +392,7 @@ ul
 
 
 .container-dos
-  background-color: #ed6e5e
+  // background-color: #ed6e5e
 
 
   ul.drag-container
@@ -569,5 +569,77 @@ ul
 #case2-tablet
   width: 86px
 
+
+#doughnutChart
+  svg
+    path
+      cursor: pointer
+
+.chart
+  position: absolute
+  width: 350px
+  height: 350px
+  top: 50%
+  left: 50%
+  margin: -195px 0 0 -175px
+
+.doughnutTip
+  position: absolute
+  min-width: 30px
+  max-width: 300px
+  padding: 5px 15px
+  border-radius: 1px
+  background: rgba(255, 255, 255, 0.8)
+  color: #4c72a2
+  font-size: 17px
+  font-family: 'chunk'
+  text-shadow: 0 1px 0 #d6d6d6
+  text-transform: uppercase
+  text-align: center
+  line-height: 1.3
+  letter-spacing: .06em
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)
+  pointer-events: none
+  &:after
+    position: absolute
+    left: 50%
+    bottom: -6px
+    content: ""
+    height: 0
+    margin: 0 0 0 -6px
+    border-right: 5px solid transparent
+    border-left: 5px solid transparent
+    border-top: 6px solid rgba(255, 255, 255, 0.7)
+    line-height: 0
+
+.doughnutSummary
+  position: absolute
+  top: 50%
+  left: 50%
+  color: #d5d5d5
+  text-align: center
+  text-shadow: 0 -1px 0 #111111
+  cursor: default
+
+.doughnutSummaryTitle
+  position: absolute
+  top: 50%
+  width: 100%
+  margin-top: -45%
+  font-size: 18px
+  letter-spacing: .06em
+  font-family: 'chunk'
+  color: #fff
+  line-height: 24px
+
+.doughnutSummaryNumber
+  position: absolute
+  top: 50%
+  width: 100%
+  margin-top: -15%
+  font-size: 55px
+
+.chart path:hover
+  opacity: .65
 
 

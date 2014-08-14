@@ -15,6 +15,7 @@
 //= require jquery-ui.min
 //= require jquery.scrollTo.min
 //= require serialScroll
+//= require chart
 //= require turbolinks
 //= require tmax
 //= require snap.svg-min
@@ -31,3 +32,4 @@
 //     console.log("click");
 //   });
 // });
+
