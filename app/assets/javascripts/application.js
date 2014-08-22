@@ -15,12 +15,14 @@
 //= require jquery-ui.min
 //= require jquery.scrollTo.min
 //= require serialScroll
-//= require chart
+//= require miniscroll
 //= require turbolinks
 //= require tmax
 //= require snap.svg-min
 //= require delaunay
 //= require paper-full.min
+//= require chart
+
 //= require_tree .
 
 // $(function() {
@@ -32,4 +34,14 @@
 //     console.log("click");
 //   });
 // });
+
+var userData = {
+  gender: 'male',
+  profile: {
+    
+  }
+
+
+}
+var sortprofile = [];
 

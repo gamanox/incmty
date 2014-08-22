@@ -10,12 +10,12 @@
  * 
  */
 var chart = [
-      { title: "Fiesta de lanzamiento",         value : 1,  color: "#6cd5e5" },
-      { title: "Abogados", value:  1,   color: "#e56c99" },
-      { title: "Produccion",      value:  1,   color: "#80e56c" },
-      { title: "Publicidad",        value : 1,   color: "#ff6c45" },
-      { title: "Mascota",        value : 1,   color: "#e36ad9" },
-      { title: "Oficinas",        value : 1,   color: "#e59f30" }
+      { resultado: "lifestyler", title: "Fiesta de lanzamiento",         value : 1,  color: "#6cd5e5" },
+      { resultado: "goldseeker", title: "Abogados", value:  1,   color: "#e56c99" },
+      { resultado: "mastermind", title: "Produccion",      value:  1,   color: "#80e56c" },
+      { resultado: "spotlighter", title: "Publicidad",        value : 1,   color: "#ff6c45" },
+      { resultado: "greatcreator", title: "Mascota",        value : 1,   color: "#e36ad9" },
+      { resultado: "coolhunter", title: "Oficinas",        value : 1,   color: "#e59f30" }
     ];
 
 ;(function($, undefined) {
@@ -44,7 +44,8 @@ var chart = [
         tipOffsetY: -45,
         tipClass: "doughnutTip",
         summaryClass: "doughnutSummary",
-        summaryTitle: "HAZ CLICK EN LOS GAJOS DE LA GRÁFICA PARA AUMENTAR EL PRESUPUESTO",
+        // summaryTitle: "HAZ CLICK EN LOS GAJOS DE LA GRÁFICA PARA AUMENTAR EL PRESUPUESTO",
+        summaryTitle: "Haz click en los gajos de la gráfica para aumentar el presupuesto de cada área",
         summaryTitleClass: "doughnutSummaryTitle",
         summaryNumberClass: "doughnutSummaryNumber",
         beforeDraw: function() {  },
@@ -88,6 +89,7 @@ var chart = [
       .attr({
         "d": getHollowCirclePath(baseDoughnutRadius, baseCutoutRadius),
         "fill": settings.baseColor
+
       })
       .appendTo($svg);
 
@@ -120,7 +122,8 @@ var chart = [
           "stroke-width": settings.segmentStrokeWidth,
           "stroke": settings.segmentStrokeColor,
           "fill": data[i].color,
-          "data-order": i
+          "data-order": i,
+          "resultado": data[i].resultado
         })
         .appendTo($pathGroup)
         .on("mouseenter", pathMouseEnter)
@@ -167,6 +170,17 @@ var chart = [
     }
     
     function pathClick(e) {
+      var result = $(this).attr('resultado');
+      // 
+      if (userData.profile.hasOwnProperty(result)){
+        var perfil = userData.profile[result];
+        userData.profile[result]=perfil+1;
+
+      } else {
+        var perfil = userData.profile[result];
+        userData.profile[result]=4;
+        
+      }
             $tip.hide();
 
             var order = $(this).data().order;
@@ -176,6 +190,7 @@ var chart = [
   $('#doughnutChart').html('');
   $("#doughnutChart").drawDoughnutChart(chart);
 });
+
     }
     function pathMouseLeave(e) {
       $tip.hide();

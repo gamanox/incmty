@@ -4,6 +4,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :provider
       t.string :uid
       t.string :name
+      t.string :gender
+      t.boolean :win
+      t.boolean :played
       t.string :email
       t.string :profilepic
       t.integer :entrepeneur_id

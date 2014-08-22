@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
       user.name = auth.info.name
       user.profilepic = auth.info.image
       user.email = auth.info.email
+      user.gender = auth.extra.raw_info.gender
 
       user.oauth_token = auth.credentials.token
 

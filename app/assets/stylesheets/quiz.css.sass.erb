@@ -15,6 +15,7 @@
     -webkit-filter: blur(3px)
   100%
     -webkit-filter: blur(0px)
+
 svg
   display: block
 
@@ -44,6 +45,73 @@ ul
   position: fixed
   bottom: 0
   left: 0
+  // -webkit-filter: drop-shadow(0px -4px 5px rgba(0,0,0,0.45))
+  .left, .right
+    height: 20px
+    padding-top: 8px
+    padding-bottom: 2px
+    position: absolute
+    // background-color: red
+
+  .left
+    top: 0
+    left: 0
+    width: 200px
+    margin-left: 15px
+    a
+      text-decoration: none
+      float: left
+      display: block
+      width: 16px
+      height: 16px
+      margin-left: 15px
+      &.tw
+        background-image: url("<%= asset_path("tw.png")%>")
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        -webkit-transition: -webkit-transform 0.2s ease-in-out
+        &:hover
+          -webkit-transform: rotate(360deg)
+      &.fb
+        background-image: url("<%= asset_path("fb.png")%>")
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        -webkit-transition: -webkit-transform 0.2s ease-in-out
+        &:hover
+          -webkit-transform: rotate(360deg)
+      &.in
+        background-image: url("<%= asset_path("in.png")%>")
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        -webkit-transition: -webkit-transform 0.2s ease-in-out
+        &:hover
+          -webkit-transform: rotate(360deg)
+  .right
+    top: 0
+    right: 0
+    width: 370px
+    margin-right: 15px
+    p
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -khtml-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      color: #205e81
+      float: right
+      font-family: 'Arial'
+      font-size: 11px
+      margin-right: 10px
+      text-align: right
+      &.prensa, &.sede
+        padding-left: 10px
+        border-left: 1px solid
+
+
 .main
   width: 100%
   height: 100%
@@ -58,6 +126,130 @@ ul
   -o-transition: background-color 0.3s ease-in-out
   -ms-transition: background-color 0.3s ease-in-out
   transition: background-color 0.3s ease-in-out
+.container-result
+  position: relative
+  #repeat
+    width: 182px
+    height: 64px
+    position: absolute
+    top: 70px
+    left: 0
+    -webkit-perspective: 1000
+    -webkit-perspective-origin: 0% 50%
+    a#repeatbtn
+      background-image: url("<%= asset_path("repeat.png")%>")
+      display: block
+      float: left
+      -webkit-transform-style: preserve-3d
+      width: 100%
+      height: 100%
+      -webkit-transform: rotateY(0deg)
+      -webkit-transform-origin: 0% 50%
+
+      -webkit-transition: all 0.2s ease-in-out
+      -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.45))
+      &:hover
+        -webkit-filter: drop-shadow(5px 0px 5px rgba(0,0,0,0.45))
+        -webkit-transform: rotateY(-20deg)
+  #incbtn-cont
+    width: 182px
+    height: 64px
+    position: absolute
+    top: 70px
+    right: 0
+    -webkit-perspective: 1000
+    -webkit-perspective-origin: 100% 50%
+    a#incbtn
+      background-image: url("<%= asset_path("inc.png")%>")
+      display: block
+      float: left
+      -webkit-transform-style: preserve-3d
+      width: 100%
+      height: 100%
+      -webkit-transform: rotateY(0deg)
+      -webkit-transform-origin: 100% 50%
+
+      -webkit-transition: all 0.2s ease-in-out
+      -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.45))
+      &:hover
+        -webkit-filter: drop-shadow(-5px 0px 5px rgba(0,0,0,0.45))
+        -webkit-transform: rotateY(20deg)
+  #todospersonajes
+    display: none
+    .persona
+      svg
+        height: 371px
+      // .personagrupo
+      //   height: 371px
+  .margen
+    position: absolute
+    width: calc(100% - 40px)
+    height: calc(100% - 70px)
+    top: 20px
+    left: 20px
+    border: 1px solid #fff
+  p.turesultado
+    font-family: 'chunk'
+    font-size: 34px
+    color: #fff
+    line-height: 36px
+    text-align: center
+    padding-top: 40px
+  #personaje
+    height: auto
+    width: 100%
+    .persona
+      width: 100%
+      height: auto
+      position: relative
+      display: none
+      svg
+        height: 371px
+        display: block
+        margin-left: auto
+        margin-right: auto
+        margin-top: -15px
+      p
+        width: 100%
+        text-align: center
+        font-family: 'chunk'
+        color: #fff
+        margin: 0
+        padding: 0
+        position: relative
+        &.the
+          margin-top: -90px
+          font-size: 37px
+          line-height: 20px
+        &.nombre
+          // bottom: 5px
+          font-size: 66px
+          line-height: 66px
+        &.descripcion
+          // color: #3c3c3c
+          font-size: 18px
+          font-family: 'geo'
+          width: 470px
+          height: auto
+          line-height: 20px
+          position: relative
+          padding-top: 5px
+          font-style: italic
+          margin-left: auto !important
+          margin-right: auto !important
+          -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.45))
+
+          // text-shadow: 0px 1px rgba(255,255,255,0.45)
+
+
+    // display: block
+
+    margin-left: auto
+    margin-right: auto
+
+    #uselink
+      height: 371px !important
+
 .container-uno
   // background-color: #4c72a2
 .container-cinco
@@ -70,6 +262,152 @@ ul
     left: 50%
     margin-left: -150px
     margin-top: -200px
+    .briefcase-sort-cont
+      top: 30px
+      left: 0
+      width: 300px
+      height: 250px
+      position: absolute
+      p.descripcion
+        font-family: 'chunk'
+        font-size: 22px
+        color: #fff
+        line-height: 23px
+        text-align: center
+        position: absolute
+        top: 100px
+        width: 100%
+    ul.briefcase-sort
+      top: 0
+      left: 0
+      width: 300px
+      height: 250px
+      position: absolute
+      overflow: hidden
+      li
+        cursor: move
+        position: relative
+        // position: absolute
+        float: left
+        &.dosXdos
+          width: 100px
+          height: 100px
+        &.unoXdos
+          width: 50px
+          height: 100px
+        &.unoXuno
+          width: 50px
+          height: 50px
+        &.dosXuno
+          width: 100px
+          height: 50px
+        &.tresXdos
+          width: 150px
+          height: 100px
+        &.tresXtres
+          width: 150px
+          height: 150px
+        &.tresXcuatro
+          width: 150px
+          height: 200px
+        &.book
+          background-color: #3ee08d
+        &.cafe
+          background-color: #aeb39a
+        &.hoja
+          background-color: #3fc4d4
+        &.jobs
+          background-color: #3ecaea
+        &.rubik
+          background-color: #76e073
+        &.usb
+          background-color: #3fbad5
+        &.postit
+          background-color: #27d0ea
+        &.coin
+          background-color: #9eb273
+        &.foco
+          background-color: #27c2ea
+        &.printer
+          background-color: #2eb9cd
+        &.mp3
+          background-color: #9ec66a
+        &.vhs
+          background-color: #9ec66a
+        &.lab
+          background-color: #2eb9cd
+        &.lab2
+          background-color: #5bd0c8
+        &.pencil
+          background-color: #81e179
+        &.cray
+          background-color: #1ec6ea
+        &.game
+          background-color: #96ac70
+        &.lap
+          background-color: #3ecaea
+        &.wacom
+          background-color: #58c7d6
+        svg
+          // background-color: #FFF
+          margin: auto
+        #case5-book
+          height: 96px
+          margin-top: 2px
+        #case5-cafe
+          width: 77px
+          margin-top: 14px
+        #case5-hoja
+          height: 71px
+          margin-top: 14px
+        #case5-jobs
+          height: 96px
+          margin-top: 2px
+        #case6_x5F_rubik
+          height: 49px
+          margin-top: 0.5px
+        #case5-usb
+          height: 37px
+          margin-top: 6.5px
+        #case5-postit
+          height: 42px
+          margin-top: 4px
+        #case5-coin
+          width: 44px
+          margin-top: 4.5px
+        #case5-foco
+          height: 48px
+          margin-top: 1px
+        #case5-printer
+          height: 100px
+        #case5-mp3
+          height: 99px
+          margin-top: 0.5px
+        #case5-vhs
+          width: 77px
+          margin-top: 2px
+        #case5-lab
+          height: 84px
+          margin-top: 8px
+        #case5-lab2
+          height: 83px
+          margin-top: 8.5px
+        #case5-pencil
+          height: 77px
+          margin-top: 11.5px
+        #case5-cray
+          width: 91px
+        #case5-game
+          width: 122px
+        #case5-lap
+          height: 146px
+          // margin-top: 20px
+          margin-top: 2px
+        #case5-wacom
+          width: 140px
+          margin-top: 9px
+
+
   ul.briefcase-container
     width: 250px
     height: 300px
@@ -77,6 +415,7 @@ ul
     top: 50%
     left: 50%
     li
+      cursor: move
       position: relative
       float: left
       &.dosXdos
@@ -94,6 +433,9 @@ ul
       &.tresXdos
         width: 150px
         height: 100px
+      &.tresXtres
+        width: 150px
+        height: 150px
       &.tresXcuatro
         width: 150px
         height: 200px
@@ -145,8 +487,8 @@ ul
         width: 77px
         margin-top: 14px
       #case5-hoja
-        height: 81px
-        margin-top: 9.5px
+        height: 71px
+        margin-top: 14px
       #case5-jobs
         height: 96px
         margin-top: 2px
@@ -187,10 +529,12 @@ ul
       #case5-game
         width: 122px
       #case5-lap
-        height: 150px
+        height: 146px
         // margin-top: 20px
+        margin-top: 2px
       #case5-wacom
         width: 140px
+        margin-top: 9px
 
     &.left
       margin-top: -175px
@@ -202,14 +546,16 @@ ul
 .container-seis
   // background-color: #86bce3
   .mono
-    width: 184px
-    height: 350px
-    margin-left: -63px
-    margin-top: -197px
+    width: 200px
+    // height: 350px
+    margin-left: -70px
+    margin-top: -220px
     top: 50%
     left: 50%
     position: absolute
-    display: none
+    // display: none
+    // .cabeza
+    //   z-index: 1000
   .mona
     width: 200px
     margin-left: -76px
@@ -270,19 +616,24 @@ ul
   
 .container-cuatro
   // background-color: #b67ba6
+  .case3-next
+    visibility: hidden
+    opacity: 0
   ul.chess-container
-    width: 960px
+    width: 900px
     height: 120px
     position: absolute
     top: 50%
     left: 50%
     margin-top: -170px
-    margin-left: -480px
+    margin-left: -450px
     li.pieza
       float: left
       position: relative
       width: 150px
       height: 200px
+      cursor: pointer
+
       p.nombre
         font-family: 'chunk'
         font-size: 15px
@@ -292,7 +643,30 @@ ul
         bottom: -45px
         height: 20px
         text-align: center
+        -webkit-transition: all 0.2s ease-in-out
+        -moz-transition: all 0.2s ease-in-out
+        -ms-transition: all 0.2s ease-in-out
+        -o-transition: all 0.2s ease-in-out
+        transition: all 0.2s ease-in-out
+      -webkit-transition: all 0.2s ease-in-out
+      -moz-transition: all 0.2s ease-in-out
+      -ms-transition: all 0.2s ease-in-out
+      -o-transition: all 0.2s ease-in-out
+      transition: all 0.2s ease-in-out
+      &:hover
+        margin-top: -20px
+        svg
+          -webkit-filter: drop-shadow(0px 0px 20px rgba(192,0,255,0.75))
+        p.nombre
+          bottom: -65px
+      &.active
+        margin-top: -20px
+        svg
+          -webkit-filter: drop-shadow(0px 0px 20px rgba(192,0,255,0.75))
+        p.nombre
+          bottom: -65px
       svg
+
         margin: auto
       #case4-king
         height: 182px
@@ -314,6 +688,9 @@ ul
         margin-top: 120px
 .container-tres
   // background-color: #a4c060
+  .case2-next
+    visibility: hidden
+    opacity: 0
   ul.networking-container
     width: 960px
     height: 181px
@@ -341,6 +718,18 @@ ul
       -ms-transition: all 0.2s ease-in-out
       -o-transition: all 0.2s ease-in-out
       transition: all 0.2s ease-in-out
+      &:hover
+        margin-top: -20px
+        svg
+          -webkit-filter: drop-shadow(0px 0px 20px rgba(0,255,0,1))
+        p.nombre
+          bottom: -65px
+      &.active
+        margin-top: -20px
+        svg
+          -webkit-filter: drop-shadow(0px 0px 20px rgba(0,255,0,1))
+        p.nombre
+          bottom: -65px
       // &.active
       //   -webkit-filter: grayscale(0%)
       //   -moz-filter: grayscale(0%)
@@ -358,6 +747,11 @@ ul
         
 
       p.nombre
+        -webkit-transition: all 0.2s ease-in-out
+        -moz-transition: all 0.2s ease-in-out
+        -ms-transition: all 0.2s ease-in-out
+        -o-transition: all 0.2s ease-in-out
+        transition: all 0.2s ease-in-out
         font-family: 'chunk'
         font-size: 16px
         font-weight: 200
@@ -393,6 +787,9 @@ ul
 
 .container-dos
   // background-color: #ed6e5e
+  .case1-next
+    visibility: hidden
+    opacity: 0
 
 
   ul.drag-container
@@ -642,4 +1039,74 @@ ul
 .chart path:hover
   opacity: .65
 
+#faqs
+  background-color: rgba(255,255,255,0.7)
+  background-image: url('<%= asset_path("faqs.png")%>')
+  background-position: 50% 5%
+  background-repeat: no-repeat
+  width: 300px
+  height: calc(100% - 30px)
+  overflow: hidden
+  
+  position: fixed
+  top: 0
+  right: -300px
+  -webkit-transition: right 0.2s ease-in-out
+  -moz-transition: right 0.2s ease-in-out
+  -ms-transition: right 0.2s ease-in-out
+  transition: right 0.2s ease-in-out
+  .close
+    width: 20px
+    height: 20px
+    position: fixed
+    cursor: pointer
+    top: 20px
+    right: 20px
+    z-index: 1000
+    -webkit-transition: -webkit-transform 0.2s ease-in-out
+    &:hover
+      -webkit-transform: rotate(90deg)
+  .container-faqs
+    width: 240px
+    margin-left: auto
+    margin-right: auto
+    // padding-bottom: 30px
+    // height: 100%
+    // overflow: hidden
+    p.title
+      font-family: 'chunk'
+      font-size: 25px
+      letter-spacing: 1px
+      color: #3c3c3c
+      width: 150px
+      margin-left: auto
+      margin-right: auto
+      padding-top: 100px
+      margin-bottom: 65px
+      text-align: center
+      line-height: 25px
+    
+    .pregunta
+      width: 100%
+      p.titulo
+        margin: 0
+        padding: 0
+
+        font-family: 'chunk'
+        font-size: 16px
+        line-height: 18px
+        color: #3c3c3c
+        text-align: right
+        margin-bottom: 15px
+      p.respuesta
+        margin: 0
+        padding: 0
+        font-family: 'geo'
+        font-size: 14px
+        color: #3c3c3c
+        text-align: right
+        margin-bottom: 35px
+        font-style: italic
+
+      
 
