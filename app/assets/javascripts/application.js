@@ -41,11 +41,6 @@ $(function(){
       message: 'Hello, world!',
       picture: 'https://incmty.herokuapp.com/her-mastermind.jpg'
     }, function(response) {
-      if (!response || response.error) {
-        return alert("Error occured");
-      } else {
-        return alert("Action was successful! Action ID: " + response.id);
-      }
     });
   // FB.ui({
   //   method: 'share',
