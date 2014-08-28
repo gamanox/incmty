@@ -43,6 +43,7 @@ $ ->
       right: '-300px'
   # console.log(#{current_user.name})
   # $('.containerscreen').height($(window).height())
+
   $('#sharebtn-cont').on 'click', ->
     # FB.api('/me/feed', 'post', {
     #   message: 'Hello, world!'
@@ -96,6 +97,7 @@ $ ->
     chngBg('#ff9966')
     $("#doughnutChart").drawDoughnutChart(chart)
   $('.case6-next').on 'click', ->
+    gender = $('#genderdiv').attr 'gender'
     personaje = sortSome(userData.profile)
     copy = 'https://twitter.com/home?status=descubr%C3%AD%20que%20soy%20The%20'+personaje+'.%20%23soyemprendedor%20y%20tu?%20descubre%20que%20tipo%20de%20emprendedor%20eres%20http://quizdelemprendedor.com'
     console.log personaje
@@ -106,6 +108,13 @@ $ ->
     $('#personaje .persona.'+personaje).css
         display: 'block'
     $('.main').scrollTo('.container-cargando', 300)
+    $('#facebtn-cont').on 'click', ->
+      FB.ui
+        method: "feed"
+        link: "http://incmty.herokuapp.com/"
+        description: "Mi avatar de emprendedor es The "+personaje+" - Descubre que tipo de emprendedor eres"
+        picture: "http://incmty.herokuapp.com/"+gender+personaje+".jpg"
+      , (response) ->
     setTimeout ->
       $('.main').scrollTo('.container-result', 300)
       switch personaje

@@ -15,6 +15,11 @@
 
 
 #screen
+  -if current_user
+    -if current_user.gender = 'male'
+      #genderdiv{:gender => 'him-'}
+    -else
+      #genderdiv{:gender => 'her-'}
   .main
     .container-uno.containerscreen
       = image_tag("quiztitle.png", :class=>"quiz-title")
