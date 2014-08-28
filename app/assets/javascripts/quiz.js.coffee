@@ -30,7 +30,9 @@ getResult = (respuesta)->
       userData.profile[result]=1
   console.log userData.profile
   
-
+userUpdate = ->
+  $.ajax 
+    
 
 $ ->
   
@@ -41,15 +43,18 @@ $ ->
       right: '-300px'
   # console.log(#{current_user.name})
   # $('.containerscreen').height($(window).height())
-  $('.btn').on 'click', ->
-    FB.api('/me/feed', 'post', {
-      message: 'Hello, world!'
-    }, (response)->
-      if not response or response.error
-        alert "Error occured"
-      else
-        alert "Action was successful! Action ID: " + response.id
-    )
+  $('#sharebtn').on 'click', ->
+    # FB.api('/me/feed', 'post', {
+    #   message: 'Hello, world!'
+    # }, (response)->
+    #   if not response or response.error
+    #     alert "Error occured"
+    #   else
+    #     alert "Action was successful! Action ID: " + response.id
+    # )
+    $('#shareoverlay').css
+      visibility: 'visible'
+
     
   # $(".main").serialScroll
     
@@ -67,6 +72,10 @@ $ ->
   #   $('.main').scrollTo('.container-dos', 300)
   #   $('.main').css
   #     'background-color': '#ed6e5e'
+  
+  $('#repeatbtn').on 'click', (e)->
+    e.preventDefault()
+    location.reload()
   $('.case1-next').on 'click', ->
     $('.main').scrollTo('.container-tres', 300)
     chngBg('#a4c060')
@@ -88,33 +97,39 @@ $ ->
     $("#doughnutChart").drawDoughnutChart(chart)
   $('.case6-next').on 'click', ->
     personaje = sortSome(userData.profile)
+    copy = 'https://twitter.com/home?status=descubr%C3%AD%20que%20soy%20The%20'+personaje+'.%20%23soyemprendedor%20y%20tu?%20descubre%20que%20tipo%20de%20emprendedor%20eres%20http://quizdelemprendedor.com'
     console.log personaje
-    
+    chngBg('#4c72a2')
+    $('#twitbtn-cont').attr
+      href: copy
+    $('#shareoverlay .nombre').html personaje
     $('#personaje .persona.'+personaje).css
         display: 'block'
-    
-    $('.main').scrollTo('.container-result', 300)
-    switch personaje
-      when "mastermind"
-        chngBg '#f1c700'
+    $('.main').scrollTo('.container-cargando', 300)
+    setTimeout ->
+      $('.main').scrollTo('.container-result', 300)
+      switch personaje
+        when "mastermind"
+          chngBg '#f1c700'
 
-      when 'goldseeker'
-        chngBg '#2d458c'
+        when 'goldseeker'
+          chngBg '#2d458c'
 
-      when 'lifestyler'
-        chngBg '#c8238d'
+        when 'lifestyler'
+          chngBg '#c8238d'
 
-      when 'coolhunter'
-        chngBg '#89c01f'
+        when 'coolhunter'
+          chngBg '#89c01f'
 
-      when 'spotlighter'
-        chngBg '#eda200'
+        when 'spotlighter'
+          chngBg '#eda200'
 
-      when 'greatcreator'
-        chngBg '#e52653'
+        when 'greatcreator'
+          chngBg '#e52653'
 
-      else
-        console.log 'error switch'
+        else
+          console.log 'error switch'
+    , 3000
     
 
   $('.pieza').on 'click', ->

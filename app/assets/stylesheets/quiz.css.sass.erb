@@ -95,6 +95,24 @@ ul
     width: 370px
     margin-right: 15px
     p
+      text-decoration: none
+      display: block
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -khtml-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      color: #205e81
+      float: right
+      font-family: 'Arial'
+      font-size: 11px
+      margin-right: 10px
+      text-align: right
+
+    a
+      text-decoration: none
+      display: block
       -webkit-touch-callout: none
       -webkit-user-select: none
       -khtml-user-select: none
@@ -126,8 +144,19 @@ ul
   -o-transition: background-color 0.3s ease-in-out
   -ms-transition: background-color 0.3s ease-in-out
   transition: background-color 0.3s ease-in-out
-.container-result
+.container-cargando
   position: relative
+.container-result
+
+  position: relative
+  .socialsharebtn
+    margin-left: 20px
+    float: left
+    display: block
+    width: 80px
+
+    &:first-child
+      margin-left: 0
   #repeat
     width: 182px
     height: 64px
@@ -146,6 +175,7 @@ ul
       -webkit-transform: rotateY(0deg)
       -webkit-transform-origin: 0% 50%
 
+      // -webkit-transition: all 0.2s
       -webkit-transition: all 0.2s ease-in-out
       -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.45))
       &:hover
@@ -188,6 +218,235 @@ ul
     top: 20px
     left: 20px
     border: 1px solid #fff
+  #sharebtn-cont
+    position: absolute
+    margin-left: 195px
+    margin-top: -140px
+    left: 50%
+    top: 50%
+    cursor: pointer
+    p.compartir
+      font-family: 'chunk'
+      font-size: 13px
+      color: #fff
+      letter-spacing: 1px
+      text-align: center
+      width: 100%
+      position: relative
+      bottom: 0
+    &:hover
+      #sharebtn
+        -webkit-transform: rotateY(360deg)
+  #shareoverlay
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.85)
+    position: absolute
+    z-index: 1000
+    display: block
+    visibility: hidden
+    p
+      text-align: center
+      font-family: 'chunk'
+      &.the
+        width: 100%
+        color: #fff
+        margin: 0
+        padding: 0
+        position: relative
+        font-size: 37px
+        line-height: 20px
+        padding-top: 100px
+      &.nombre
+        width: 100%
+        color: #fff
+        margin: 0
+        padding: 0
+        position: relative
+        // bottom: 5px
+        font-size: 66px
+        line-height: 66px
+        text-transform: uppercase
+      &.sharetext1
+        color: #edca1c
+        font-size: 21px
+        padding-top: 60px
+        letter-spacing: 1px
+      &.sharetext2
+        color: #fff
+        font-family: 'geo'
+        font-size: 15px
+        line-height: 18px
+        padding-top: 35px
+        clear: both
+        font-style: italic
+    .share-container
+      padding-top: 25px
+      margin-left: auto
+      margin-right: auto
+      width: 300px
+  #sharebtn
+    width: 70px
+    height: 70px
+    // background-color: #FFF
+    // -webkit-border-radius: 50%
+    // -moz-border-radius: 50%
+    // -ms-border-radius: 50%
+    // -o-border-radius: 50%
+    background-image: url('<%= asset_path("share.png")%>')
+    background-size: cover
+    background-position: 50% 50%
+    -webkit-transition: -webkit-transform 0.6s ease-in-out
+    svg
+      display: block
+      padding-top: 15%
+      padding-left: 9%
+      width: 70%
+  #todosbtn-cont
+    position: absolute
+    margin-left: -265px
+    margin-top: -140px
+    left: 50%
+    top: 50%
+    cursor: pointer
+    p.compartir
+      font-family: 'chunk'
+      font-size: 13px
+      color: #fff
+      letter-spacing: 1px
+      text-align: center
+      width: 100%
+      position: relative
+      bottom: 0
+      margin-left: -5px
+      width: 80px
+
+    &:hover
+      #todosbtn
+        -webkit-transform: rotateY(360deg)
+    #todosbtn
+      width: 70px
+      height: 70px
+      margin-left: -5px
+      // background-color: #FFF
+      // -webkit-border-radius: 50%
+      // -moz-border-radius: 50%
+      // -ms-border-radius: 50%
+      // -o-border-radius: 50%
+      background-image: url('<%= asset_path("todos.png")%>')
+      background-size: cover
+      background-position: 50% 50%
+      -webkit-transition: -webkit-transform 0.6s ease-in-out
+    
+  
+  #facebtn-cont
+    
+    cursor: pointer
+    p.compartir
+      font-family: 'chunk'
+      font-size: 13px
+      color: #fff
+      letter-spacing: 1px
+      text-align: center
+      width: 100%
+      position: relative
+      bottom: 0
+      // margin-left: -5px
+      width: 80px
+
+    &:hover
+      #facebtn
+        -webkit-transform: rotateY(360deg)
+    #facebtn
+      width: 70px
+      height: 70px
+      margin-left: auto
+      margin-right: auto
+
+      // margin-left: -5px
+      // background-color: #FFF
+      // -webkit-border-radius: 50%
+      // -moz-border-radius: 50%
+      // -ms-border-radius: 50%
+      // -o-border-radius: 50%
+      background-image: url('<%= asset_path("face.png")%>')
+      background-size: cover
+      background-position: 50% 50%
+      -webkit-transition: -webkit-transform 0.6s ease-in-out
+
+  #twitbtn-cont
+    
+    cursor: pointer
+    p.compartir
+      font-family: 'chunk'
+      font-size: 13px
+      color: #fff
+      letter-spacing: 1px
+      text-align: center
+      width: 100%
+      position: relative
+      bottom: 0
+      // margin-left: -5px
+      width: 80px
+
+    &:hover
+      #twitbtn
+        -webkit-transform: rotateY(360deg)
+    #twitbtn
+      width: 70px
+      height: 70px
+      margin-left: auto
+      margin-right: auto
+      // margin-left: -5px
+      // background-color: #FFF
+      // -webkit-border-radius: 50%
+      // -moz-border-radius: 50%
+      // -ms-border-radius: 50%
+      // -o-border-radius: 50%
+      background-image: url('<%= asset_path("twit.png")%>')
+      background-size: cover
+      background-position: 50% 50%
+      -webkit-transition: -webkit-transform 0.6s ease-in-out
+
+  #downbtn-cont
+    
+    cursor: pointer
+    p.compartir
+      font-family: 'chunk'
+      font-size: 13px
+      color: #fff
+      letter-spacing: 1px
+      text-align: center
+      width: 100%
+      position: relative
+      bottom: 0
+      // margin-left: -5px
+      width: 80px
+
+    &:hover
+      #downbtn
+        -webkit-transform: rotateY(360deg)
+    #downbtn
+      width: 70px
+      height: 70px
+      margin-left: auto
+      margin-right: auto
+      // margin-left: -5px
+      // background-color: #FFF
+      // -webkit-border-radius: 50%
+      // -moz-border-radius: 50%
+      // -ms-border-radius: 50%
+      // -o-border-radius: 50%
+      background-image: url('<%= asset_path("share.png")%>')
+      background-size: cover
+      background-position: 50% 50%
+      -webkit-transition: -webkit-transform 0.6s ease-in-out
+
+
+
+    
   p.turesultado
     font-family: 'chunk'
     font-size: 34px
@@ -1058,7 +1317,7 @@ ul
   .close
     width: 20px
     height: 20px
-    position: fixed
+    position: absolute
     cursor: pointer
     top: 20px
     right: 20px
@@ -1110,3 +1369,108 @@ ul
 
       
 
+
+.mikepad-loading
+  width: 150px
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translateY(-50%) translateX(-50%)
+  -moz-transform: translateY(-50%) translateX(-50%)
+  -o-transform: translateY(-50%) translateX(-50%)
+  transform: translateY(-50%) translateX(-50%)
+  .binding
+    content: ''
+    width: 27px
+    height: 4px
+    border: 2px solid #fff
+    margin: 0 auto
+  .pad
+    width: 15px
+    height: 18px
+    border: 2px solid #fff
+    border-top: 0
+    padding: 6px
+    margin: 0 auto
+  .line
+    width: 15px
+    margin-top: 4px
+    border-top: 2px solid #fff
+    opacity: 0
+    -webkit-animation: writeline 3s infinite ease-in
+    -moz-animation: writeline 3s infinite ease-in
+    -o-animation: writeline 3s infinite ease-in
+    animation: writeline 3s infinite ease-in
+    &:first-child
+      margin-top: 0
+    &.line1
+      -webkit-animation-delay: 0s
+      -moz-animation-delay: 0s
+      -o-animation-delay: 0s
+      animation-delay: 0s
+    &.line2
+      -webkit-animation-delay: 0.5s
+      -moz-animation-delay: 0.5s
+      -o-animation-delay: 0.5s
+      animation-delay: 0.5s
+    &.line3
+      -webkit-animation-delay: 1s
+      -moz-animation-delay: 1s
+      -o-animation-delay: 1s
+      animation-delay: 1s
+  .text
+    text-align: center
+    margin-top: 10px
+    font-size: 14px
+    color: #fff
+
+@-webkit-keyframes writeline
+  0%
+    width: 0px
+    opacity: 0
+  33%
+    width: 15px
+    opacity: 1
+  70%
+    opacity: 1
+  100%
+    opacity: 0
+
+
+@-moz-keyframes writeline
+  0%
+    width: 0px
+    opacity: 0
+  33%
+    width: 15px
+    opacity: 1
+  70%
+    opacity: 1
+  100%
+    opacity: 0
+
+
+@-o-keyframes writeline
+  0%
+    width: 0px
+    opacity: 0
+  33%
+    width: 15px
+    opacity: 1
+  70%
+    opacity: 1
+  100%
+    opacity: 0
+
+
+@keyframes writeline
+  0%
+    width: 0px
+    opacity: 0
+  33%
+    width: 15px
+    opacity: 1
+  70%
+    opacity: 1
+  100%
+    opacity: 0

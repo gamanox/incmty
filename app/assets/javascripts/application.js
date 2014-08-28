@@ -28,12 +28,30 @@
 // $(function() {
 //   $('.btn').on('click', function(e) {
 //     e.preventDefault();
-//     FB.api('/me/feed', 'post', {
+//     FB.api '/me/feed', 'post', {
 //       message: 'Hello, world!'
 //     });
 //     console.log("click");
 //   });
 // });
+
+$(function(){
+  $('#facebtn-cont').on('click', function() {
+    // return FB.api('/me/feed', 'post', {
+    //   message: 'Hello, world!'
+    // }, function(response) {
+    //   if (!response || response.error) {
+    //     return alert("Error occured");
+    //   } else {
+    //     return alert("Action was successful! Action ID: " + response.id);
+    //   }
+    // });
+  FB.ui({
+    method: 'share',
+    href: 'https://developers.facebook.com/docs/',
+  }, function(response){});
+  });
+});
 
 var userData = {
   gender: 'male',
@@ -44,4 +62,5 @@ var userData = {
 
 }
 var sortprofile = [];
+
 

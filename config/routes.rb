@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  
+  constraints subdomain: 'api' do
+    namespace :api, path: '/' do
+      resources :users
+    end
+  end
+  resources :users
+  resources :quiz
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,9 +63,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  match 'quiz/update_user', to: 'quiz#update_user', via: [:post]
   root 'quiz#index'
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
-  match "/users/:id" => "user#update", via: :patch
 
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
 
