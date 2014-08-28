@@ -37,18 +37,26 @@
 
 $(function(){
   $('#facebtn-cont').on('click', function() {
-    FB.api('/me/feed', 'post', {
-      message: 'Hello, world!',
-      picture: 'https://incmty.herokuapp.com/her-mastermind.jpg'
-    }, function(response) {
-    });
+    // FB.api('/me/feed', 'post', {
+    //   message: 'Hello, world!',
+    //   picture: 'http://incmty.herokuapp.com/her-mastermind.jpg'
+    // }, function(response) {
+    // });
   // FB.ui({
-  //   method: 'share',
+  //   method: 'feed',
   //   href: 'https://incmty.herokuapp.com/',
   //   caption: 'prueba',
   //   description: 'quiz del emprendedor',
   //   picture: 'https://incmty.herokuapp.com/her-mastermind.jpg'
   // }, function(response){});
+  FB.ui({
+    method: 'feed',
+    link: 'http://incmty.herokuapp.com/',
+    caption: 'An example caption',
+    picture: 'http://incmty.herokuapp.com/her-mastermind.jpg'
+  }, function(response){});
+
+
   });
 });
 
