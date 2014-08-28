@@ -37,7 +37,7 @@
 
 $(function(){
   $('#facebtn-cont').on('click', function() {
-    return FB.api('/me/feed', 'post', {
+    FB.api('/me/feed', 'post', {
       message: 'Hello, world!',
       picture: 'https://incmty.herokuapp.com/her-mastermind.jpg'
     }, function(response) {

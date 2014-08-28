@@ -43,7 +43,7 @@ $ ->
       right: '-300px'
   # console.log(#{current_user.name})
   # $('.containerscreen').height($(window).height())
-  $('#sharebtn').on 'click', ->
+  $('#sharebtn-cont').on 'click', ->
     # FB.api('/me/feed', 'post', {
     #   message: 'Hello, world!'
     # }, (response)->
