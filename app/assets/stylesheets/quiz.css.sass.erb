@@ -37,6 +37,24 @@ ul
   li
     margin: 0
     padding: 0
+#help
+  top: 50px
+  right: 50%
+  margin-right: -400px
+  cursor: pointer
+  height: 62px
+  width: 62px
+  display: block
+  position: fixed
+  z-index: 1500
+  background-image: url('<%= asset_path("help.png")%>')
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  -webkit-transition: -webkit-transform 0.2s ease-in-out
+  &:hover
+    -webkit-transform: rotate(360deg)
+
+
 #genderdiv
   visibility: hidden
 #footer
@@ -802,7 +820,11 @@ ul
     &.right
       margin-top: -175px
       margin-left: 225px
-
+.container-siete
+  
+  .case6-next
+    visibility: hidden
+    opacity: 0
 .container-seis
   // background-color: #86bce3
   .mono
@@ -1307,7 +1329,7 @@ ul
   width: 300px
   height: calc(100% - 30px)
   overflow: hidden
-  
+  z-index: 2000
   position: fixed
   top: 0
   right: -300px
@@ -1322,7 +1344,7 @@ ul
     cursor: pointer
     top: 20px
     right: 20px
-    z-index: 1000
+    z-index: 2000
     -webkit-transition: -webkit-transform 0.2s ease-in-out
     &:hover
       -webkit-transform: rotate(90deg)

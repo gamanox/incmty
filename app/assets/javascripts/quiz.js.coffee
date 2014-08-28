@@ -29,18 +29,24 @@ getResult = (respuesta)->
     else
       userData.profile[result]=1
   console.log userData.profile
-  
-userUpdate = ->
-  $.ajax 
+
     
 
 $ ->
   
   # console.log 
+  $('#help').on 'click', ->
+    $('#faqs').css
+      right: '0px'
+    $('#help').css
+      visibility: 'hidden'
   $("#faqs").scroller()
+
   $('#faqs .close').on 'click', ->
     $('#faqs').css
       right: '-300px'
+    $('#help').css
+      visibility: 'visible'
   # console.log(#{current_user.name})
   # $('.containerscreen').height($(window).height())
 
@@ -55,6 +61,8 @@ $ ->
     # )
     $('#shareoverlay').css
       visibility: 'visible'
+    $('#help').css
+      visibility: 'hidden'
 
     
   # $(".main").serialScroll
@@ -97,6 +105,8 @@ $ ->
     chngBg('#ff9966')
     $("#doughnutChart").drawDoughnutChart(chart)
   $('.case6-next').on 'click', ->
+    $('#help').css
+      visibility: 'hidden'
     gender = $('#genderdiv').attr 'gender'
     personaje = sortSome(userData.profile)
     copy = 'https://twitter.com/home?status=descubr%C3%AD%20que%20soy%20The%20'+personaje+'.%20%23soyemprendedor%20y%20tu?%20descubre%20que%20tipo%20de%20emprendedor%20eres%20http://quizdelemprendedor.com'
@@ -111,9 +121,9 @@ $ ->
     $('#facebtn-cont').on 'click', ->
       FB.ui
         method: "feed"
-        link: "http://incmty.herokuapp.com/"
+        link: "http://quizdelemprendedor.com/"
         description: "Mi avatar de emprendedor es The "+personaje+" - Descubre que tipo de emprendedor eres"
-        picture: "http://incmty.herokuapp.com/"+gender+personaje+".jpg"
+        picture: "http://quizdelemprendedor.com/"+gender+personaje+".jpg"
       , (response) ->
     setTimeout ->
       $('.main').scrollTo('.container-result', 300)

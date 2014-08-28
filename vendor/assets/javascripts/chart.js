@@ -170,6 +170,10 @@ var chart = [
     }
     
     function pathClick(e) {
+      $('.case6-next').css({
+        visibility: 'visible',
+        opacity: 1
+      });
       var result = $(this).attr('resultado');
       // 
       if (userData.profile.hasOwnProperty(result)){
