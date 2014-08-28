@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui.min
+//= require uimobile
 //= require jquery.scrollTo.min
 //= require serialScroll
 //= require miniscroll
