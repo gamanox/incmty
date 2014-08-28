@@ -48,10 +48,10 @@ $(function(){
     // });
   FB.ui({
     method: 'share',
-    href: 'http://incmty.herokuapp.com/',
+    href: 'https://incmty.herokuapp.com/',
     caption: 'prueba',
     description: 'quiz del emprendedor',
-    picture: 'http://incmty.herokuapp.com/her-mastermind.jpg'
+    picture: 'https://incmty.herokuapp.com/her-mastermind.jpg'
   }, function(response){});
   });
 });
