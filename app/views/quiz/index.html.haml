@@ -17,10 +17,11 @@
 #screen
   #help
   -if current_user
-    -if current_user.gender = 'male'
-      #genderdiv{:gender => 'him-'}
-    -else
+    -if current_user.gender.include?("female")
       #genderdiv{:gender => 'her-'}
+    -else
+      #genderdiv{:gender => 'him-'}
+      
   .main
     .container-uno.containerscreen
       = image_tag("quiztitle.png", :class=>"quiz-title")
@@ -456,7 +457,7 @@
       .case-title.case-cuatro
         %p.case-number Caso #3: 
         = image_tag("left-brace.png", :class => "left-brace")
-        %p.case-description Si tuvieras que elegir estrategicamente tu lugar en el tablero de Ajedrez, tú serías...
+        %p.case-description Si tuvieras que elegir estratégicamente tu lugar en el tablero de Ajedrez, tú serías...
         = image_tag("right-brace.png", :class => "right-brace")
       %ul.chess-container
         %li.pieza
@@ -1876,7 +1877,7 @@
       .margen
       -if current_user
 
-        %p.turesultado #{current_user.name}<br>Basado en tu desempeño<br>tu resultado es:
+        %p.turesultado #{current_user.name}<br>Basado en tus respuestas<br>eres:
       -else
         %p.turesultado Basado en tu desempeño <br> tu resultado es:
 

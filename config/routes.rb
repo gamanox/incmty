@@ -66,6 +66,7 @@ Rails.application.routes.draw do
   match 'quiz/update_user', to: 'quiz#update_user', via: [:post]
   root 'quiz#index'
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/:provider/update', to: 'sessions#update', via: [:get, :post]
 
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
 
