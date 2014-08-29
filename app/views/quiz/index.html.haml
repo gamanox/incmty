@@ -21,7 +21,7 @@
       #genderdiv{:gender => 'her-'}
     -else
       #genderdiv{:gender => 'him-'}
-      
+
   .main
     .container-uno.containerscreen
       = image_tag("quiztitle.png", :class=>"quiz-title")
@@ -923,7 +923,7 @@
         = image_tag("right-brace.png", :class => "right-brace")
       = image_tag("case1-next.png", :class => "case5-next case-next")
       -if current_user
-        -if current_user.gender = 'male'
+        -if current_user.gender.include?("male")
           .mono
             %svg#case6-kiddo{"enable-background" => "new 0 0 50 95.1", space: "preserve", version: "1.1", viewbox: "0 0 50 95.1", x: "0px", xmlns: "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", y: "0px"}
               %g
@@ -1128,7 +1128,7 @@
 
       #todospersonajes
         -if current_user
-          -if current_user.gender = 'male'
+          -if current_user.gender.include?("male")
             #perfiles.him
               .persona.mastermind
                 %svg{"enable-background" => "new 0 0 67.6 106.9", space: "preserve", version: "1.1", viewbox: "0 0 67.6 106.9", x: "0px", xmlns: "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", y: "0px"}
@@ -1883,7 +1883,7 @@
 
       #personaje
         -if current_user
-          -if current_user.gender = 'male'
+          -if current_user.gender.include?("male")
             .persona.mastermind
               %svg#him-mastermind{"enable-background" => "new 0 0 67.6 106.9", space: "preserve", version: "1.1", viewbox: "0 0 67.6 106.9", x: "0px", xmlns: "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", y: "0px"}
                 %g
