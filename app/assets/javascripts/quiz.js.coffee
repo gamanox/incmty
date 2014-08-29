@@ -99,7 +99,11 @@ $ ->
     chngBg('#3dc0d4')
   $('.case4-next').on 'click', ->
     $('.main').scrollTo('.container-seis', 300)
-    chngBg('#86bce3')
+    gender = $('#genderdiv').attr 'gender'
+    if gender is 'her-'
+      chngBg('#d64f92') 
+    else
+      chngBg('#86bce3')
   $('.case5-next').on 'click', ->
     $('.main').scrollTo('.container-siete', 300)
     chngBg('#ff9966')
