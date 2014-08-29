@@ -26,7 +26,7 @@
     .container-uno.containerscreen
       = image_tag("quiztitle.png", :class=>"quiz-title")
       %p.quiz-subtitle
-        ( Descubre que tipo de emprendedor eres, comparte y gana )
+        ( Descubre qué tipo de emprendedor eres, comparte y gana )
       = link_to "", "/auth/facebook", :class => "quiz-start case-next"
       
     .container-dos.containerscreen
@@ -35,6 +35,9 @@
         = image_tag("left-brace.png", :class => "left-brace")
         %p.case-description Re-ordena por tu nivel de prioridad el uso de los siguientes elementos:
         = image_tag("right-brace.png", :class => "right-brace")
+      %p.instruccion-caso1.instruccion Arrastra los elementos<br>para organizarlos como lo prefieras.
+      = image_tag("case1-scale.png", :class => "case1-scale")
+
       %ul.drag-container#caso1-resultado{:resultado => "lifestyler"}
         
         %li.element{:respuesta => "lifestyler"}
@@ -225,7 +228,6 @@
               %path{"clip-rule" => "evenodd", d: "M4.2,26.2c-0.3,0.4,0,1,0.4,1.7c0,0.1,0,0.2,0,0.2l-1,0l-0.4,0.8\r\n\t\tc0,0.1-0.1,0-0.2,0c-0.4-0.7-0.7-1.3-0.6-2.6C3,26.2,3.6,26.2,4.2,26.2", fill: "#DB0000", "fill-rule" => "evenodd"}
           %p.nombre Cuaderno
 
-      = image_tag("case1-scale.png", :class => "case1-scale")
       
       = image_tag("case1-next.png", :class => "case1-next case-next", :id => 'case-next')
     .container-tres.containerscreen
@@ -234,6 +236,8 @@
         = image_tag("left-brace.png", :class => "left-brace")
         %p.case-description Vas a un evento y con el primero que haces networking es:
         = image_tag("right-brace.png", :class => "right-brace")
+      %p.instruccion-caso1.instruccion Selecciona sólo uno<br>de los siguientes personajes.
+
       %ul.networking-container#caso2-resultado{:resultado => ""}
         %li.entrepeneur#inversionista{:respuesta => "goldseeker"}
           %svg#case3-men{"enable-background" => "new 0 0 34.8 90", space: "preserve", version: "1.1", viewbox: "0 0 34.8 90", x: "0px", xmlns: "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", y: "0px"}
@@ -459,6 +463,8 @@
         = image_tag("left-brace.png", :class => "left-brace")
         %p.case-description Si tuvieras que elegir estratégicamente tu lugar en el tablero de Ajedrez, tú serías...
         = image_tag("right-brace.png", :class => "right-brace")
+      %p.instruccion-caso1.instruccion Selecciona sólo<br>una de las siguientes figuras.
+
       %ul.chess-container
         %li.pieza
           %svg#case4-king{"enable-background" => "new 0 0 15.1 46", space: "preserve", version: "1.1", viewbox: "0 0 15.1 46", x: "0px", xmlns: "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", y: "0px"}
@@ -521,7 +527,7 @@
       .case-title.case-cinco
         %p.case-number Caso #4: 
         = image_tag("left-brace.png", :class => "left-brace")
-        %p.case-description De subirte al proximo StartupBus (R) ¿Que cosas empacarías “por si acaso”?
+        %p.case-description De subirte al próximo StartupBus<sup>®</sup> ¿Qué cosas empacarías “por si acaso”?
         = image_tag("right-brace.png", :class => "right-brace")
       = image_tag("case1-next.png", :class => "case4-next case-next")
 
@@ -1124,7 +1130,7 @@
           .line.line2
           .line.line3
         .text
-          Calculando...
+          Analizando<br>tus respuestas...
     .container-result.containerscreen
 
       #todospersonajes
@@ -2680,7 +2686,11 @@
         #shareoverlay
           %p.the THE
           %p.nombre 
-          %p.sharetext1.sharetext Comparte y gana un pasepara INC-MTY 2014<sup>*</sup>
+          %p.sharetext1.sharetext 
+            Comparte y gana un pase para
+            %a{:href => "http://incmty.itesm.mx", :target => "_blank"}
+              =image_tag("logoinc.png", :class=>"inclogoimg")
+            <sup>*</sup>
           .share-container
             %a#downbtn-cont.socialsharebtn{:href => 'avatars.zip'}
               #downbtn
@@ -2749,7 +2759,7 @@
       .left
         %a.tw{:href => "https://twitter.com/incmty", :target => "_blank"}
         %a.fb{:href => "https://www.facebook.com/INCmty", :target => "_blank"}
-        %a.in{:href => "http://www.facebook.com", :target => "_blank"}
+        / %a.in{:href => "http://www.facebook.com", :target => "_blank"}
 
       .right
         %a.sede{:href => "http://incmty.itesm.mx/sede/", :target => "_blank"} Sede

@@ -62,7 +62,7 @@ $ ->
     $('#shareoverlay').css
       visibility: 'visible'
     $('#help').css
-      visibility: 'hidden'
+      visibility: 'visible'
 
     
   # $(".main").serialScroll
