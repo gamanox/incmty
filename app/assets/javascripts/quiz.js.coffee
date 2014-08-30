@@ -2,6 +2,9 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+String::capitalize = ->
+  @charAt(0).toUpperCase() + @slice(1)
+
 chngBg = (color)->
   $('.main').css
     'background-color': color
@@ -113,7 +116,7 @@ $ ->
       visibility: 'hidden'
     gender = $('#genderdiv').attr 'gender'
     personaje = sortSome(userData.profile)
-    copy = 'https://twitter.com/home?status=descubr%C3%AD%20que%20soy%20The%20'+personaje+'.%20%23soyemprendedor%20y%20tu?%20descubre%20que%20tipo%20de%20emprendedor%20eres%20http://quizdelemprendedor.com'
+    copy = 'https://twitter.com/home?status=Descubr%C3%AD%20que%20soy%20un%20emprendedor%20'+personaje.capitalize()+',%20descubre%20qu%C3%A9%20tipo%20de%20emprendedor%20eres%20t%C3%BA%20aqu%C3%AD:%20http:/QuizDelEmprendedor.com%20%23INCmty'
     console.log personaje
     chngBg('#4c72a2')
     $('#twitbtn-cont').attr
@@ -126,7 +129,7 @@ $ ->
       FB.ui
         method: "feed"
         link: "http://quizdelemprendedor.com/"
-        description: "Mi avatar de emprendedor es The "+personaje+" - Descubre que tipo de emprendedor eres"
+        description: "Yo soy un "+personaje.capitalize()+". Descubre qué tipo de emprendedor eres aquí."
         picture: "http://quizdelemprendedor.com/"+gender+personaje+".jpg"
       , (response) ->
     setTimeout ->
