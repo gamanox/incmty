@@ -321,6 +321,30 @@ ul
         padding-top: 35px
         clear: both
         font-style: italic
+        .incfb
+          cursor: pointer
+          display: inline-block
+          width: 24px
+          height: 24px
+          background-image: url('<%= asset_path("incfb.png")%>')
+          background-repeat: no-repeat
+          background-position: 50% 50%
+          -webkit-transition: -webkit-transform 0.2s ease-in-out
+          &:hover
+            -webkit-transform: rotate(360deg)
+        .inctw
+          cursor: pointer
+          display: inline-block
+          width: 24px
+          height: 24px
+          background-image: url('<%= asset_path("inctw.png")%>')
+          background-repeat: no-repeat
+          background-position: 50% 50%
+          -webkit-transition: -webkit-transform 0.2s ease-in-out
+          &:hover
+            -webkit-transform: rotate(360deg)
+
+
     .share-container
       padding-top: 25px
       margin-left: auto
