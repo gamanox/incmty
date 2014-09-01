@@ -112,11 +112,17 @@ $ ->
     chngBg('#ff9966')
     $("#doughnutChart").drawDoughnutChart(chart)
   $('.case6-next').on 'click', ->
+    $('').attr
+      href: "http://quizdelemprendedor.com/"+gender+personaje+".zip"
     $('#help').css
       visibility: 'hidden'
     gender = $('#genderdiv').attr 'gender'
     personaje = sortSome(userData.profile)
-    copy = 'https://twitter.com/home?status=Descubr%C3%AD%20que%20soy%20un%20emprendedor%20'+personaje.capitalize()+',%20descubre%20qu%C3%A9%20tipo%20de%20emprendedor%20eres%20t%C3%BA%20aqu%C3%AD:%20http:/QuizDelEmprendedor.com%20%23INCmty'
+    if gender is 'her-'
+      copy = 'https://twitter.com/home?status=Descubr%C3%AD%20que%20soy%20una%20emprendedora%20'+personaje.capitalize()+',%20descubre%20qu%C3%A9%20tipo%20de%20emprendedor%20eres%20t%C3%BA%20aqu%C3%AD:%20http:/QuizDelEmprendedor.com%20%23INCmty'
+    if gender is 'him-'
+      copy = 'https://twitter.com/home?status=Descubr%C3%AD%20que%20soy%20un%20emprendedor%20'+personaje.capitalize()+',%20descubre%20qu%C3%A9%20tipo%20de%20emprendedor%20eres%20t%C3%BA%20aqu%C3%AD:%20http:/QuizDelEmprendedor.com%20%23INCmty'
+
     console.log personaje
     chngBg('#4c72a2')
     $('#twitbtn-cont').attr
@@ -126,10 +132,15 @@ $ ->
         display: 'block'
     $('.main').scrollTo('.container-cargando', 300)
     $('#facebtn-cont').on 'click', ->
+      if gender is 'her-'
+        copy = 'Yo soy una '+personaje.capitalize()+'. Descubre qué tipo de emprendedor eres tú.'
+      if gender is 'him-'
+        copy = 'Yo soy un '+personaje.capitalize()+'. Descubre qué tipo de emprendedor eres tú.'
+
       FB.ui
         method: "feed"
         link: "http://quizdelemprendedor.com/"
-        description: "Yo soy un "+personaje.capitalize()+". Descubre qué tipo de emprendedor eres aquí."
+        description: ""
         picture: "http://quizdelemprendedor.com/"+gender+personaje+".jpg"
       , (response) ->
     setTimeout ->
