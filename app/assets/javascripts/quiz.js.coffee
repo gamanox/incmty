@@ -112,7 +112,7 @@ $ ->
     chngBg('#ff9966')
     $("#doughnutChart").drawDoughnutChart(chart)
   $('.case6-next').on 'click', ->
-    $('').attr
+    $('#downbtn-cont').attr
       href: "http://quizdelemprendedor.com/"+gender+personaje+".zip"
     $('#help').css
       visibility: 'hidden'
