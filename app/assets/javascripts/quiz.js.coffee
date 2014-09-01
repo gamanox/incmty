@@ -55,6 +55,8 @@ $ ->
   $('#shareoverlay .close').on 'click', ->
     $('#shareoverlay').css
       visibility: 'hidden'
+    $('#help').css
+      visibility: 'hidden'
   $('#sharebtn-cont').on 'click', ->
     # FB.api('/me/feed', 'post', {
     #   message: 'Hello, world!'
