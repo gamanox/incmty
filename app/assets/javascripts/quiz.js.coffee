@@ -43,12 +43,17 @@ $ ->
       right: '0px'
     $('#help').css
       visibility: 'hidden'
+    $('#shareoverlay .close').css
+      visibility: 'hidden'
   $("#faqs").scroller()
 
   $('#faqs .close').on 'click', ->
     $('#faqs').css
       right: '-300px'
     $('#help').css
+      visibility: 'visible'
+
+    $('#shareoverlay .close').css
       visibility: 'visible'
   # console.log(#{current_user.name})
   # $('.containerscreen').height($(window).height())
