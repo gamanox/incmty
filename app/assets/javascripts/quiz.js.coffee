@@ -141,7 +141,7 @@ $ ->
       FB.ui
         method: "feed"
         link: "http://quizdelemprendedor.com/"
-        description: ""
+        description: copy
         picture: "http://quizdelemprendedor.com/"+gender+personaje+".jpg"
       , (response) ->
     setTimeout ->
