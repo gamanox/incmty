@@ -266,6 +266,17 @@ ul
     z-index: 1000
     display: block
     visibility: hidden
+    .close
+      width: 20px
+      height: 20px
+      position: absolute
+      cursor: pointer
+      top: 50px
+      right: 50px
+      z-index: 2000
+      -webkit-transition: -webkit-transform 0.2s ease-in-out
+      &:hover
+        -webkit-transform: rotate(90deg)
     p
       text-align: center
       font-family: 'chunk'

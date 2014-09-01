@@ -52,7 +52,9 @@ $ ->
       visibility: 'visible'
   # console.log(#{current_user.name})
   # $('.containerscreen').height($(window).height())
-
+  $('#shareoverlay .close').on 'click', ->
+    $('#shareoverlay').css
+      visibility: 'hidden'
   $('#sharebtn-cont').on 'click', ->
     # FB.api('/me/feed', 'post', {
     #   message: 'Hello, world!'
@@ -134,9 +136,9 @@ $ ->
     $('.main').scrollTo('.container-cargando', 300)
     $('#facebtn-cont').on 'click', ->
       if gender is 'her-'
-        copy = 'Yo soy una '+personaje.capitalize()+'. Descubre qué tipo de emprendedor eres tú.'
+        copy = 'Yo soy una emprendedora '+personaje.capitalize()+'. Descubre aquí qué tipo de emprendedor eres tú.'
       if gender is 'him-'
-        copy = 'Yo soy un '+personaje.capitalize()+'. Descubre qué tipo de emprendedor eres tú.'
+        copy = 'Yo soy un emprendedor '+personaje.capitalize()+'. Descubre aquí qué tipo de emprendedor eres tú.'
 
       FB.ui
         method: "feed"
