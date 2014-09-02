@@ -49,11 +49,9 @@ $ ->
   $("#todospersonajes").scroller
     horizontal: true
   $('#todosbtn-cont').on 'click', ->
-    $('#todospersonajes').css
-      display: 'block'
+    $('#todospersonajes').fadeIn({},"fast")
   $('#todospersonajes .close').on 'click', ->
-    $('#todospersonajes').css
-      display: 'none'
+    $('#todospersonajes').fadeOut({},"fast")
   $('#faqs .close').on 'click', ->
     $('#faqs').css
       right: '-300px'
