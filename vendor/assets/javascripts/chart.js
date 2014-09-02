@@ -163,7 +163,7 @@ var chart = [
     };
     function pathMouseEnter(e) {
       var order = $(this).data().order;
-      $tip.text(data[order].title+ ": " + data[order].value)
+      $tip.text(data[order].title+ ": " + Math.round(((data[order].value)*100)/segmentTotal)+"%")
       // $tip.text(data[order].title + ": " + data[order].value)
           .fadeIn(100);
       settings.onPathEnter.apply($(this),[e,data]);
