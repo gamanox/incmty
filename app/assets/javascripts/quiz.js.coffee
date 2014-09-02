@@ -46,7 +46,10 @@ $ ->
     $('#shareoverlay .close').css
       visibility: 'hidden'
   $("#faqs").scroller()
-
+  $("#todospersonajes").scroller()
+  $('#todosbtn-cont').on 'click', ->
+    $('#todospersonajes').css
+      display: 'block'
   $('#faqs .close').on 'click', ->
     $('#faqs').css
       right: '-300px'
@@ -55,44 +58,19 @@ $ ->
 
     $('#shareoverlay .close').css
       visibility: 'visible'
-  # console.log(#{current_user.name})
-  # $('.containerscreen').height($(window).height())
+
   $('#shareoverlay .close').on 'click', ->
     $('#shareoverlay').css
       visibility: 'hidden'
     $('#help').css
       visibility: 'hidden'
   $('#sharebtn-cont').on 'click', ->
-    # FB.api('/me/feed', 'post', {
-    #   message: 'Hello, world!'
-    # }, (response)->
-    #   if not response or response.error
-    #     alert "Error occured"
-    #   else
-    #     alert "Action was successful! Action ID: " + response.id
-    # )
+
     $('#shareoverlay').css
       visibility: 'visible'
     $('#help').css
       visibility: 'visible'
 
-    
-  # $(".main").serialScroll
-    
-  #   items: ".containerscreen" # Selector to the items ( relative to the matched elements, '#sections' in this case )
-  #   # prev: "img.prev" # Selector to the 'prev' button (absolute!, meaning it's relative to the document)
-  #   next: ".case-next" # Selector to the 'next' button (absolute too)
-  #   axis: "y"
-  #   start:0
-  #   # stop:true # The default is 'y' scroll on both ways
-  #   # navigation: ".case-next"
-  #   duration: 700 # Length of the animation (if you scroll 2 axes and use queue, then each axis take half this time)
-  #   force: true
-  #   queue:false
-  # $('.quiz-start').on 'click', ->
-  #   $('.main').scrollTo('.container-dos', 300)
-  #   $('.main').css
-  #     'background-color': '#ed6e5e'
   
   $('#repeatbtn').on 'click', (e)->
     e.preventDefault()
