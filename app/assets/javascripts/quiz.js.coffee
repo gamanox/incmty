@@ -46,10 +46,14 @@ $ ->
     $('#shareoverlay .close').css
       visibility: 'hidden'
   $("#faqs").scroller()
-  $("#todospersonajes").scroller()
+  $("#todospersonajes").scroller
+    horizontal: true
   $('#todosbtn-cont').on 'click', ->
     $('#todospersonajes').css
       display: 'block'
+  $('#todospersonajes .close').on 'click', ->
+    $('#todospersonajes').css
+      display: 'none'
   $('#faqs .close').on 'click', ->
     $('#faqs').css
       right: '-300px'

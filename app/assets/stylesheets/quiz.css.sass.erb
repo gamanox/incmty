@@ -220,6 +220,17 @@ ul
     top: 0
     left: 0
     z-index: 900
+    .close
+      width: 20px
+      height: 20px
+      position: absolute
+      cursor: pointer
+      top: 50px
+      right: 50px
+      z-index: 2000
+      -webkit-transition: -webkit-transform 0.2s ease-in-out
+      &:hover
+        -webkit-transform: rotate(90deg)
     #perfiles
       width: 1800px
       height: 100%
@@ -246,7 +257,7 @@ ul
       &.greatcreator
         background-color: #e52653
       svg
-        margin-top: 40%
+        margin-top: 25%
         display: block
         margin-left: auto
         margin-right: auto
@@ -261,17 +272,17 @@ ul
         position: relative
         &.the
           margin-top: -90px
-          font-size: 37px
-          line-height: 20px
+          font-size: 25px
+          line-height: 15px
         &.nombre
           // bottom: 5px
-          font-size: 63px
-          line-height: 58px
+          font-size: 28px
+          line-height: 37px
         &.descripcion
           // color: #3c3c3c
-          font-size: 18px
+          font-size: 14px
           font-family: 'geo'
-          width: 500px
+          width: 250px
           height: auto
           line-height: 20px
           position: relative
