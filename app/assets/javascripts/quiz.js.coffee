@@ -109,9 +109,9 @@ $ ->
     $('#downbtn-cont').attr
       href: "http://quizdelemprendedor.com/"+gender+personaje+".zip"
     if gender is 'her-'
-      copy = 'https://twitter.com/home?status=Descubr%C3%AD%20que%20soy%20una%20emprendedora%20'+personaje.capitalize()+',%20descubre%20qu%C3%A9%20tipo%20de%20emprendedor%20eres%20t%C3%BA%20aqu%C3%AD:%20http:/QuizDelEmprendedor.com%20%23INCmty'
+      copy = 'https://twitter.com/home?status=Descubr%C3%AD%20que%20soy%20una%20emprendedora%20'+personaje.capitalize()+',%20descubre%20qu%C3%A9%20tipo%20de%20emprendedor%20eres%20t%C3%BA%20aqu%C3%AD:%20http://QuizDelEmprendedor.com%20%23INCmty'
     if gender is 'him-'
-      copy = 'https://twitter.com/home?status=Descubr%C3%AD%20que%20soy%20un%20emprendedor%20'+personaje.capitalize()+',%20descubre%20qu%C3%A9%20tipo%20de%20emprendedor%20eres%20t%C3%BA%20aqu%C3%AD:%20http:/QuizDelEmprendedor.com%20%23INCmty'
+      copy = 'https://twitter.com/home?status=Descubr%C3%AD%20que%20soy%20un%20emprendedor%20'+personaje.capitalize()+',%20descubre%20qu%C3%A9%20tipo%20de%20emprendedor%20eres%20t%C3%BA%20aqu%C3%AD:%20http://QuizDelEmprendedor.com%20%23INCmty'
 
     console.log personaje
     chngBg('#4c72a2')
