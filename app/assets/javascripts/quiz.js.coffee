@@ -33,9 +33,13 @@ getResult = (respuesta)->
       userData.profile[result]=1
   console.log userData.profile
 
-    
+
 
 $ ->
+ 
+  pageView = ()->
+    console.log 'analytics: '+page
+    ga('send', 'pageview', '/'+page)
   currentCase = '.container-uno'
   # console.log 
   $('#help').on 'click', ->

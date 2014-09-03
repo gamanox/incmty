@@ -11,10 +11,7 @@
     ga('create', 'UA-42769061-4', 'auto');
     ga('send', 'pageview');
     
-    function pageView(page) {
-      console.log('analytics: ' + page);
-      ga('send', 'pageview', '/' + page);
-    };
+    
   </script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
