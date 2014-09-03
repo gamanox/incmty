@@ -52,10 +52,6 @@ var sortprofile = [];
 
 
 
-function pageView(page) {
-  console.log('analytics: ' + page);
-  return ga('send', 'pageview', '/' + page);
-};
 
 
 
