@@ -50,7 +50,7 @@ var userData = {
 var sortprofile = [];
 
 
-var gaua, pageView;
+var gaua;
 
 gaua = 'UA-42769061-4';
 
