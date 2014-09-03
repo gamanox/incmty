@@ -23,6 +23,7 @@
 //= require delaunay
 //= require paper-full.min
 //= require chart
+//= require ga
 
 //= require_tree .
 
