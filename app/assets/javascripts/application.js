@@ -54,7 +54,7 @@ var gaua, pageView;
 
 gaua = 'UA-42769061-4';
 
-pageView = function(page) {
+function pageView(page) {
   console.log('analytics: ' + page);
   return ga('send', 'pageview', '/' + page);
 };
