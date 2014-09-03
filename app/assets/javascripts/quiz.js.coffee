@@ -41,7 +41,6 @@ $(window).resize ->
 $ ->
   
   
-  currentCase = '.container-uno'
   # console.log 
   $('#help').on 'click', ->
     pageView('faqs')
