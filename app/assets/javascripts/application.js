@@ -58,41 +58,4 @@ function pageView(page) {
 };
 
 
-$(function() {
-  $('#help').on('click', function() {
-    return pageView('faqs');
-  });
-  $('#todosbtn-cont').on('click', function() {
-    return pageView('todos-personajes');
-  });
-  $('#sharebtn-cont').on('click', function() {
-    return pageView('abrir-compartir');
-  });
-  $('#repeatbtn').on('click', function(e) {
-    return pageView('repetirquiz');
-  });
-  $('.case1-next').on('click', function() {
-    return pageView('caso2');
-  });
-  $('.case2-next').on('click', function() {
-    return pageView('caso3');
-  });
-  $('.case3-next').on('click', function() {
-    return pageView('caso4');
-  });
-  $('.case4-next').on('click', function() {
-    return pageView('caso5');
-  });
-  $('.case5-next').on('click', function() {
-    return pageView('caso6');
-  });
-  $('.case6-next').on('click', function() {
-    return pageView('resultado');
-  });
-  $('#facebtn-cont').on('click', function() {
-    return pageView('compartir-facebook');
-  });
-  return $('#twitbtn-cont').on('click', function() {
-    return pageView('compartir-twitter');
-  });
-});
+

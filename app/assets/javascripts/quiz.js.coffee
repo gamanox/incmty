@@ -39,6 +39,7 @@ $ ->
   currentCase = '.container-uno'
   # console.log 
   $('#help').on 'click', ->
+    pageView('faqs')
     $('#faqs').css
       right: '0px'
     $('#help').css
@@ -49,6 +50,7 @@ $ ->
   $("#todospersonajes").scroller
     horizontal: true
   $('#todosbtn-cont').on 'click', ->
+    pageView('todos-personajes')
     $('#todospersonajes').fadeIn({},"fast")
   $('#todospersonajes .close').on 'click', ->
     $('#todospersonajes').fadeOut({},"fast")
@@ -67,6 +69,7 @@ $ ->
     $('#help').css
       visibility: 'hidden'
   $('#sharebtn-cont').on 'click', ->
+    pageView('compartir')
 
     $('#shareoverlay').css
       visibility: 'visible'
@@ -75,21 +78,26 @@ $ ->
 
   
   $('#repeatbtn').on 'click', (e)->
+    pageView('repetir-quiz')
     e.preventDefault()
     location.reload()
   $('.case1-next').on 'click', ->
+    pageView('caso2')
     $('.main').scrollTo('.container-tres', 300)
     chngBg('#a4c060')
     getResult('#caso1-resultado')
   $('.case2-next').on 'click', ->
+    pageView('caso3')
     $('.main').scrollTo('.container-cuatro', 300)
     chngBg('#b67ba6')
     getResult('#caso2-resultado')
 
   $('.case3-next').on 'click', ->
+    pageView('caso4')
     $('.main').scrollTo('.container-cinco', 300)
     chngBg('#3dc0d4')
   $('.case4-next').on 'click', ->
+    pageView('caso5')
     $('.main').scrollTo('.container-seis', 300)
     gender = $('#genderdiv').attr 'gender'
     if gender is 'her-'
@@ -97,10 +105,12 @@ $ ->
     else
       chngBg('#86bce3')
   $('.case5-next').on 'click', ->
+    pageView('caso6')
     $('.main').scrollTo('.container-siete', 300)
     chngBg('#ff9966')
     $("#doughnutChart").drawDoughnutChart(chart)
   $('.case6-next').on 'click', ->
+    pageView('resultado')
 
     $('#help').css
       visibility: 'hidden'
@@ -122,6 +132,7 @@ $ ->
         display: 'block'
     $('.main').scrollTo('.container-cargando', 300)
     $('#facebtn-cont').on 'click', ->
+      pageView('compartir-facebook')
       if gender is 'her-'
         copy = 'Yo soy una emprendedora '+personaje.capitalize()+'. Descubre aquí qué tipo de emprendedor eres tú.'
       if gender is 'him-'
