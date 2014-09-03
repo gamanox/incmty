@@ -34,11 +34,12 @@ getResult = (respuesta)->
     else
       userData.profile[result]=1
   console.log userData.profile
-
+$(window).resize ->
+  $('.main').scrollTo(currentCase, 300)
 
 
 $ ->
- 
+  
   
   currentCase = '.container-uno'
   # console.log 
@@ -89,7 +90,7 @@ $ ->
     pageView('caso2')
     $('.main').scrollTo('.container-tres', 300)
     chngBg('#a4c060')
-    currentCase = '.container-dos'
+    currentCase = '.container-tres'
 
     getResult('#caso1-resultado')
   $('.case2-next').on 'click', ->
@@ -97,17 +98,21 @@ $ ->
     $('.main').scrollTo('.container-cuatro', 300)
     chngBg('#b67ba6')
     getResult('#caso2-resultado')
-    currentCase = '.container-tres'
+    currentCase = '.container-cuatro'
 
 
   $('.case3-next').on 'click', ->
     pageView('caso4')
     $('.main').scrollTo('.container-cinco', 300)
     chngBg('#3dc0d4')
+    currentCase = '.container-cinco'
+
   $('.case4-next').on 'click', ->
     pageView('caso5')
     $('.main').scrollTo('.container-seis', 300)
     gender = $('#genderdiv').attr 'gender'
+    currentCase = '.container-seis'
+
     if gender is 'her-'
       chngBg('#d64f92') 
     else
@@ -115,6 +120,8 @@ $ ->
   $('.case5-next').on 'click', ->
     pageView('caso6')
     $('.main').scrollTo('.container-siete', 300)
+    currentCase = '.container-siete'
+
     chngBg('#ff9966')
     $("#doughnutChart").drawDoughnutChart(chart)
   $('.case6-next').on 'click', ->
@@ -154,6 +161,8 @@ $ ->
       , (response) ->
     setTimeout ->
       $('.main').scrollTo('.container-result', 300)
+      currentCase = '.container-result'
+
       switch personaje
         when "mastermind"
           chngBg '#f1c700'
