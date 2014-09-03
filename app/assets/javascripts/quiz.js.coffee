@@ -87,31 +87,40 @@ $ ->
     e.preventDefault()
     location.reload()
   $('.case1-next').on 'click', ->
+    currentCase = '.container-tres'
+    console.log currentCase
     pageView('caso2')
     $('.main').scrollTo('.container-tres', 300)
     chngBg('#a4c060')
-    currentCase = '.container-tres'
+    console.log currentCase
 
     getResult('#caso1-resultado')
   $('.case2-next').on 'click', ->
+    currentCase = '.container-cuatro'
+    console.log currentCase
+
+
     pageView('caso3')
     $('.main').scrollTo('.container-cuatro', 300)
     chngBg('#b67ba6')
     getResult('#caso2-resultado')
-    currentCase = '.container-cuatro'
 
 
   $('.case3-next').on 'click', ->
+    currentCase = '.container-cinco'
+    console.log currentCase
+
     pageView('caso4')
     $('.main').scrollTo('.container-cinco', 300)
     chngBg('#3dc0d4')
-    currentCase = '.container-cinco'
 
   $('.case4-next').on 'click', ->
+    currentCase = '.container-seis'
+    console.log currentCase
+
     pageView('caso5')
     $('.main').scrollTo('.container-seis', 300)
     gender = $('#genderdiv').attr 'gender'
-    currentCase = '.container-seis'
 
     if gender is 'her-'
       chngBg('#d64f92') 
@@ -121,6 +130,7 @@ $ ->
     pageView('caso6')
     $('.main').scrollTo('.container-siete', 300)
     currentCase = '.container-siete'
+    console.log currentCase
 
     chngBg('#ff9966')
     $("#doughnutChart").drawDoughnutChart(chart)
