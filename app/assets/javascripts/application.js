@@ -36,7 +36,7 @@
 //   });
 // });
 
-
+var currentCase = '';
 
 var userData = {
   gender: 'male',

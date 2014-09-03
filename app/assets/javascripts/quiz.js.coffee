@@ -36,7 +36,7 @@ getResult = (respuesta)->
     
 
 $ ->
-  
+  currentCase = '.container-uno'
   # console.log 
   $('#help').on 'click', ->
     $('#faqs').css

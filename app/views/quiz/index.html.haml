@@ -1,9 +1,14 @@
 
 - if current_user
   :javascript
-
+  
     $(document).ready(function(){
+    pageView('login');
+    setTimeout(function(){
+    pageView('caso1');
+    }, 1000);
     $('.main').scrollTo('.container-dos', 300);
+    currentCase = '.container-dos'
     $('.main').css({'background-color': '#ed6e5e'});
     });
 
