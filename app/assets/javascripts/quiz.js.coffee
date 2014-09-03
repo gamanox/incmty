@@ -20,7 +20,9 @@ sortSome = (array)->
     b[1] - a[1]
   pusharray[0][0]
 
-
+pageView = (page)->
+  console.log 'analytics: '+page
+  ga('send', 'pageview', '/'+page)
 getResult = (respuesta)->
   console.log respuesta
   result = $(respuesta).attr('resultado')
@@ -37,9 +39,7 @@ getResult = (respuesta)->
 
 $ ->
  
-  pageView = ()->
-    console.log 'analytics: '+page
-    ga('send', 'pageview', '/'+page)
+  
   currentCase = '.container-uno'
   # console.log 
   $('#help').on 'click', ->
