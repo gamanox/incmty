@@ -12,7 +12,7 @@ resultadoSize = ->
       "padding-top": 0
       console.log 'if'+wH
   else
-    personajeH = wH-653
+    personajeH = (wH-653)/2
     $('#personaje').css
       "padding-top": personajeH+"px"
       console.log 'else '+personajeH
