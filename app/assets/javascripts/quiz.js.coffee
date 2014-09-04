@@ -5,6 +5,16 @@ currentCase = '.container-uno'
 String::capitalize = ->
   @charAt(0).toUpperCase() + @slice(1)
 
+resultadoSize = ->
+  wH = $(window).height()
+  if wH <= 653
+    $('#personaje').css
+      "padding-top": 0
+  else
+    personajeH = wH-653
+    $('#personaje').css
+      "paddint-top": personajeH+"px"
+
 chngBg = (color)->
   $('.main').css
     'background-color': color
@@ -35,13 +45,31 @@ getResult = (respuesta)->
       userData.profile[result]=1
   console.log userData.profile
 $(window).resize ->
-  $('.main').scrollTo(currentCase, 300)
+  setTimeout ->
+    $('.main').scrollTo(currentCase, 300)
+    resultadoSize()
+  , 1000
+
 
 
 $ ->
   
-  
+  resultadoSize()
   # console.log 
+  $('#footer .tw').on 'click', ->
+    pageView 'footer-tw'
+  $('#footer .fb').on 'click', ->
+    pageView 'footer-fb'
+  $('#footer .inscribete').on 'click', ->
+    pageView 'footer-inscribete'
+  $('#footer .legal').on 'click', ->
+    pageView 'footer-legal'
+  $('#linkincmtyresultado').on 'click', ->
+    pageView 'resultado-incmty'
+  $('#resultado-inc-fb').on 'click', ->
+    pageView 'resultado-incmty-fb'
+  $('#resultado-inc-tw').on 'click', ->
+    pageView 'resultado-incmty-tw'
   $('#help').on 'click', ->
     pageView('faqs')
     $('#faqs').css
