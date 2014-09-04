@@ -14,7 +14,7 @@ resultadoSize = ->
   else
     personajeH = wH-653
     $('#personaje').css
-      "paddint-top": personajeH+"px"
+      "padding-top": personajeH+"px"
       console.log 'else '+personajeH
 
 chngBg = (color)->
