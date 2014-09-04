@@ -81,12 +81,14 @@ $ ->
     $('#shareoverlay .close').css
       visibility: 'hidden'
   $("#faqs").scroller()
-  $("#todospersonajes").scroller
-    horizontal: true
+  
   $('#todosbtn-cont').on 'click', ->
-    $("#todospersonajes").scroller("reset");
     pageView('todos-personajes')
-    $('#todospersonajes').fadeIn({},"fast")
+    $('#todospersonajes').fadeIn "fast", ->
+      $("#todospersonajes").scroller
+        horizontal: true
+      # $("#todospersonajes").scroller("reset")
+
   $('#todospersonajes .close').on 'click', ->
     $('#todospersonajes').fadeOut({},"fast")
   $('#faqs .close').on 'click', ->
