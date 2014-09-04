@@ -84,6 +84,7 @@ $ ->
   $("#todospersonajes").scroller
     horizontal: true
   $('#todosbtn-cont').on 'click', ->
+    $("#todospersonajes").scroller("reset");
     pageView('todos-personajes')
     $('#todospersonajes').fadeIn({},"fast")
   $('#todospersonajes .close').on 'click', ->
