@@ -10,10 +10,12 @@ resultadoSize = ->
   if wH <= 653
     $('#personaje').css
       "padding-top": 0
+      console.log 'if'+wH
   else
     personajeH = wH-653
     $('#personaje').css
       "paddint-top": personajeH+"px"
+      console.log 'else '+personajeH
 
 chngBg = (color)->
   $('.main').css
