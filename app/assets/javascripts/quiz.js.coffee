@@ -72,6 +72,8 @@ $ ->
     pageView 'resultado-incmty-fb'
   $('#resultado-inc-tw').on 'click', ->
     pageView 'resultado-incmty-tw'
+  $('#incbtn').on 'click', ->
+    pageView 'resultado-incmty-site'
   $('#help').on 'click', ->
     pageView('faqs')
     $('#faqs').css
