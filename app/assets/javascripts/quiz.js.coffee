@@ -193,9 +193,9 @@ $ ->
     $('#facebtn-cont').on 'click', ->
       pageView('compartir-facebook')
       if gender is 'her-'
-        copy = 'Yo soy una emprendedora '+personaje.capitalize()+'. Descubre aquí qué tipo de emprendedor eres tú.'
+        copy = 'Yo soy una emprendedora '+personaje.capitalize()+'. Descubre aquí qué tipo de emprendedor eres tú. #INCmty'
       if gender is 'him-'
-        copy = 'Yo soy un emprendedor '+personaje.capitalize()+'. Descubre aquí qué tipo de emprendedor eres tú.'
+        copy = 'Yo soy un emprendedor '+personaje.capitalize()+'. Descubre aquí qué tipo de emprendedor eres tú. #INCmty'
 
       FB.ui
         method: "feed"
