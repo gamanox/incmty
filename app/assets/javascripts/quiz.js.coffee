@@ -268,6 +268,7 @@ $ ->
     connectToSortable: ".briefcase-sort"
     helper: "clone"
     revert: "invalid"
+  
   $('.ropa').draggable()
   $('.briefcase-sort').sortable
     revert: true
