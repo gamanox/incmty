@@ -50,7 +50,7 @@ $(window).resize ->
   setTimeout ->
     $('.main').scrollTo(currentCase, 300)
     resultadoSize()
-  , 1000
+  , 6000
 
 
 
@@ -84,7 +84,7 @@ $ ->
       visibility: 'hidden'
   $("#faqs").scroller()
   
-  $('#todosbtn-cont').on 'click', ->
+  $('.todosbtn-cont').on 'click', ->
     pageView('todos-personajes')
     $('#todospersonajes').fadeIn "fast", ->
       $("#todospersonajes").scroller
@@ -107,7 +107,7 @@ $ ->
       visibility: 'hidden'
     $('#help').css
       visibility: 'hidden'
-  $('#sharebtn-cont').on 'click', ->
+  $('.sharebtn-cont').on 'click', ->
     pageView('compartir')
 
     $('#shareoverlay').css
@@ -209,7 +209,8 @@ $ ->
 
       switch personaje
         when "mastermind"
-          chngBg '#f1c700'
+          chngBg '#f2b121'
+          # chngBg '#f1c700'
 
         when 'goldseeker'
           chngBg '#2d458c'
@@ -268,7 +269,7 @@ $ ->
     connectToSortable: ".briefcase-sort"
     helper: "clone"
     revert: "invalid"
-  
+
   $('.ropa').draggable()
   $('.briefcase-sort').sortable
     revert: true

@@ -1,0 +1,2448 @@
+@font-face {
+    font-family: 'big';
+    src: url(<%= asset_path("geo.eot")%>);
+    src: url(<%= asset_path("geo.eot?#iefix")%>) format('embedded-opentype'),
+         url(<%= asset_path("geo.woff")%>) format('woff'),
+         url(<%= asset_path("geo.ttf")%>) format('truetype'),
+         url(<%= asset_path("geo.svg#ccupupandawayregular")%>) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@-webkit-keyframes anifocus {
+  /* line 6, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  0% {
+    -webkit-filter: blur(0px);
+  }
+
+  /* line 9, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  25% {
+    -webkit-filter: blur(3px);
+  }
+
+  /* line 12, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  50% {
+    -webkit-filter: blur(0px);
+  }
+
+  /* line 14, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  75% {
+    -webkit-filter: blur(3px);
+  }
+
+  /* line 16, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  100% {
+    -webkit-filter: blur(0px);
+  }
+}
+
+/* line 22, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+svg {
+  display: block;
+}
+
+/* line 25, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+html, body, #screen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 30, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#screen {
+  position: relative;
+}
+
+/* line 32, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* line 35, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 40, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 43, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#help {
+  top: 50px;
+  right: 50%;
+  margin-right: -400px;
+  cursor: pointer;
+  height: 62px;
+  width: 62px;
+  display: block;
+  position: fixed;
+  z-index: 1500;
+  background-image: url("/assets/help.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+}
+/* line 57, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#help:hover {
+  -webkit-transform: rotate(360deg);
+}
+
+/* line 70, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#genderdiv {
+  visibility: hidden;
+}
+
+/* line 72, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+/* line 80, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .left, #footer .right {
+  height: 20px;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  position: absolute;
+}
+/* line 87, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .left {
+  top: 0;
+  left: 0;
+  width: 200px;
+  margin-left: 15px;
+}
+/* line 92, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .left a {
+  text-decoration: none;
+  float: left;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-left: 15px;
+}
+/* line 99, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .left a.tw {
+  background-image: url("/assets/tw.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+}
+/* line 105, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .left a.tw:hover {
+  -webkit-transform: rotate(360deg);
+}
+/* line 107, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .left a.fb {
+  background-image: url("/assets/fb.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+}
+/* line 113, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .left a.fb:hover {
+  -webkit-transform: rotate(360deg);
+}
+/* line 115, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .left a.in {
+  background-image: url("/assets/in.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+}
+/* line 121, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .left a.in:hover {
+  -webkit-transform: rotate(360deg);
+}
+/* line 123, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .right {
+  top: 0;
+  right: 0;
+  width: 370px;
+  margin-right: 15px;
+}
+/* line 128, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .right p {
+  text-decoration: none;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #205e81;
+  float: right;
+  font-family: "Arial";
+  font-size: 11px;
+  margin-right: 10px;
+  text-align: right;
+}
+/* line 144, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .right a {
+  text-decoration: none;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #205e81;
+  float: right;
+  font-family: "Arial";
+  font-size: 11px;
+  margin-right: 10px;
+  text-align: right;
+}
+/* line 159, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#footer .right a.prensa, #footer .right a.inscribete {
+  padding-left: 10px;
+  border-left: 1px solid;
+}
+
+/* line 164, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #4c72a2;
+  background-image: url("/assets/bg-ruler.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 178, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cargando {
+  position: relative;
+}
+
+/* line 180, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result {
+  position: relative;
+}
+/* line 183, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .socialsharebtn {
+  margin-left: 20px;
+  float: left;
+  display: block;
+  width: 80px;
+}
+/* line 189, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .socialsharebtn:first-child {
+  margin-left: 0;
+}
+/* line 191, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #repeat {
+  width: 182px;
+  height: 64px;
+  position: absolute;
+  top: 70px;
+  left: -20px;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+/* line 198, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #repeat a#repeatbtn {
+  background-image: url("/assets/repeat.png");
+  display: block;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+/* line 208, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #repeat:hover {
+  left: 0px;
+}
+/* line 210, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #incbtn-cont {
+  width: 182px;
+  height: 64px;
+  position: absolute;
+  top: 70px;
+  right: -20px;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+/* line 216, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #incbtn-cont a#incbtn {
+  background-image: url("/assets/inc.png");
+  display: block;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+/* line 225, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #incbtn-cont:hover {
+  right: 0px;
+}
+/* line 227, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes {
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+}
+/* line 236, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .close {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  cursor: pointer;
+  top: 50px;
+  right: 50px;
+  z-index: 2000;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+}
+/* line 245, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .close:hover {
+  -webkit-transform: rotate(90deg);
+}
+/* line 247, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes #perfiles {
+  width: 2200px;
+  height: 100%;
+}
+/* line 250, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona {
+  width: 16.66%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+/* line 256, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona.mastermind {
+  background-color: #f1c700;
+}
+/* line 259, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona.goldseeker {
+  background-color: #2d458c;
+}
+/* line 262, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona.lifestyler {
+  background-color: #c8238d;
+}
+/* line 265, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona.coolhunter {
+  background-color: #89c01f;
+}
+/* line 268, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona.spotlighter {
+  background-color: #eda200;
+}
+/* line 271, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona.greatcreator {
+  background-color: #e52653;
+}
+/* line 273, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona svg {
+  margin-top: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 371px;
+}
+/* line 279, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona p {
+  width: 100%;
+  text-align: center;
+  font-family: "chunk";
+  color: white;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+/* line 287, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona p.the {
+  margin-top: -90px;
+  font-size: 25px;
+  line-height: 15px;
+}
+/* line 291, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona p.nombre {
+  font-size: 28px;
+  line-height: 37px;
+}
+/* line 295, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona p.descripcion {
+  font-size: 14px;
+  font-family: "geo";
+  width: 250px;
+  height: auto;
+  line-height: 20px;
+  position: relative;
+  padding-top: 5px;
+  font-style: italic;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.45));
+}
+/* line 308, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #todospersonajes .persona p.descripcion a {
+  color: white;
+  text-decoration: underline;
+}
+/* line 313, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .margen {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 70px);
+  top: 20px;
+  left: 20px;
+  border: 1px solid white;
+}
+/* line 320, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .share-cont-btns {
+  width: 70%;
+  height: auto;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 33px;
+}
+/* line 327, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .sharebtn-cont {
+  float: right;
+  cursor: pointer;
+}
+/* line 330, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .sharebtn-cont p.compartir {
+  font-family: "chunk";
+  font-size: 13px;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+/* line 340, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .sharebtn-cont:hover .sharebtn {
+  -webkit-transform: rotateY(360deg);
+}
+/* line 342, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  z-index: 1000;
+  display: block;
+  visibility: hidden;
+}
+/* line 352, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay .close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  cursor: pointer;
+  top: 50px;
+  right: 50px;
+  z-index: 2000;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+}
+/* line 361, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay .close:hover {
+  -webkit-transform: rotate(90deg);
+}
+/* line 363, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p {
+  text-align: center;
+  font-family: "chunk";
+}
+/* line 366, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.the {
+  width: 100%;
+  color: white;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 37px;
+  line-height: 20px;
+  padding-top: 100px;
+}
+/* line 375, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.nombre {
+  width: 100%;
+  color: white;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 66px;
+  line-height: 66px;
+  text-transform: uppercase;
+}
+/* line 385, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.sharetext1 {
+  color: #edca1c;
+  font-size: 21px;
+  padding-top: 60px;
+  letter-spacing: 1px;
+}
+/* line 390, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.sharetext1 a {
+  position: relative;
+  display: inline-block;
+  width: 89px;
+  height: 31px;
+}
+/* line 395, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.sharetext1 a img {
+  top: 6px;
+  position: absolute;
+  left: 0;
+}
+/* line 399, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.sharetext2 {
+  color: white;
+  font-family: "geo";
+  font-size: 15px;
+  line-height: 18px;
+  padding-top: 35px;
+  clear: both;
+  font-style: italic;
+}
+/* line 407, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.sharetext2 a {
+  color: white;
+  text-transform: underline;
+}
+/* line 410, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.sharetext2 .incfb {
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/assets/incfb.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+}
+/* line 421, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.sharetext2 .incfb:hover {
+  -webkit-transform: rotate(360deg);
+}
+/* line 423, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.sharetext2 .inctw {
+  cursor: pointer;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/assets/inctw.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+}
+/* line 432, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay p.sharetext2 .inctw:hover {
+  -webkit-transform: rotate(360deg);
+}
+/* line 436, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #shareoverlay .share-container {
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+/* line 441, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .sharebtn {
+  width: 70px;
+  height: 70px;
+  background-image: url("/assets/share.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+}
+/* line 453, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .sharebtn svg {
+  display: block;
+  padding-top: 15%;
+  padding-left: 9%;
+  width: 70%;
+}
+/* line 458, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .todosbtn-cont {
+  float: left;
+  cursor: pointer;
+}
+/* line 461, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .todosbtn-cont p.compartir {
+  font-family: "chunk";
+  font-size: 13px;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-left: -5px;
+  width: 80px;
+}
+/* line 474, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .todosbtn-cont:hover .todosbtn {
+  -webkit-transform: rotateY(360deg);
+}
+/* line 476, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result .todosbtn-cont .todosbtn {
+  width: 70px;
+  height: 70px;
+  background-image: url("/assets/todos.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 493, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #facebtn-cont {
+  cursor: pointer;
+}
+/* line 496, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #facebtn-cont p.compartir {
+  font-family: "chunk";
+  font-size: 13px;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  width: 80px;
+}
+/* line 509, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #facebtn-cont:hover #facebtn {
+  -webkit-transform: rotateY(360deg);
+}
+/* line 511, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #facebtn-cont #facebtn {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("/assets/face.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+}
+/* line 528, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #twitbtn-cont {
+  cursor: pointer;
+}
+/* line 531, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #twitbtn-cont p.compartir {
+  font-family: "chunk";
+  font-size: 13px;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  width: 80px;
+}
+/* line 544, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #twitbtn-cont:hover #twitbtn {
+  -webkit-transform: rotateY(360deg);
+}
+/* line 546, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #twitbtn-cont #twitbtn {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("/assets/twit.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+}
+/* line 562, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #downbtn-cont {
+  cursor: pointer;
+}
+/* line 565, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #downbtn-cont p.compartir {
+  font-family: "chunk";
+  font-size: 13px;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  width: 80px;
+}
+/* line 578, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #downbtn-cont:hover #downbtn {
+  -webkit-transform: rotateY(360deg);
+}
+/* line 580, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #downbtn-cont #downbtn {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("/assets/todos.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+}
+/* line 599, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result p.turesultado {
+  font-family: "chunk";
+  font-size: 28px;
+  color: white;
+  line-height: 25px;
+  text-align: center;
+  padding-top: 40px;
+}
+/* line 606, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 614, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje .persona {
+  width: 900px;
+  height: auto;
+  position: relative;
+  display: none;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 75px;
+}
+/* line 625, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje .persona .right-cont {
+  width: 60%;
+  height: 100%;
+  float: right;
+}
+/* line 629, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje .persona .right-cont p {
+  width: 100%;
+  text-align: center;
+  font-family: "chunk";
+  color: white;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+/* line 637, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje .persona .right-cont p.the {
+  margin-top: 5px;
+  font-size: 37px;
+  line-height: 20px;
+}
+/* line 641, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje .persona .right-cont p.nombre {
+  font-size: 60px;
+  line-height: 58px;
+  text-align: center;
+}
+/* line 646, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje .persona .right-cont p.descripcion {
+  font-size: 18px;
+  font-family: "geo";
+  width: 100%;
+  height: auto;
+  line-height: 20px;
+  position: relative;
+  padding-top: 20px;
+  font-style: italic;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.45));
+}
+/* line 659, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje .persona .right-cont p.descripcion a {
+  color: white;
+  text-decoration: underline;
+}
+/* line 662, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje .persona .left-cont {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+/* line 666, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje .persona .left-cont svg {
+  height: 371px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+/* line 682, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-result #personaje #uselink {
+  height: 371px !important;
+}
+
+/* line 689, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase {
+  width: 300px;
+  height: 240px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -200px;
+}
+/* line 697, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase .briefcase-sort-cont {
+  top: 30px;
+  left: 0;
+  width: 300px;
+  height: 250px;
+  position: absolute;
+}
+/* line 703, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase .briefcase-sort-cont p.descripcion {
+  font-family: "chunk";
+  font-size: 22px;
+  color: white;
+  line-height: 23px;
+  text-align: center;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+}
+/* line 712, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort {
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 250px;
+  position: absolute;
+}
+/* line 719, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li {
+  cursor: move;
+  position: relative;
+  float: left;
+}
+/* line 724, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.dosXdos {
+  width: 100px;
+  height: 100px;
+}
+/* line 727, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.unoXdos {
+  width: 50px;
+  height: 100px;
+}
+/* line 730, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.unoXuno {
+  width: 50px;
+  height: 50px;
+}
+/* line 733, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.dosXuno {
+  width: 100px;
+  height: 50px;
+}
+/* line 736, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.tresXdos {
+  width: 150px;
+  height: 100px;
+}
+/* line 739, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.tresXtres {
+  width: 150px;
+  height: 150px;
+}
+/* line 742, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.tresXcuatro {
+  width: 150px;
+  height: 200px;
+}
+/* line 745, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.book {
+  background-color: #3ee08d;
+}
+/* line 747, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.cafe {
+  background-color: #aeb39a;
+}
+/* line 749, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.hoja {
+  background-color: #3fc4d4;
+}
+/* line 751, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.jobs {
+  background-color: #3ecaea;
+}
+/* line 753, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.rubik {
+  background-color: #76e073;
+}
+/* line 755, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.usb {
+  background-color: #3fbad5;
+}
+/* line 757, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.postit {
+  background-color: #27d0ea;
+}
+/* line 759, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.coin {
+  background-color: #9eb273;
+}
+/* line 761, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.foco {
+  background-color: #27c2ea;
+}
+/* line 763, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.printer {
+  background-color: #2eb9cd;
+}
+/* line 765, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.mp3 {
+  background-color: #9ec66a;
+}
+/* line 767, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.vhs {
+  background-color: #9ec66a;
+}
+/* line 769, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.lab {
+  background-color: #2eb9cd;
+}
+/* line 771, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.lab2 {
+  background-color: #5bd0c8;
+}
+/* line 773, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.pencil {
+  background-color: #81e179;
+}
+/* line 775, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.cray {
+  background-color: #1ec6ea;
+}
+/* line 777, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.game {
+  background-color: #96ac70;
+}
+/* line 779, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.lap {
+  background-color: #3ecaea;
+}
+/* line 781, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li.wacom {
+  background-color: #58c7d6;
+}
+/* line 783, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li svg {
+  margin: auto;
+}
+/* line 786, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-book {
+  height: 96px;
+  margin-top: 2px;
+}
+/* line 789, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-cafe {
+  width: 77px;
+  margin-top: 14px;
+}
+/* line 792, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-hoja {
+  height: 71px;
+  margin-top: 14px;
+}
+/* line 795, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-jobs {
+  height: 96px;
+  margin-top: 2px;
+}
+/* line 798, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case6_x5F_rubik {
+  height: 49px;
+  margin-top: 0.5px;
+}
+/* line 801, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-usb {
+  height: 37px;
+  margin-top: 6.5px;
+}
+/* line 804, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-postit {
+  height: 42px;
+  margin-top: 4px;
+}
+/* line 807, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-coin {
+  width: 44px;
+  margin-top: 4.5px;
+}
+/* line 810, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-foco {
+  height: 48px;
+  margin-top: 1px;
+}
+/* line 813, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-printer {
+  height: 100px;
+}
+/* line 815, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-mp3 {
+  height: 99px;
+  margin-top: 0.5px;
+}
+/* line 818, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-vhs {
+  width: 77px;
+  margin-top: 2px;
+}
+/* line 821, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-lab {
+  height: 84px;
+  margin-top: 8px;
+}
+/* line 824, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-lab2 {
+  height: 83px;
+  margin-top: 8.5px;
+}
+/* line 827, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-pencil {
+  height: 77px;
+  margin-top: 11.5px;
+}
+/* line 830, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-cray {
+  width: 91px;
+}
+/* line 832, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-game {
+  width: 122px;
+}
+/* line 834, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-lap {
+  height: 146px;
+  margin-top: 2px;
+}
+/* line 838, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco .briefcase ul.briefcase-sort li #case5-wacom {
+  width: 140px;
+  margin-top: 9px;
+}
+/* line 843, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+/* line 849, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li {
+  cursor: move;
+  position: relative;
+  float: left;
+}
+/* line 853, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.dosXdos {
+  width: 100px;
+  height: 100px;
+}
+/* line 856, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.unoXdos {
+  width: 50px;
+  height: 100px;
+}
+/* line 859, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.unoXuno {
+  width: 50px;
+  height: 50px;
+}
+/* line 862, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.dosXuno {
+  width: 100px;
+  height: 50px;
+}
+/* line 865, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.tresXdos {
+  width: 150px;
+  height: 100px;
+}
+/* line 868, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.tresXtres {
+  width: 150px;
+  height: 150px;
+}
+/* line 871, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.tresXcuatro {
+  width: 150px;
+  height: 200px;
+}
+/* line 874, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.book {
+  background-color: #3ee08d;
+}
+/* line 876, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.cafe {
+  background-color: #aeb39a;
+}
+/* line 878, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.hoja {
+  background-color: #3fc4d4;
+}
+/* line 880, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.jobs {
+  background-color: #3ecaea;
+}
+/* line 882, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.rubik {
+  background-color: #76e073;
+}
+/* line 884, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.usb {
+  background-color: #3fbad5;
+}
+/* line 886, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.postit {
+  background-color: #27d0ea;
+}
+/* line 888, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.coin {
+  background-color: #9eb273;
+}
+/* line 890, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.foco {
+  background-color: #27c2ea;
+}
+/* line 892, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.printer {
+  background-color: #2eb9cd;
+}
+/* line 894, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.mp3 {
+  background-color: #9ec66a;
+}
+/* line 896, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.vhs {
+  background-color: #9ec66a;
+}
+/* line 898, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.lab {
+  background-color: #2eb9cd;
+}
+/* line 900, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.lab2 {
+  background-color: #5bd0c8;
+}
+/* line 902, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.pencil {
+  background-color: #81e179;
+}
+/* line 904, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.cray {
+  background-color: #1ec6ea;
+}
+/* line 906, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.game {
+  background-color: #96ac70;
+}
+/* line 908, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.lap {
+  background-color: #3ecaea;
+}
+/* line 910, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li.wacom {
+  background-color: #58c7d6;
+}
+/* line 912, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li svg {
+  margin: auto;
+}
+/* line 915, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-book {
+  height: 96px;
+  margin-top: 2px;
+}
+/* line 918, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-cafe {
+  width: 77px;
+  margin-top: 14px;
+}
+/* line 921, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-hoja {
+  height: 71px;
+  margin-top: 14px;
+}
+/* line 924, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-jobs {
+  height: 96px;
+  margin-top: 2px;
+}
+/* line 927, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case6_x5F_rubik {
+  height: 49px;
+  margin-top: 0.5px;
+}
+/* line 930, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-usb {
+  height: 37px;
+  margin-top: 6.5px;
+}
+/* line 933, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-postit {
+  height: 42px;
+  margin-top: 4px;
+}
+/* line 936, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-coin {
+  width: 44px;
+  margin-top: 4.5px;
+}
+/* line 939, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-foco {
+  height: 48px;
+  margin-top: 1px;
+}
+/* line 942, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-printer {
+  height: 100px;
+}
+/* line 944, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-mp3 {
+  height: 99px;
+  margin-top: 0.5px;
+}
+/* line 947, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-vhs {
+  width: 77px;
+  margin-top: 2px;
+}
+/* line 950, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-lab {
+  height: 84px;
+  margin-top: 8px;
+}
+/* line 953, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-lab2 {
+  height: 83px;
+  margin-top: 8.5px;
+}
+/* line 956, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-pencil {
+  height: 77px;
+  margin-top: 11.5px;
+}
+/* line 959, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-cray {
+  width: 91px;
+}
+/* line 961, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-game {
+  width: 122px;
+}
+/* line 963, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-lap {
+  height: 146px;
+  margin-top: 2px;
+}
+/* line 967, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container li #case5-wacom {
+  width: 140px;
+  margin-top: 9px;
+}
+/* line 971, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container.left {
+  margin-top: -175px;
+  margin-left: -450px;
+}
+/* line 974, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cinco ul.briefcase-container.right {
+  margin-top: -175px;
+  margin-left: 225px;
+}
+
+/* line 979, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-siete .case6-next {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* line 984, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis .mono {
+  width: 200px;
+  height: 380px;
+  margin-left: -70px;
+  margin-top: -220px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+/* line 995, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis .mona {
+  width: 200px;
+  height: 355px;
+  margin-left: -76px;
+  margin-top: -197px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+/* line 1003, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container {
+  width: 335px;
+  height: 395px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+/* line 1009, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container.left {
+  margin-top: -175px;
+  margin-left: -450px;
+}
+/* line 1013, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container.right {
+  margin-top: -175px;
+  margin-left: 135px;
+}
+/* line 1017, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa {
+  float: left;
+}
+/* line 1019, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.pantalon {
+  width: 74px;
+  height: 95px;
+}
+/* line 1022, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.vestido {
+  width: 68px;
+  height: 127px;
+}
+/* line 1025, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.lentes {
+  width: 106px;
+  height: 29px;
+}
+/* line 1028, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.falda {
+  width: 88px;
+  height: 50px;
+}
+/* line 1031, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.telefono {
+  width: 43px;
+  height: 33px;
+}
+/* line 1034, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.short {
+  width: 71px;
+  height: 57px;
+}
+/* line 1037, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.skirt {
+  width: 74px;
+  height: 53px;
+}
+/* line 1040, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.playeranaranja {
+  width: 82px;
+  height: 75px;
+}
+/* line 1043, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.blusanegra {
+  width: 82px;
+  height: 81px;
+}
+/* line 1046, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.monorojo {
+  width: 26px;
+  height: 11px;
+}
+/* line 1049, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.scarf {
+  width: 46px;
+  height: 19px;
+}
+/* line 1052, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.playera {
+  width: 99px;
+  height: 92px;
+}
+/* line 1055, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.gorra {
+  width: 148px;
+  height: 71px;
+}
+/* line 1058, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-seis ul.ropa-container li.ropa.traje {
+  width: 148px;
+  height: 92px;
+}
+
+/* line 1070, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro .case3-next {
+  visibility: hidden;
+  opacity: 0;
+}
+/* line 1073, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container {
+  width: 900px;
+  height: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -170px;
+  margin-left: -450px;
+}
+/* line 1081, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza {
+  float: left;
+  position: relative;
+  width: 150px;
+  height: 200px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 1088, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza p.nombre {
+  font-family: "chunk";
+  font-size: 15px;
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: -45px;
+  height: 20px;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 1109, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza:hover svg {
+  -webkit-filter: drop-shadow(0px 0px 20px white);
+}
+/* line 1115, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza.active svg {
+  -webkit-filter: drop-shadow(0px 0px 20px white);
+}
+/* line 1119, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza svg {
+  margin: auto;
+}
+/* line 1122, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza #case4-king {
+  height: 182px;
+  margin-top: 18px;
+}
+/* line 1125, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza #case4-reina {
+  height: 147px;
+  margin-top: 53px;
+}
+/* line 1128, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza #case4-alfil {
+  height: 123px;
+  margin-top: 77px;
+}
+/* line 1131, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza #case4-horse {
+  height: 112px;
+  margin-top: 88px;
+}
+/* line 1134, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza #case4-torre {
+  height: 99px;
+  margin-top: 101px;
+}
+/* line 1137, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-cuatro ul.chess-container li.pieza #case4-peon {
+  height: 80px;
+  margin-top: 120px;
+}
+
+/* line 1142, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres .case2-next {
+  visibility: hidden;
+  opacity: 0;
+}
+/* line 1145, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container {
+  width: 960px;
+  height: 181px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -480px;
+  margin-top: -136px;
+}
+/* line 1153, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur {
+  float: left;
+  height: 200px;
+  width: 150px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 1174, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur:hover svg {
+  -webkit-filter: drop-shadow(0px 0px 20px white);
+}
+/* line 1180, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur.active svg {
+  -webkit-filter: drop-shadow(0px 0px 20px white);
+}
+/* line 1200, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur p.nombre {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-family: "chunk";
+  font-size: 16px;
+  font-weight: 200;
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: -45px;
+  height: 20px;
+  text-align: center;
+}
+/* line 1216, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur svg {
+  margin: auto;
+}
+/* line 1218, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur #case3-men {
+  height: 171px;
+  margin-top: 29px;
+}
+/* line 1221, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur #case3-boy {
+  height: 171px;
+  margin-top: 29px;
+}
+/* line 1224, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur #case3-cat {
+  height: 135px;
+  margin-top: 65px;
+}
+/* line 1227, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur #case3-girl {
+  height: 181px;
+  margin-top: 19px;
+}
+/* line 1230, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur #case3-skype {
+  height: 165px;
+  margin-top: 35px;
+}
+/* line 1233, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-tres ul.networking-container li.entrepeneur #case3-mesero {
+  height: 171px;
+  margin-top: 29px;
+}
+
+/* line 1241, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-dos .case1-next {
+  visibility: hidden;
+  opacity: 0;
+}
+/* line 1246, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-dos ul.drag-container {
+  width: 930px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -465px;
+  margin-top: -58px;
+}
+/* line 1254, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-dos ul.drag-container li {
+  cursor: move;
+  float: left;
+  position: relative;
+  width: 155px;
+  height: 150px;
+}
+/* line 1261, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-dos ul.drag-container li p.nombre {
+  font-family: "chunk";
+  font-size: 15px;
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+  text-align: center;
+}
+/* line 1270, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-dos ul.drag-container li svg {
+  margin: auto;
+  vertical-align: bottom;
+}
+/* line 1273, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.container-dos .case1-scale {
+  width: 934px;
+  height: 128px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -471px;
+  margin-top: -107px;
+}
+
+/* line 1288, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen {
+  background-image: url("/assets/blueprint.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  float: left;
+}
+/* line 1299, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .instruccion {
+  font-family: "chunk";
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: white;
+  width: 400px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  clear: both;
+  padding-top: 13px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 95px;
+}
+/* line 1314, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .case-next {
+  width: 107px;
+  height: 108px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -54px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.25));
+}
+/* line 1329, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .case-next:hover {
+  bottom: 58px;
+  -webkit-filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
+}
+/* line 1334, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .case-title {
+  width: 723px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  padding-top: 50px;
+}
+/* line 1343, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .case-title p.case-number {
+  float: left;
+  font-family: "chunk";
+  font-size: 39px;
+  color: white;
+}
+/* line 1348, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .case-title .left-brace {
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 1352, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .case-title .right-brace {
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 1356, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .case-title p.case-description {
+  float: left;
+  font-family: "geo";
+  font-style: italic;
+  width: 430px;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+}
+/* line 1367, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .quiz-title {
+  width: 746px;
+  height: 201px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -373px;
+  margin-top: -200px;
+  -webkit-animation: anifocus 3s;
+  background-image: url("/assets/quiztitle.png");
+}
+/* line 1393, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .quiz-subtitle {
+  margin: 0;
+  padding: 0;
+  font-family: "geo";
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 55%;
+  font-style: italic;
+}
+/* line 1404, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .quiz-start {
+  cursor: pointer;
+  width: 125px;
+  height: 124px;
+  background-image: url("/assets/quiz-start.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: 100px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.25));
+}
+/* line 1421, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.containerscreen .quiz-start:hover {
+  margin-top: 102px;
+  -webkit-filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
+}
+
+/* line 1428, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#case5-book {
+  width: 70px;
+  height: 92px;
+  margin: auto;
+}
+
+/* line 1436, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#case2-moleskine {
+  width: 75px;
+  height: 91px;
+}
+
+/* line 1439, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#case2-smartphone {
+  height: 83px;
+}
+
+/* line 1442, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#case2-ipod {
+  width: 97px;
+  height: 109px;
+}
+
+/* line 1445, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#caase2-pc {
+  height: 114px;
+}
+
+/* line 1448, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#case2-wii {
+  width: 105px;
+}
+
+/* line 1451, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#case2-tablet {
+  width: 86px;
+}
+
+/* line 1453, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.scroll-handle {
+  background-color: #d6d6d6 !important;
+}
+
+/* line 1458, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#doughnutChart svg path {
+  cursor: pointer;
+}
+
+/* line 1461, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.chart {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  top: 50%;
+  left: 50%;
+  margin: -195px 0 0 -175px;
+}
+
+/* line 1469, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.doughnutTip {
+  position: absolute;
+  min-width: 30px;
+  max-width: 300px;
+  padding: 5px 15px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #4c72a2;
+  font-size: 17px;
+  font-family: "chunk";
+  text-shadow: 0 1px 0 #d6d6d6;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+/* line 1486, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.doughnutTip:after {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  content: "";
+  height: 0;
+  margin: 0 0 0 -6px;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 6px solid rgba(255, 255, 255, 0.7);
+  line-height: 0;
+}
+
+/* line 1498, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.doughnutSummary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #d5d5d5;
+  text-align: center;
+  text-shadow: 0 -1px 0 #111111;
+  cursor: default;
+}
+
+/* line 1507, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.doughnutSummaryTitle {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -45%;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  font-family: "chunk";
+  color: white;
+  line-height: 24px;
+}
+
+/* line 1518, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.doughnutSummaryNumber {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -15%;
+  font-size: 55px;
+}
+
+/* line 1525, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.chart path:hover {
+  opacity: 0.65;
+}
+
+/* line 1528, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#faqs {
+  background-color: rgba(255, 255, 255, 0.7);
+  background-image: url("/assets/faqs.png");
+  background-position: 50% 5%;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: calc(100% - 30px);
+  overflow: hidden;
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  -webkit-transition: right 0.2s ease-in-out;
+  -moz-transition: right 0.2s ease-in-out;
+  -ms-transition: right 0.2s ease-in-out;
+  transition: right 0.2s ease-in-out;
+}
+/* line 1544, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#faqs .close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+}
+/* line 1553, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#faqs .close:hover {
+  -webkit-transform: rotate(90deg);
+}
+/* line 1555, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#faqs .container-faqs {
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 1562, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#faqs .container-faqs p.title {
+  font-family: "chunk";
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: #3c3c3c;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  margin-bottom: 65px;
+  text-align: center;
+  line-height: 25px;
+}
+/* line 1575, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#faqs .container-faqs .pregunta {
+  width: 100%;
+}
+/* line 1577, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#faqs .container-faqs .pregunta p.titulo {
+  margin: 0;
+  padding: 0;
+  font-family: "chunk";
+  font-size: 16px;
+  line-height: 18px;
+  color: #3c3c3c;
+  text-align: right;
+  margin-bottom: 15px;
+}
+/* line 1587, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+#faqs .container-faqs .pregunta p.respuesta {
+  margin: 0;
+  padding: 0;
+  font-family: "geo";
+  font-size: 14px;
+  color: #3c3c3c;
+  text-align: right;
+  margin-bottom: 35px;
+  font-style: italic;
+}
+
+/* line 1600, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.mikepad-loading {
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+/* line 1609, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.mikepad-loading .binding {
+  content: "";
+  width: 27px;
+  height: 4px;
+  border: 2px solid white;
+  margin: 0 auto;
+}
+/* line 1615, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.mikepad-loading .pad {
+  width: 15px;
+  height: 18px;
+  border: 2px solid white;
+  border-top: 0;
+  padding: 6px;
+  margin: 0 auto;
+}
+/* line 1622, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.mikepad-loading .line {
+  width: 15px;
+  margin-top: 4px;
+  border-top: 2px solid white;
+  opacity: 0;
+  -webkit-animation: writeline 3s infinite ease-in;
+  -moz-animation: writeline 3s infinite ease-in;
+  -o-animation: writeline 3s infinite ease-in;
+  animation: writeline 3s infinite ease-in;
+}
+/* line 1631, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.mikepad-loading .line:first-child {
+  margin-top: 0;
+}
+/* line 1633, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.mikepad-loading .line.line1 {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+}
+/* line 1638, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.mikepad-loading .line.line2 {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+/* line 1643, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.mikepad-loading .line.line3 {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+/* line 1648, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+.mikepad-loading .text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+@-webkit-keyframes writeline {
+  /* line 1655, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+
+  /* line 1658, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  33% {
+    width: 15px;
+    opacity: 1;
+  }
+
+  /* line 1661, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  70% {
+    opacity: 1;
+  }
+
+  /* line 1663, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes writeline {
+  /* line 1668, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+
+  /* line 1671, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  33% {
+    width: 15px;
+    opacity: 1;
+  }
+
+  /* line 1674, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  70% {
+    opacity: 1;
+  }
+
+  /* line 1676, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes writeline {
+  /* line 1681, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+
+  /* line 1684, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  33% {
+    width: 15px;
+    opacity: 1;
+  }
+
+  /* line 1687, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  70% {
+    opacity: 1;
+  }
+
+  /* line 1689, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes writeline {
+  /* line 1694, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+
+  /* line 1697, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  33% {
+    width: 15px;
+    opacity: 1;
+  }
+
+  /* line 1700, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  70% {
+    opacity: 1;
+  }
+
+  /* line 1702, /Users/gamanox/Sites/incmty/app/assets/stylesheets/quiz.css.sass.erb */
+  100% {
+    opacity: 0;
+  }
+}
+/* line 5, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 8, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #367aa2;
+  background: #4397b7;
+}
+
+/* line 16, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 19, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* line 23, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 27, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+}
+
+/* line 34, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+.logo {
+  width: 182px;
+  height: 77px;
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+
+/* line 41, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+p.centertitle {
+  position: relative;
+  font-family: "big";
+  font-size: 55px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -315px;
+  margin-top: -112px;
+  color: #add85e;
+  line-height: 50px;
+}
+/* line 52, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+p.centertitle span {
+  color: white;
+}
+/* line 55, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+p.centertitle #sign_in {
+  display: block;
+  float: right;
+  margin-right: 50px;
+}
+
+/* line 60, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-right {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+}
+/* line 65, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-right p.righttitle {
+  position: relative;
+  font-family: "big";
+  font-size: 20px;
+  text-align: right;
+  color: #add85e;
+  line-height: 20px;
+  margin: 0;
+}
+/* line 73, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-right p.righttitle span {
+  color: white;
+}
+
+/* line 76, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#main {
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/grid.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/* line 83, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category {
+  position: fixed;
+  left: 0;
+  top: 150px;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+}
+/* line 91, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  cursor: pointer;
+}
+/* line 96, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li a {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  display: block;
+  padding-right: 30px;
+  padding-left: 30px;
+  height: 20px;
+  color: white;
+  font-family: "big";
+  font-size: 20px;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translate(-100px, 0px);
+  -moz-transform: translate(-100px, 0px);
+  -ms-transform: translate(-100px, 0px);
+  -o-transform: translate(-100px, 0px);
+  transform: translate(-100px, 0px);
+}
+/* line 118, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li a:hover {
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+/* line 126, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li a span {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  display: block;
+  border-left: 5px white solid;
+  border-top: 5px rgba(255, 255, 255, 0) solid;
+  border-right: 5px rgba(255, 255, 255, 0) solid;
+  border-bottom: 5px rgba(255, 255, 255, 0) solid;
+}
+/* line 141, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li #cat-1 {
+  background-color: #ff8a8a;
+}
+/* line 143, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li #cat-2 {
+  background-color: #ff69bd;
+}
+/* line 145, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li #cat-3 {
+  background-color: #be7afd;
+}
+/* line 147, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li #cat-4 {
+  background-color: #88c1d1;
+}
+/* line 149, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li #cat-5 {
+  background-color: #5eeaef;
+}
+/* line 151, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li #cat-6 {
+  background-color: #59ffbb;
+}
+/* line 153, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li #cat-7 {
+  background-color: #ffe65b;
+}
+/* line 155, /Users/gamanox/Sites/incmty/app/assets/stylesheets/welcome.css.sass.erb */
+#nav-category li #cat-8 {
+  background-color: #f3b56d;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed b
+ *
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+
+ */
+#canvas, #canvas2 {
+  width: 400px;
+  height: 400px;
+}
+
+#profile, #profile2 {
+  display: none;
+}
+
+@font-face {
+    font-family: 'condensed';
+    src: url(/assets/condensed-webfont.eot);
+    src: url(/assets/condensed-webfont.eot?#iefix) format('embedded-opentype'),
+         url(/assets/condensed-webfont.woff) format('woff'),
+         url(/assets/condensed-webfont.ttf) format('truetype'),
+         url(/assets/condensed-webfont.svg#condensed) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'big';
+    src: url(/assets/big-webfont.eot);
+    src: url(/assets/big-webfont.eot?#iefix) format('embedded-opentype'),
+         url(/assets/big-webfont.woff) format('woff'),
+         url(/assets/big-webfont.ttf) format('truetype'),
+         url(/assets/big-webfont.svg#ccupupandawayregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'geo';
+    src: url(/assets/geo.eot);
+    src: url(/assets/geo.eot?#iefix) format('embedded-opentype'),
+         url(/assets/geo.woff) format('woff'),
+         url(/assets/geo.ttf) format('truetype'),
+         url(/assets/geo.svg#geo) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'chunk';
+    src: url(/assets/chunk-webfont.eot);
+    src: url(/assets/chunk-webfont.eot?#iefix) format('embedded-opentype'),
+         url(/assets/chunk-webfont.woff) format('woff'),
+         url(/assets/chunk-webfont.ttf) format('truetype'),
+         url(/assets/chunk-webfont.svg#chunk) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.scroller { overflow: hidden; overflow-x: hidden; overflow-y: hidden; position: relative; }
+  .scroller-content { height: 100%; overflow: auto; overflow-x: hidden; overflow-y: auto; position: relative; z-index: 1;
+    -webkit-overflow-scrolling: touch;
+  }
+  .scroller-bar { background: #FBFBFB; border-left: 1px solid #EEEEEE; display: none; height: 80%; position: absolute; right: 0; top: 0; width: 20px; z-index: 2; }
+  .scroller-track { background: #FBFBFB; height: 80%; overflow: hidden; position: relative; width: 100%; }
+  .scroller-handle { background: #EEEEEE; border: 1px solid #D5D5D5; border-radius: 5px; cursor: pointer; height: 20px; overflow: hidden; position: absolute; right: 5px; top: 0; width: 10px; z-index: 2;
+    -webkit-transition: right 0.1s linear, width 0.1s linear;
+       -moz-transition: right 0.1s linear, width 0.1s linear;
+        -ms-transition: right 0.1s linear, width 0.1s linear;
+         -o-transition: right 0.1s linear, width 0.1s linear;
+          transition: right 0.1s linear, width 0.1s linear;
+  }
+
+  /* Webkit Fix */
+  .scroller-content::-webkit-scrollbar,
+  .scroller-content::-webkit-scrollbar-button,
+  .scroller-content::-webkit-scrollbar-track,
+  .scroller-content::-webkit-scrollbar-track-piece,
+  .scroller-content::-webkit-scrollbar-thumb,
+  .scroller-content::-webkit-scrollbar-corner,
+  .scroller-content::-webkit-resizer { background: transparent; opacity: 0; }
+
+  /* Active Scrollbar */
+  .scroller-active .scroller-content { padding: 20px; }
+  .scroller-active .scroller-bar { display: block; }
+
+  /* Setup Scrollbar - Should match 'active' styles for proper sizing */
+  .scroller-active .scroller-content { padding: 20px; }
+  .scroller-active .scroller-bar { display: block; }
+
+  /* Horizontal */
+  .scroller-horizontal .scroller-content { overflow: auto; overflow-x: auto; overflow-y: hidden; padding: 0 0 10px 0; }
+  .scroller-horizontal .scroller-bar { border-left: none; border-top: 1px solid #EEEEEE; bottom: 0; height: 20px; top: auto; width: 100%; }
+  .scroller-horizontal .scroller-handle { bottom: 5px; height: 10px; right: auto; top: auto; width: 20px; }

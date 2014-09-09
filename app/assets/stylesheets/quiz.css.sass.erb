@@ -16,6 +16,9 @@
   100%
     -webkit-filter: blur(0px)
 
+$break-small: 360px
+$break-large: 1200px
+
 svg
   display: block
 
@@ -53,6 +56,15 @@ ul
   -webkit-transition: -webkit-transform 0.2s ease-in-out
   &:hover
     -webkit-transform: rotate(360deg)
+  // @media screen and (max-width: $break-small)
+  //   top: 10px
+  //   right: 10px
+  //   margin-right: 0
+  //   background-size: cover
+  //   width: 40px
+  //   height: 40px
+
+
 
 
 #genderdiv
@@ -192,7 +204,7 @@ ul
 
       // -webkit-transition: all 0.2s
     -webkit-transition: all 0.2s ease-in-out
-    -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.45))
+    // -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.45))
     &:hover
       left: 0px
   #incbtn-cont
@@ -209,7 +221,7 @@ ul
       height: 100%
 
     -webkit-transition: all 0.2s ease-in-out
-    -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.45))
+    // -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.45))
     &:hover
       right: 0px
   #todospersonajes
@@ -305,12 +317,15 @@ ul
     top: 20px
     left: 20px
     border: 1px solid #fff
-  #sharebtn-cont
-    position: absolute
-    margin-left: 195px
-    margin-top: -140px
-    left: 50%
-    top: 50%
+  .share-cont-btns
+    width: 70%
+    height: auto
+    overflow: auto
+    margin-left: auto
+    margin-right: auto
+    margin-top: 33px
+  .sharebtn-cont
+    float: right
     cursor: pointer
     p.compartir
       font-family: 'chunk'
@@ -322,7 +337,7 @@ ul
       position: relative
       bottom: 0
     &:hover
-      #sharebtn
+      .sharebtn
         -webkit-transform: rotateY(360deg)
   #shareoverlay
     top: 0
@@ -423,7 +438,7 @@ ul
       margin-left: auto
       margin-right: auto
       width: 300px
-  #sharebtn
+  .sharebtn
     width: 70px
     height: 70px
     // background-color: #FFF
@@ -440,12 +455,8 @@ ul
       padding-top: 15%
       padding-left: 9%
       width: 70%
-  #todosbtn-cont
-    position: absolute
-    margin-left: -265px
-    margin-top: -140px
-    left: 50%
-    top: 50%
+  .todosbtn-cont
+    float: left
     cursor: pointer
     p.compartir
       font-family: 'chunk'
@@ -460,12 +471,12 @@ ul
       width: 80px
 
     &:hover
-      #todosbtn
+      .todosbtn
         -webkit-transform: rotateY(360deg)
-    #todosbtn
+    .todosbtn
       width: 70px
       height: 70px
-      margin-left: -5px
+      // margin-left: -5px
       // background-color: #FFF
       // -webkit-border-radius: 50%
       // -moz-border-radius: 50%
@@ -475,6 +486,8 @@ ul
       background-size: cover
       background-position: 50% 50%
       -webkit-transition: -webkit-transform 0.6s ease-in-out
+      margin-left: auto
+      margin-right: auto
     
   
   #facebtn-cont
@@ -575,7 +588,7 @@ ul
       // -moz-border-radius: 50%
       // -ms-border-radius: 50%
       // -o-border-radius: 50%
-      background-image: url('<%= asset_path("share.png")%>')
+      background-image: url('<%= asset_path("todos.png")%>')
       background-size: cover
       background-position: 50% 50%
       -webkit-transition: -webkit-transform 0.6s ease-in-out
@@ -589,53 +602,74 @@ ul
     color: #fff
     line-height: 25px
     text-align: center
-    padding-top: 20px
+    padding-top: 40px
   #personaje
-    height: auto
+    height: 100%
+    position: absolute
     width: 100%
+    top: 0
+    left: 0
+
+    
     .persona
-      width: 100%
+      width: 900px
       height: auto
       position: relative
       display: none
-      svg
-        height: 371px
-        display: block
-        margin-left: auto
-        margin-right: auto
-        margin-top: 5px
-      p
-        width: 100%
-        text-align: center
-        font-family: 'chunk'
-        color: #fff
-        margin: 0
-        padding: 0
-        position: relative
-        &.the
-          margin-top: -90px
-          font-size: 37px
-          line-height: 20px
-        &.nombre
-          // bottom: 5px
-          font-size: 63px
-          line-height: 58px
-        &.descripcion
-          // color: #3c3c3c
-          font-size: 18px
-          font-family: 'geo'
-          width: 610px
-          height: auto
-          line-height: 20px
+      overflow: auto
+      margin-left: auto
+      margin-right: auto
+      padding-top: 75px
+      
+
+      .right-cont
+        width: 60%
+        height: 100%
+        float: right
+        p
+          width: 100%
+          text-align: center
+          font-family: 'chunk'
+          color: #fff
+          margin: 0
+          padding: 0
           position: relative
-          padding-top: 5px
-          font-style: italic
-          margin-left: auto !important
-          margin-right: auto !important
-          -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.45))
-          a
-            color: #fff
-            text-decoration: underline
+          &.the
+            margin-top: 5px
+            font-size: 37px
+            line-height: 20px
+          &.nombre
+            // bottom: 5px
+            font-size: 60px
+            line-height: 58px
+            text-align: center
+          &.descripcion
+            // color: #3c3c3c
+            font-size: 18px
+            font-family: 'geo'
+            width: 100%
+            height: auto
+            line-height: 20px
+            position: relative
+            padding-top: 20px
+            font-style: italic
+            margin-left: auto !important
+            margin-right: auto !important
+            -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.45))
+            a
+              color: #fff
+              text-decoration: underline
+      .left-cont
+        width: 40%
+        height: 100%
+        float: left
+        svg
+          height: 371px
+          display: block
+          margin-left: auto
+          margin-right: auto
+          margin-top: 5px
+      
 
           // text-shadow: 0px 1px rgba(255,255,255,0.45)
 
@@ -1255,6 +1289,7 @@ ul
   background-image: url('<%= asset_path("blueprint.png")%>')
   background-repeat: no-repeat
   background-position: 50% 50%
+  background-size: cover
   width: 100%
   height: 100%
   position: relative
@@ -1339,6 +1374,22 @@ ul
     margin-left: -373px
     margin-top: -200px
     -webkit-animation: anifocus 3s
+    background-image: url("<%= asset_path("quiztitle.png")%>")
+    // @media screen and (max-width: $break-small)
+    //   background-image: url("<%= asset_path("quiz-mobi.png")%>")
+    //   margin-left: auto
+    //   margin-right: auto
+    //   margin-top: 0px
+    //   transform: translateY(50px)
+    //   background-size: cover
+    //   width: 300px
+    //   height: 172px
+    //   position: relative
+    //   top: auto
+    //   left: auto
+
+
+    
   .quiz-subtitle
     margin: 0
     padding: 0
@@ -1370,7 +1421,9 @@ ul
     &:hover
       margin-top: 102px
 
-      -webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.25))  
+      -webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.25)) 
+    
+
 
 #case5-book
   width: 70px
