@@ -305,9 +305,13 @@ $ ->
       $("#todospersonajes").scroller
         horizontal: true
       # $("#todospersonajes").scroller("reset")
+    $('#help').css
+      visibility: 'hidden'
 
   $('#todospersonajes .close').on 'click', ->
     $('#todospersonajes').fadeOut({},"fast")
+    $('#help').css
+      visibility: 'visible'
   $('#faqs .close').on 'click', ->
     $('#faqs').css
       right: '-300px'
