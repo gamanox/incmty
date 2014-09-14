@@ -12,10 +12,10 @@
 var chart = [
       { resultado: "lifestyler", title: "Fiesta de lanzamiento",         value : 1,  color: "#6cd5e5" },
       { resultado: "goldseeker", title: "Abogados", value:  1,   color: "#e56c99" },
-      { resultado: "mastermind", title: "Producción",      value:  1,   color: "#80e56c" },
-      { resultado: "spotlighter", title: "Publicidad",        value : 1,   color: "#ff6c45" },
-      { resultado: "greatcreator", title: "Mascota",        value : 1,   color: "#e36ad9" },
-      { resultado: "coolhunter", title: "Oficinas",        value : 1,   color: "#e59f30" }
+      { resultado: "mastermind", title: "Estudio de mercado",      value:  1,   color: "#80e56c" },
+      { resultado: "spotlighter", title: "Oficinas",        value : 1,   color: "#ff6c45" },
+      { resultado: "greatcreator", title: "Empleados",        value : 1,   color: "#e36ad9" },
+      { resultado: "coolhunter", title: "Hardware",        value : 1,   color: "#e59f30" }
     ];
 
 ;(function($, undefined) {

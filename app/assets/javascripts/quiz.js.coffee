@@ -1,9 +1,30 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
-currentCase = '.container-uno'
+console.log 'afuera: '+currentCase
 String::capitalize = ->
   @charAt(0).toUpperCase() + @slice(1)
+# ratio = $(window).height()/$(window).width()
+
+# if ratio<=1
+#     $('')
+
+
+supportsOrientationChange = "onorientationchange" of window
+orientationEvent = (if supportsOrientationChange then "orientationchange" else "resize")
+window.addEventListener orientationEvent, (->
+  if window.orientation is 0
+    $('#rotardispisitivo').css
+      display: 'none'
+  else if window.orientation is 90
+    $('#rotardispisitivo').css
+      display: 'block'
+  return
+), false
+
+
+if navigator.userAgent.match(/iPhone/i)
+  $('#viewport').attr('content', 'width=device-width,minimum-scale=0.8,maximum-scale=0.8,initial-scale=0.8')
 
 resultadoSize = ->
   wH = $(window).height()
@@ -32,9 +53,7 @@ sortSome = (array)->
     b[1] - a[1]
   pusharray[0][0]
 
-pageView = (page)->
-  console.log 'analytics: '+page
-  ga('send', 'pageview', '/'+page)
+
 getResult = (respuesta)->
   console.log respuesta
   result = $(respuesta).attr('resultado')
@@ -50,11 +69,136 @@ $(window).resize ->
   setTimeout ->
     $('.main').scrollTo(currentCase, 300)
     resultadoSize()
-  , 6000
+  , 600
+getTotal = ->
+  total = 0
+  $.each $('#chartmobi .percent'), ->
+    valor = parseInt($(this).attr 'value')
+    total = total+valor
+    console.log 'total: '+total
+  console.log 'totalloop: '+total
+  $.each $('#chartmobi .percent'), ->
+    value = parseInt($(this).attr 'value')
 
+    percent = (value*100)/total
+    percent = Math.round(percent*10)/10
+    $(this).find('.color').html percent+'%'
+    console.log 'percent: '+percent+'%'
+  
 
 
 $ ->
+  $('#chartmobi .percent').on 'click', ->
+    el=$(this)
+    valor = 0
+    valor = el.attr 'value'
+    valor++
+    el.attr
+      value: valor
+    getTotal()
+    $('.case6-next').css
+      visibility: 'visible'
+      opacity: 1
+    result = $(this).attr('resultado')
+    if userData.profile.hasOwnProperty(result)
+      perfil = userData.profile[result]
+      `userData.profile[result]=perfil+1`
+    else
+      perfil = userData.profile[result]
+      `userData.profile[result]=4`
+      
+  
+
+
+    
+      
+  console.log 'screen: '+winW
+
+  $('#caso2-resultado').dragswipe
+    width: winW
+    current_page_element: '#current_page'
+    total_pages_element: '#total_pages'
+  $('#caso2-resultado').on 'swiperight', ->
+    $('#caso2-resultado').prevPage()
+    currentEntrepeneur = $('#current_page').html()
+    switch currentEntrepeneur
+      when "1"
+        $('#inversionista').trigger 'click'
+      when '2'
+        $('#emprendedor').trigger 'click'
+      when '3'
+        $('#gato').trigger 'click'
+      when '4'
+        $('#staff').trigger 'click'
+      when '5'
+        $('#amigo').trigger 'click'
+      when '6'
+        $('#mesero').trigger 'click'
+        
+
+      else
+        console.log 'error switch'
+
+  $('#caso2-resultado').on 'swipeleft', ->
+    $('#caso2-resultado').nextPage()
+    currentEntrepeneur = $('#current_page').html()
+    switch currentEntrepeneur
+      when "1"
+        $('#inversionista').trigger 'click'
+      when '2'
+        $('#emprendedor').trigger 'click'
+      when '3'
+        $('#gsto').trigger 'click'
+      when '4'
+        $('#staff').trigger 'click'
+      when '5'
+        $('#amigo').trigger 'click'
+      when '6'
+        $('#mesero').trigger 'click'
+
+
+
+  $('#caso3-resultado').dragswipe
+    width: winW
+    current_page_element: '#current_chess'
+    total_pages_element: '#total_chess'
+  $('#caso3-resultado').on 'swiperight', ->
+    $('#caso3-resultado').prevPage()
+    currentEntrepeneur = $('#current_chess').html()
+    switch currentEntrepeneur
+      when "1"
+        $('#chess-rey').trigger 'click'
+      when '2'
+        $('#chess-reina').trigger 'click'
+      when '3'
+        $('#chess-alfil').trigger 'click'
+      when '4'
+        $('#chess-caballo').trigger 'click'
+      when '5'
+        $('#chess-torre').trigger 'click'
+      when '6'
+        $('#chess-peon').trigger 'click'
+        
+
+      else
+        console.log 'error switch'
+
+  $('#caso3-resultado').on 'swipeleft', ->
+    $('#caso3-resultado').nextPage()
+    currentEntrepeneur = $('#current_chess').html()
+    switch currentEntrepeneur
+      when "1"
+        $('#chess-rey').trigger 'click'
+      when '2'
+        $('#chess-reina').trigger 'click'
+      when '3'
+        $('#chess-alfil').trigger 'click'
+      when '4'
+        $('#chess-caballo').trigger 'click'
+      when '5'
+        $('#chess-torre').trigger 'click'
+      when '6'
+        $('#chess-peon').trigger 'click'
   
   resultadoSize()
   # console.log 
@@ -106,14 +250,14 @@ $ ->
     $('#shareoverlay').css
       visibility: 'hidden'
     $('#help').css
-      visibility: 'hidden'
+      visibility: 'visible'
   $('.sharebtn-cont').on 'click', ->
     pageView('compartir')
 
     $('#shareoverlay').css
       visibility: 'visible'
     $('#help').css
-      visibility: 'visible'
+      visibility: 'hidden'
 
   
   $('#repeatbtn').on 'click', (e)->
@@ -121,8 +265,8 @@ $ ->
     e.preventDefault()
     location.reload()
   $('.case1-next').on 'click', ->
-    currentCase = '.container-tres'
-    console.log currentCase
+    `currentCase = '.container-tres'`
+    console.log 'click: '+currentCase
     pageView('caso2')
     $('.main').scrollTo('.container-tres', 300)
     chngBg('#a4c060')
@@ -130,7 +274,7 @@ $ ->
 
     getResult('#caso1-resultado')
   $('.case2-next').on 'click', ->
-    currentCase = '.container-cuatro'
+    `currentCase = '.container-cuatro'`
     console.log currentCase
 
 
@@ -141,15 +285,29 @@ $ ->
 
 
   $('.case3-next').on 'click', ->
-    currentCase = '.container-cinco'
-    console.log currentCase
+    ancho = $(window).width()
+    if ancho>=851
+      `currentCase = '.container-cinco'`
+      console.log currentCase
 
-    pageView('caso4')
-    $('.main').scrollTo('.container-cinco', 300)
-    chngBg('#3dc0d4')
+      pageView('caso4')
+      $('.main').scrollTo('.container-cinco', 300)
+      chngBg('#3dc0d4')
+    else
+      $('.container-cinco').css
+        display: 'none'
+      $('.container-seis').css
+        display: 'none'
+      $('.container-siete .case-number').html 'Caso #4'
+      pageView('caso6')
+      $('.main').scrollTo('.container-siete', 300)
+      `currentCase = '.container-siete'`
+      console.log currentCase
+
+      chngBg('#ff9966')
 
   $('.case4-next').on 'click', ->
-    currentCase = '.container-seis'
+    `currentCase = '.container-seis'`
     console.log currentCase
 
     pageView('caso5')
@@ -163,7 +321,7 @@ $ ->
   $('.case5-next').on 'click', ->
     pageView('caso6')
     $('.main').scrollTo('.container-siete', 300)
-    currentCase = '.container-siete'
+    `currentCase = '.container-siete'`
     console.log currentCase
 
     chngBg('#ff9966')
@@ -204,9 +362,11 @@ $ ->
         picture: "http://quizdelemprendedor.com/"+gender+personaje+".jpg"
       , (response) ->
     setTimeout ->
-      $('.main').scrollTo('.container-result', 300)
-      currentCase = '.container-result'
+      `$('.main').scrollTo('.container-result', 300, {onAfter: function(){$('#personaje .persona.'+personaje+' .share-cont-btns').css({"display": 'block'})}});`
+      `currentCase = '.container-result'`
 
+      
+          
       switch personaje
         when "mastermind"
           chngBg '#f2b121'
@@ -276,3 +436,5 @@ $ ->
     tolerance: 'pointer'
     grid: [50, 50]
   $('.drag-container').disableSelection()
+  $('#inversionista').trigger 'click'
+  $('#chess-rey').trigger 'click'

@@ -24,32 +24,16 @@
 //= require paper-full.min
 //= require chart
 //= require ga
+//= require vars
+//= require hammer
+//= require swipe
 
 //= require_tree .
 
-// $(function() {
-//   $('.btn').on('click', function(e) {
-//     e.preventDefault();
-//     FB.api '/me/feed', 'post', {
-//       message: 'Hello, world!'
-//     });
-//     console.log("click");
-//   });
-// });
 
 
 
-var userData = {
-  gender: 'male',
-  profile: {
-    
-  }
 
-
-}
-var sortprofile = [];
-
-  
 
 
 

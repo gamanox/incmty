@@ -16,7 +16,7 @@
   100%
     -webkit-filter: blur(0px)
 
-$break-small: 360px
+$break-small: 850px
 $break-large: 1200px
 
 svg
@@ -56,14 +56,36 @@ ul
   -webkit-transition: -webkit-transform 0.2s ease-in-out
   &:hover
     -webkit-transform: rotate(360deg)
-  // @media screen and (max-width: $break-small)
-  //   top: 10px
-  //   right: 10px
-  //   margin-right: 0
-  //   background-size: cover
-  //   width: 40px
-  //   height: 40px
+  @media screen and (max-width: $break-small)
+    display: none
+    top: 10px
+    right: 10px
+    margin-right: 0
+    background-size: cover
+    width: 40px
+    height: 40px
 
+
+#rotardispisitivo
+  width: 100%
+  height: 100%
+  display: none
+  background-color: #4c72a2
+  background-image: url('<%= asset_path("blueprint.png")%>')
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-size: cover
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10000
+  p.text
+    font-family: 'chunk'
+    text-align: center
+    width: 100%
+    font-size: 36px
+    padding-top: 12%
+    color: #fff
 
 
 
@@ -71,7 +93,7 @@ ul
   visibility: hidden
 #footer
   width: 100%
-  height: 30px
+  height: 25px
   background-color: #FFF
   position: fixed
   bottom: 0
@@ -82,6 +104,8 @@ ul
     padding-top: 8px
     padding-bottom: 2px
     position: absolute
+    @media screen and (max-width: $break-small)
+      height: 15px
     // background-color: red
 
   .left
@@ -89,6 +113,10 @@ ul
     left: 0
     width: 200px
     margin-left: 15px
+    @media screen and (max-width: $break-small)
+      margin-left: 10px
+      width: 70px
+      padding-top: 5px
     a
       text-decoration: none
       float: left
@@ -102,6 +130,7 @@ ul
         background-size: cover
         background-position: 50% 50%
         -webkit-transition: -webkit-transform 0.2s ease-in-out
+        margin-left: 0
         &:hover
           -webkit-transform: rotate(360deg)
       &.fb
@@ -125,6 +154,9 @@ ul
     right: 0
     width: 370px
     margin-right: 15px
+    @media screen and (max-width: $break-small)
+      width: 80%
+      margin-right: 8px
     p
       text-decoration: none
       display: block
@@ -140,6 +172,10 @@ ul
       font-size: 11px
       margin-right: 10px
       text-align: right
+      @media screen and (max-width: $break-small)
+        font-size: 8px
+        margin-right: 6px
+
 
     a
       text-decoration: none
@@ -156,6 +192,8 @@ ul
       font-size: 11px
       margin-right: 10px
       text-align: right
+      @media screen and (max-width: $break-small)
+        font-size: 8px
       &.prensa, &.inscribete
         padding-left: 10px
         border-left: 1px solid
@@ -201,12 +239,23 @@ ul
       float: left
       width: 100%
       height: 100%
-
+    @media screen and (max-width: $break-small)
+      top: auto
+      bottom: 13%
+      left: -120px
+      a#repeatbtn
+        background-size: 50%
+        background-repeat: no-repeat
+        background-color: #fff
+        background-position: 100% 50%
       // -webkit-transition: all 0.2s
     -webkit-transition: all 0.2s ease-in-out
     // -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.45))
     &:hover
       left: 0px
+      @media screen and (max-width: $break-small)
+        left: -120px
+
   #incbtn-cont
     width: 182px
     height: 64px
@@ -219,11 +268,21 @@ ul
       float: left
       width: 100%
       height: 100%
-
+    @media screen and (max-width: $break-small)
+      top: auto
+      bottom: 13%
+      right: -120px
+      a#incbtn
+        background-size: 50%
+        background-repeat: no-repeat
+        background-color: #fff
+        background-position: 0% 50%
     -webkit-transition: all 0.2s ease-in-out
     // -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.45))
     &:hover
       right: 0px
+      @media screen and (max-width: $break-small)
+        right: -120px
   #todospersonajes
     display: none
     width: 100%
@@ -271,7 +330,7 @@ ul
       &.greatcreator
         background-color: #e52653
       svg
-        margin-top: 25%
+        margin-top: 20%
         display: block
         margin-left: auto
         margin-right: auto
@@ -296,7 +355,7 @@ ul
           // color: #3c3c3c
           font-size: 14px
           font-family: 'geo'
-          width: 250px
+          width: 300px
           height: auto
           line-height: 20px
           position: relative
@@ -310,6 +369,28 @@ ul
             text-decoration: underline
       // .personagrupo
       //   height: 371px
+    @media screen and (max-width: $break-small)
+      .close
+        width: 25px
+        height: 25px
+        top: 15px
+        right: 15px
+      .persona
+        background-image: url('<%= asset_path("blueprint.png")%>')
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: cover
+        svg
+          margin-top: 4%
+          height: 60%
+        p.the
+          margin-top: -20%
+        p.descripcion
+          -webkit-filter: none
+          line-height: 17px
+          width: 91%
+          font-size: 15px
+
   .margen
     position: absolute
     width: calc(100% - 40px)
@@ -317,6 +398,11 @@ ul
     top: 20px
     left: 20px
     border: 1px solid #fff
+    @media screen and (max-width: $break-small)
+      width: calc(100% - 10px)
+      height: calc(100% - 35px)
+      top: 5px
+      left: 5px
   .share-cont-btns
     width: 70%
     height: auto
@@ -324,6 +410,12 @@ ul
     margin-left: auto
     margin-right: auto
     margin-top: 33px
+    @media screen and (max-width: $break-small)
+      display: none
+      width: 40%
+      position: fixed
+      bottom: 8%
+      left: 30%
   .sharebtn-cont
     float: right
     cursor: pointer
@@ -336,9 +428,13 @@ ul
       width: 100%
       position: relative
       bottom: 0
+      @media screen and (max-width: $break-small)
+        font-size: 10px
     &:hover
       .sharebtn
         -webkit-transform: rotateY(360deg)
+      
+
   #shareoverlay
     top: 0
     left: 0
@@ -371,7 +467,7 @@ ul
         position: relative
         font-size: 37px
         line-height: 20px
-        padding-top: 100px
+        padding-top: 2%
       &.nombre
         width: 100%
         color: #fff
@@ -408,8 +504,8 @@ ul
           color: #fff
           text-transform: underline
         .incfb
-          margin-top: 10px
-          margin-right: 10px
+          margin-top: 15px
+          margin-right: 15px
           cursor: pointer
           display: inline-block
           width: 24px
@@ -431,13 +527,34 @@ ul
           -webkit-transition: -webkit-transform 0.2s ease-in-out
           &:hover
             -webkit-transform: rotate(360deg)
-
-
     .share-container
       padding-top: 40px
       margin-left: auto
       margin-right: auto
-      width: 300px
+      width: 281px
+    @media screen and (max-width: $break-small)
+      .close
+        width: 25px
+        height: 25px
+        top: 15px
+        right: 15px
+      p.the
+        padding-top: 13%
+        font-size: 25px
+      p.nombre
+        font-size: 41px
+        line-height: 42px
+      p.sharetext1
+        padding-top: 2%
+      .share-container
+        padding-top: 6%
+      .sharetext2
+        padding-top: 6%
+
+
+
+
+    
   .sharebtn
     width: 70px
     height: 70px
@@ -446,10 +563,16 @@ ul
     // -moz-border-radius: 50%
     // -ms-border-radius: 50%
     // -o-border-radius: 50%
+    margin-left: auto
+    margin-right: auto
     background-image: url('<%= asset_path("share.png")%>')
     background-size: cover
     background-position: 50% 50%
     -webkit-transition: -webkit-transform 0.6s ease-in-out
+    @media screen and (max-width: $break-small)
+      width: 60px
+      height: 60px
+
     svg
       display: block
       padding-top: 15%
@@ -469,10 +592,13 @@ ul
       bottom: 0
       margin-left: -5px
       width: 80px
-
+      @media screen and (max-width: $break-small)
+        font-size: 10px
+      
     &:hover
       .todosbtn
         -webkit-transform: rotateY(360deg)
+
     .todosbtn
       width: 70px
       height: 70px
@@ -488,6 +614,11 @@ ul
       -webkit-transition: -webkit-transform 0.6s ease-in-out
       margin-left: auto
       margin-right: auto
+      @media screen and (max-width: $break-small)
+        width: 60px
+        height: 60px
+        margin-left: auto
+        margin-right: auto
     
   
   #facebtn-cont
@@ -603,12 +734,17 @@ ul
     line-height: 25px
     text-align: center
     padding-top: 40px
+    @media screen and (max-width: $break-small)
+      font-size: 16px
+      line-height: 17px
+      padding-top: 13px
   #personaje
     height: 100%
     position: absolute
     width: 100%
     top: 0
     left: 0
+
 
     
     .persona
@@ -681,6 +817,72 @@ ul
 
     #uselink
       height: 371px !important
+
+    @media screen and (max-width: $break-small)
+      .persona
+        width: 93%
+        position: relative
+        padding-top: 2%
+        &.lifestyler
+          .left-cont
+            width: 59%
+          
+            svg
+              margin-left: auto
+              height: 57%
+          .right-cont
+            width: 41%
+        &.mastermind
+          .left-cont
+            width: 58%
+
+            svg
+              margin-left: auto
+              height: 55%
+          .right-cont
+            width: 42%
+        &.coolhunter
+          .left-cont
+            svg
+              margin-left: auto
+        &.goldseeker
+          .left-cont
+            width: 45%
+            svg
+              margin-left: auto
+          .right-cont
+            width: 55%
+            padding-top: 5%
+            p.nombre
+              font-size: 17px
+        &.spotlighter
+          .left-cont
+            width: 49%
+            svg
+              margin-left: auto
+              height: 50%
+          .right-cont
+            width: 51%
+
+        .left-cont
+          width: 55%
+          svg
+            height: 60%
+        .right-cont
+          width: 45%
+          p.the
+            margin-top: 5px
+            font-size: 16px
+            line-height: 16px
+            text-align: center
+          p.nombre
+            font-size: 17px
+            line-height: 17px
+          p.descripcion
+            font-size: 13px
+            line-height: 16px
+            padding-top: 8px
+            -webkit-filter: none
 
 .container-uno
   // background-color: #4c72a2
@@ -975,7 +1177,72 @@ ul
       margin-top: -175px
       margin-left: 225px
 .container-siete
-  
+  #chartmobi
+    display: none
+  @media screen and (max-width: $break-small)
+    #chartmobi
+      display: block
+      width: 90%
+      height: auto
+      overflow: auto
+      margin-left: auto
+      margin-right: auto
+      margin-top: 1%
+      .percent
+        width: 46%
+        margin-left: 2%
+        margin-right: 2%
+        margin-bottom: 3%
+        height: auto
+        overflow: auto
+        float: left
+        p.label
+          font-family: 'chunk'
+          font-size: 14px
+          color: #fff
+          text-align: center
+        p.color
+          background-color: red
+          width: 44%
+          padding: 0%
+          font-size: 18px
+          text-align: center
+          font-family: 'chunk'
+          color: #fff
+          margin-bottom: 0%
+          -webkit-border-radius: 50%
+          -moz-border-radius: 50%
+          -ms-border-radius: 50%
+          -o-border-radius: 50%
+          border-radius: 50%
+          padding-top: 13%
+          padding-bottom: 13%
+          border: 1px solid rgba(255,255,255,0.4)
+          margin-left: auto
+          margin-right: auto
+      #chart-fiesta
+        p.color
+          background-color: #6cd5e5
+      #chart-abogados
+        p.color
+          background-color: #e56c99
+      #chart-estudio
+        p.color
+          background-color: #80e56c
+      #chart-oficinas
+        p.color
+          background-color: #ff6c45
+      #chart-empleados
+        p.color
+          background-color: #e36ad9
+      #chart-hardware
+        p.color
+          background-color: #e59f30
+
+
+
+
+
   .case6-next
     visibility: hidden
     opacity: 0
@@ -1067,6 +1334,34 @@ ul
   
 .container-cuatro
   // background-color: #b67ba6
+
+  #current_chess, #total_chess
+    display: none
+  .chess-mask
+    @media screen and (max-width: $break-small)
+      margin-top: 2%
+      width: 100%
+      margin-left: auto
+      margin-right: auto
+      height: 50%
+      overflow: hidden
+      ul.chess-container
+        position: relative
+        height: 100%
+        width: 600%
+        top: auto
+        left: auto
+        margin-left: 0
+        margin-top: 0
+        overflow: hidden
+        li.pieza
+          width: 16.66%
+          height: 100%
+          display: block
+          p.nombre
+            position: relative
+            bottom: auto
+
   .case3-next
     visibility: hidden
     opacity: 0
@@ -1137,11 +1432,66 @@ ul
       #case4-peon
         height: 80px
         margin-top: 120px
+      @media screen and (max-width: $break-small)
+        #case4-king
+          height: 182px
+          margin-top: 18px
+        #case4-reina
+          height: 147px
+          margin-top: 53px
+        #case4-alfil
+          height: 123px
+          margin-top: 77px
+        #case4-horse
+          height: 112px
+          margin-top: 88px
+        #case4-torre
+          height: 99px
+          margin-top: 101px
+        #case4-peon
+          height: 80px
+          margin-top: 120px
+
+
 .container-tres
   // background-color: #a4c060
+  #current_page, #total_pages
+    display: none
+  .networking-mask
+    @media screen and (max-width: $break-small)
+      margin-top: 2%
+      width: 100%
+      margin-left: auto
+      margin-right: auto
+      height: 50%
+      overflow: hidden
+      ul.networking-container
+        position: relative
+        height: 100%
+        width: 600%
+        top: auto
+        left: auto
+        margin-left: 0
+        margin-top: 0
+        overflow: hidden
+        li.entrepeneur
+          width: 16.66%
+          height: 100%
+          display: block
+          p.nombre
+            position: relative
+            bottom: auto
+
+
+
+
   .case2-next
     visibility: hidden
     opacity: 0
+    @media screen and (max-width: $break-small)
+      visibility: visible
+      opacity: 1
+
   ul.networking-container
     width: 960px
     height: 181px
@@ -1233,6 +1583,27 @@ ul
       #case3-mesero
         height: 171px
         margin-top: 29px
+      @media screen and (max-width: $break-small)
+        #case3-men
+          height: 82.48%
+          margin-top: 23px
+        #case3-boy
+          height: 82.48%
+          margin-top: 23px
+        #case3-cat
+          height: 62.59%
+          margin-top: 59px
+        #case3-girl
+          height: 88.00%
+          margin-top: 13px
+        #case3-skype
+          height: 79.16%
+          margin-top: 29px
+        #case3-mesero
+          height: 82.48%
+          margin-top: 23px
+
+
 
 
 
@@ -1258,6 +1629,8 @@ ul
       
       width: 155px
       height: 150px
+      .drag-handle
+        display: none
       p.nombre
         font-family: 'chunk'
         font-size: 15px
@@ -1270,6 +1643,50 @@ ul
       svg
         margin: auto
         vertical-align: bottom
+    @media screen and (max-width: $break-small)
+      width: 80%
+      height: 54%
+      overflow: auto
+      top: auto
+      left: auto
+      margin-left: 0
+      position: relative
+      margin-top: 5%
+      margin-left: auto
+      margin-right: auto
+      li
+        width: 100%
+        height: 16%
+        position: relative
+        background-color: rgba(255,255,255,0.3)
+        margin-bottom: 1px
+        .drag-handle
+          display: block
+          float: left
+          height: 100%
+          width: 9%
+          display: block
+          background-image: url('<%= asset_path("drag-handle.png")%>')
+          background-repeat: no-repeat
+          background-position: 50% 50%
+        p.nombre
+          position: absolute
+          top: 21%
+          left: 37%
+          width: 60%
+          text-align: left
+        
+          
+        svg
+          // width: 100px
+          // max-height: 50px
+          // max-width: 50px
+          height: 35px
+          float: left
+          display: block
+          margin: auto
+          margin-left: 7%
+          margin-top: 1.5%
   .case1-scale
     width: 934px
     height: 128px
@@ -1278,6 +1695,8 @@ ul
     left: 50%
     margin-left: -471px
     margin-top: -107px
+    @media screen and (max-width: $break-small)
+      display: none
 
  
 
@@ -1310,6 +1729,8 @@ ul
     margin-left: auto
     margin-right: auto
     padding-left: 95px
+    @media screen and (max-width: $break-small)
+      display: none
 
   .case-next
     width: 107px
@@ -1326,10 +1747,22 @@ ul
     -o-transition: all 0.2s ease-in-out
     transition: all 0.2s ease-in-out
     -webkit-filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.25))
+    @media screen and (max-width: $break-small)
+      width: 80px
+      height: 80px
+      bottom: 6%
+      margin-left: -40px
+      -webkit-filter: none
+      &:hover
+
     &:hover
       
       bottom: 58px
       -webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.25))
+      @media screen and (max-width: $break-small)
+      
+        bottom: 6%
+        -webkit-filter: none
 
   .case-title
     // position: absolute
@@ -1339,6 +1772,7 @@ ul
     // height: 100px
     height: 50px
     padding-top: 50px
+    
 
     p.case-number
       float: left
@@ -1363,6 +1797,22 @@ ul
       font-size: 22px
       color: #fff
       text-align: center
+    @media screen and (max-width: $break-small)
+      width: 90%
+      padding-top: 0
+      height: auto
+      overflow: auto
+      .case-number
+        width: 100%
+        text-align: center
+      .left-brace, .right-brace
+        height: 36px
+      p.case-description
+        font-size: 15px
+        width: 93%
+      .right-brace, .left-brace
+        margin-left: 2px
+        margin-right: 2px
   
   .quiz-title
     width: 746px
@@ -1375,18 +1825,18 @@ ul
     margin-top: -200px
     -webkit-animation: anifocus 3s
     background-image: url("<%= asset_path("quiztitle.png")%>")
-    // @media screen and (max-width: $break-small)
-    //   background-image: url("<%= asset_path("quiz-mobi.png")%>")
-    //   margin-left: auto
-    //   margin-right: auto
-    //   margin-top: 0px
-    //   transform: translateY(50px)
-    //   background-size: cover
-    //   width: 300px
-    //   height: 172px
-    //   position: relative
-    //   top: auto
-    //   left: auto
+    @media screen and (max-width: $break-small)
+      background-image: url("<%= asset_path("quiz-mobi.png")%>")
+      margin-left: auto
+      margin-right: auto
+      margin-top: 50px
+      // transform: translateY(50px)
+      background-size: cover
+      width: 300px
+      height: 172px
+      position: relative
+      top: auto
+      left: auto
 
 
     
@@ -1401,6 +1851,14 @@ ul
     width: 100%
     top: 55%
     font-style: italic
+    @media screen and (max-width: $break-small)
+      width: 90%
+      margin-left: auto
+      margin-right: auto
+      position: relative
+      padding-top: 30px
+      font-size: 20px
+      top: auto
   .quiz-start
     cursor: pointer
     width: 125px
@@ -1417,6 +1875,19 @@ ul
     -o-transition: all 0.2s ease-in-out
     transition: all 0.2s ease-in-out
     -webkit-filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.25))
+    @media screen and (max-width: $break-small)
+      -webkit-filter: none
+      width: 90px
+      height: 90px
+      position: relative
+      bottom: auto
+      left: auto
+      top: auto
+      margin-left: auto
+      margin-right: auto
+      margin-top: 38px
+      display: block
+      background-size: cover
     
     &:hover
       margin-top: 102px
@@ -1433,23 +1904,42 @@ ul
   // margin-bottom: 4px
   // background-color: #FFF
 
+
 #case2-moleskine
   width: 75px
   height: 91px
+  @media screen and (max-width: $break-small)
+    width: 27px
+    height: 35px
 #case2-smartphone
   // width: 52px
   height: 83px
+  @media screen and (max-width: $break-small)
+    width: 22px
+    height: 35px
 #case2-ipod
   width: 97px
   height: 109px
+  @media screen and (max-width: $break-small)
+    width: 31px
+    height: 35px
 #caase2-pc
   // width: 97px
   height: 114px
+  @media screen and (max-width: $break-small)
+    width: 45px
+    height: auto
 #case2-wii
   width: 105px
+  @media screen and (max-width: $break-small)
+    width: 41px
+    height: 35px
   // height: 91px
 #case2-tablet
   width: 86px
+  @media screen and (max-width: $break-small)
+    width: 35px
+    height: 35px
 .scroll-handle
   background-color: #d6d6d6 !important
 
@@ -1457,6 +1947,9 @@ ul
   svg
     path
       cursor: pointer
+  @media screen and (max-width: $break-small)
+    display: none
+
 
 .chart
   position: absolute
@@ -1465,6 +1958,16 @@ ul
   top: 50%
   left: 50%
   margin: -195px 0 0 -175px
+  @media screen and (max-width: $break-small)
+    position: relative
+    top: auto
+    left: auto
+    margin: 0
+    margin-left: auto
+    margin-right: auto
+    width: 200px
+    height: 200px
+
 
 .doughnutTip
   position: absolute
@@ -1536,6 +2039,7 @@ ul
   z-index: 2000
   position: fixed
   top: 0
+
   right: -300px
   -webkit-transition: right 0.2s ease-in-out
   -moz-transition: right 0.2s ease-in-out
