@@ -1338,7 +1338,34 @@ ul
   #current_chess, #total_chess
     display: none
   .chess-mask
+    .rarrow, .larrow
+      display: none
     @media screen and (max-width: $break-small)
+      .rarrow
+        display: block
+        position: absolute
+        top: 50%
+        right: 2%
+        width: 0 
+        height: 0
+        z-index: 1000
+        border-top: 30px solid transparent
+        border-bottom: 30px solid transparent
+        border-left: 30px solid rgba(255,255,255,0.4)
+        margin-top: -30px
+      .larrow
+        display: block
+        position: absolute
+        top: 50%
+        left: 2%
+        width: 0 
+        height: 0
+        z-index: 1000
+        border-top: 30px solid transparent
+        border-bottom: 30px solid transparent
+        border-right: 30px solid rgba(255,255,255,0.4)
+        margin-top: -30px
+      position: relative
       margin-top: 2%
       width: 100%
       margin-left: auto
@@ -1458,7 +1485,34 @@ ul
   #current_page, #total_pages
     display: none
   .networking-mask
+    .larrow, .rarrow
+      display: none
     @media screen and (max-width: $break-small)
+      .rarrow
+        display: block
+        position: absolute
+        top: 50%
+        right: 2%
+        width: 0 
+        height: 0
+        z-index: 1000
+        border-top: 30px solid transparent
+        border-bottom: 30px solid transparent
+        border-left: 30px solid rgba(255,255,255,0.4)
+        margin-top: -30px
+      .larrow
+        display: block
+        position: absolute
+        top: 50%
+        left: 2%
+        width: 0 
+        height: 0
+        z-index: 1000
+        border-top: 30px solid transparent
+        border-bottom: 30px solid transparent
+        border-right: 30px solid rgba(255,255,255,0.4)
+        margin-top: -30px
+      position: relative
       margin-top: 2%
       width: 100%
       margin-left: auto

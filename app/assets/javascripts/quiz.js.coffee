@@ -118,7 +118,7 @@ $ ->
     width: winW
     current_page_element: '#current_page'
     total_pages_element: '#total_pages'
-  $('#caso2-resultado').on 'swiperight', ->
+  $('.container-tres .larrow').on 'click', ->
     $('#caso2-resultado').prevPage()
     currentEntrepeneur = $('#current_page').html()
     switch currentEntrepeneur
@@ -139,6 +139,42 @@ $ ->
       else
         console.log 'error switch'
 
+  $('#caso2-resultado').on 'swiperight', ->
+    $('#caso2-resultado').prevPage()
+    currentEntrepeneur = $('#current_page').html()
+    switch currentEntrepeneur
+      when "1"
+        $('#inversionista').trigger 'click'
+      when '2'
+        $('#emprendedor').trigger 'click'
+      when '3'
+        $('#gato').trigger 'click'
+      when '4'
+        $('#staff').trigger 'click'
+      when '5'
+        $('#amigo').trigger 'click'
+      when '6'
+        $('#mesero').trigger 'click'
+        
+
+      else
+        console.log 'error switch'
+  $('.container-tres .rarrow').on 'click', ->
+    $('#caso2-resultado').nextPage()
+    currentEntrepeneur = $('#current_page').html()
+    switch currentEntrepeneur
+      when "1"
+        $('#inversionista').trigger 'click'
+      when '2'
+        $('#emprendedor').trigger 'click'
+      when '3'
+        $('#gsto').trigger 'click'
+      when '4'
+        $('#staff').trigger 'click'
+      when '5'
+        $('#amigo').trigger 'click'
+      when '6'
+        $('#mesero').trigger 'click'
   $('#caso2-resultado').on 'swipeleft', ->
     $('#caso2-resultado').nextPage()
     currentEntrepeneur = $('#current_page').html()
@@ -162,6 +198,26 @@ $ ->
     width: winW
     current_page_element: '#current_chess'
     total_pages_element: '#total_chess'
+  $('.container-cuatro .larrow').on 'click', ->
+    $('#caso3-resultado').prevPage()
+    currentEntrepeneur = $('#current_chess').html()
+    switch currentEntrepeneur
+      when "1"
+        $('#chess-rey').trigger 'click'
+      when '2'
+        $('#chess-reina').trigger 'click'
+      when '3'
+        $('#chess-alfil').trigger 'click'
+      when '4'
+        $('#chess-caballo').trigger 'click'
+      when '5'
+        $('#chess-torre').trigger 'click'
+      when '6'
+        $('#chess-peon').trigger 'click'
+        
+
+      else
+        console.log 'error switch'
   $('#caso3-resultado').on 'swiperight', ->
     $('#caso3-resultado').prevPage()
     currentEntrepeneur = $('#current_chess').html()
@@ -182,7 +238,22 @@ $ ->
 
       else
         console.log 'error switch'
-
+  $('.container-cuatro .rarrow').on 'click', ->
+    $('#caso3-resultado').nextPage()
+    currentEntrepeneur = $('#current_chess').html()
+    switch currentEntrepeneur
+      when "1"
+        $('#chess-rey').trigger 'click'
+      when '2'
+        $('#chess-reina').trigger 'click'
+      when '3'
+        $('#chess-alfil').trigger 'click'
+      when '4'
+        $('#chess-caballo').trigger 'click'
+      when '5'
+        $('#chess-torre').trigger 'click'
+      when '6'
+        $('#chess-peon').trigger 'click'
   $('#caso3-resultado').on 'swipeleft', ->
     $('#caso3-resultado').nextPage()
     currentEntrepeneur = $('#current_chess').html()
