@@ -23,8 +23,6 @@ window.addEventListener orientationEvent, (->
 ), false
 
 
-if navigator.userAgent.match(/iPhone/i)
-  $('#viewport').attr('content', 'width=device-width,minimum-scale=0.8,maximum-scale=0.8,initial-scale=0.8')
 
 resultadoSize = ->
   wH = $(window).height()
