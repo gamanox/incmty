@@ -13,6 +13,7 @@ $(function () {
   if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))){
     $('#viewport').attr('content', 'width=device-width,minimum-scale=0.8,maximum-scale=0.8,initial-scale=0.7');
   }
+
   
 });
 
@@ -36,6 +37,6 @@ var currentCase = '.container-uno';
 var pageView;
 var case2result = '';
 pageView = function(page) {
-  console.log('analytics: ' + page);
+  // console.log('analytics: ' + page);
   return ga('send', 'pageview', '/' + page);
 };

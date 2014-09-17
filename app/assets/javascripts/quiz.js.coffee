@@ -1,7 +1,7 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
-console.log 'afuera: '+currentCase
+# console.log 'afuera: '+currentCase
 String::capitalize = ->
   @charAt(0).toUpperCase() + @slice(1)
 # ratio = $(window).height()/$(window).width()
@@ -29,12 +29,12 @@ resultadoSize = ->
   if wH <= 653
     $('#personaje').css
       "padding-top": 0
-      console.log 'if'+wH
+      # console.log 'if'+wH
   else
     personajeH = (wH-653)/2
     $('#personaje').css
       "padding-top": personajeH+"px"
-      console.log 'else '+personajeH
+      # console.log 'else '+personajeH
 
 chngBg = (color)->
   $('.main').css
@@ -53,7 +53,7 @@ sortSome = (array)->
 
 
 getResult = (respuesta)->
-  console.log respuesta
+  # console.log respuesta
   result = $(respuesta).attr('resultado')
   if result isnt ''
     if userData.profile.hasOwnProperty(result)
@@ -62,7 +62,7 @@ getResult = (respuesta)->
 
     else
       userData.profile[result]=1
-  console.log userData.profile
+  # console.log userData.profile
 $(window).resize ->
   setTimeout ->
     $('.main').scrollTo(currentCase, 300)
@@ -73,19 +73,31 @@ getTotal = ->
   $.each $('#chartmobi .percent'), ->
     valor = parseInt($(this).attr 'value')
     total = total+valor
-    console.log 'total: '+total
-  console.log 'totalloop: '+total
+    # console.log 'total: '+total
+  # console.log 'totalloop: '+total
   $.each $('#chartmobi .percent'), ->
     value = parseInt($(this).attr 'value')
 
     percent = (value*100)/total
     percent = Math.round(percent*10)/10
     $(this).find('.color').html percent+'%'
-    console.log 'percent: '+percent+'%'
+    # console.log 'percent: '+percent+'%'
   
 
 
 $ ->
+
+  if navigator.userAgent.match(/iPad/i)
+    $("#viewport").attr "content", "width=device-width,minimum-scale=0.8,maximum-scale=0.8,initial-scale=1.0"
+    if window.orientation is 0
+      $('#rotardispisitivo').css
+        display: 'block'
+    else if window.orientation is 90
+      $('#rotardispisitivo').css
+        display: 'block'
+      
+    
+
   $('#chartmobi .percent').on 'click', ->
     el=$(this)
     valor = 0
@@ -110,7 +122,7 @@ $ ->
 
     
       
-  console.log 'screen: '+winW
+  # console.log 'screen: '+winW
 
   $('#caso2-resultado').dragswipe
     width: winW
@@ -135,7 +147,7 @@ $ ->
         
 
       else
-        console.log 'error switch'
+        # console.log 'error switch'
 
   $('#caso2-resultado').on 'swiperight', ->
     $('#caso2-resultado').prevPage()
@@ -156,7 +168,7 @@ $ ->
         
 
       else
-        console.log 'error switch'
+        # console.log 'error switch'
   $('.container-tres .rarrow').on 'click', ->
     $('#caso2-resultado').nextPage()
     currentEntrepeneur = $('#current_page').html()
@@ -215,7 +227,7 @@ $ ->
         
 
       else
-        console.log 'error switch'
+        # console.log 'error switch'
   $('#caso3-resultado').on 'swiperight', ->
     $('#caso3-resultado').prevPage()
     currentEntrepeneur = $('#current_chess').html()
@@ -235,7 +247,7 @@ $ ->
         
 
       else
-        console.log 'error switch'
+        # console.log 'error switch'
   $('.container-cuatro .rarrow').on 'click', ->
     $('#caso3-resultado').nextPage()
     currentEntrepeneur = $('#current_chess').html()
@@ -270,7 +282,7 @@ $ ->
         $('#chess-peon').trigger 'click'
   
   resultadoSize()
-  # console.log 
+  console.log 
   $('#footer .tw').on 'click', ->
     pageView 'footer-tw'
   $('#footer .fb').on 'click', ->
@@ -339,16 +351,16 @@ $ ->
     location.reload()
   $('.case1-next').on 'click', ->
     `currentCase = '.container-tres'`
-    console.log 'click: '+currentCase
+    # console.log 'click: '+currentCase
     pageView('caso2')
     $('.main').scrollTo('.container-tres', 300)
     chngBg('#a4c060')
-    console.log currentCase
+    # console.log currentCase
 
     getResult('#caso1-resultado')
   $('.case2-next').on 'click', ->
     `currentCase = '.container-cuatro'`
-    console.log currentCase
+    # console.log currentCase
 
 
     pageView('caso3')
@@ -361,7 +373,7 @@ $ ->
     ancho = $(window).width()
     if ancho>=851
       `currentCase = '.container-cinco'`
-      console.log currentCase
+      # console.log currentCase
 
       pageView('caso4')
       $('.main').scrollTo('.container-cinco', 300)
@@ -375,13 +387,13 @@ $ ->
       pageView('caso6')
       $('.main').scrollTo('.container-siete', 300)
       `currentCase = '.container-siete'`
-      console.log currentCase
+      # console.log currentCase
 
       chngBg('#ff9966')
 
   $('.case4-next').on 'click', ->
     `currentCase = '.container-seis'`
-    console.log currentCase
+    # console.log currentCase
 
     pageView('caso5')
     $('.main').scrollTo('.container-seis', 300)
@@ -395,7 +407,7 @@ $ ->
     pageView('caso6')
     $('.main').scrollTo('.container-siete', 300)
     `currentCase = '.container-siete'`
-    console.log currentCase
+    # console.log currentCase
 
     chngBg('#ff9966')
     $("#doughnutChart").drawDoughnutChart(chart)
@@ -413,7 +425,7 @@ $ ->
     if gender is 'him-'
       copy = 'https://twitter.com/home?status=Descubr%C3%AD%20que%20soy%20un%20emprendedor%20'+personaje.capitalize()+'%20%23INCmty%20descubre%20qu%C3%A9%20tipo%20de%20emprendedor%20eres%20t%C3%BA%20aqu%C3%AD:%20http://QuizDelEmprendedor.com'
 
-    console.log personaje
+    # console.log personaje
     chngBg('#4c72a2')
     $('#twitbtn-cont').attr
       href: copy
@@ -461,7 +473,7 @@ $ ->
           chngBg '#e52653'
 
         else
-          console.log 'error switch'
+          # console.log 'error switch'
     , 3000
     
 
@@ -478,10 +490,10 @@ $ ->
     $('.entrepeneur').removeClass 'active'
     $(this).addClass 'active'
     primero = $(this).attr('respuesta')
-    console.log primero
+    # console.log primero
     $("#caso2-resultado").attr
       resultado: primero
-    console.log $("#caso2-resultado").attr('resultado')
+    # console.log $("#caso2-resultado").attr('resultado')
 
   $('.drag-container').sortable
     stop: ->
@@ -491,7 +503,7 @@ $ ->
       primero = $("#caso1-resultado li").first().attr('respuesta')
       $("#caso1-resultado").attr
         resultado: primero
-      console.log $("#caso1-resultado").attr('resultado')
+      # console.log $("#caso1-resultado").attr('resultado')
       
   # $('.briefcase-container').sortable()
   $('.square').draggable
