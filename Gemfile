@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '4.1.4'
 gem 'rails_12factor', group: :production
-
+gem 'newrelic_rpm'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
