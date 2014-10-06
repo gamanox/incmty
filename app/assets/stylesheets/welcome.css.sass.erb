@@ -1,7 +1,12 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+$break-small: 850px
+$break-large: 1200px
+$amarillo: rgb(255, 211, 30)
+$morado: rgb(109, 98, 176)
+$rosa: rgb(233, 29, 92)
+$verde: rgb(134, 197, 82)
 html
   width: 100%
   height: 100%
@@ -10,8 +15,10 @@ body
   padding: 0
   width: 100%
   height: 100%
-  background: #367aa2
-  background: #4397b7
+  // background: #367aa2
+  // background: #367aa2
+  // background: #4397b7
+  background: rgb(0, 203, 227)
 
 p
   margin: 0
@@ -23,6 +30,11 @@ a
 #svg
   width: 100%
   height: 100%
+  @media screen and (max-width: $break-small)
+    position: absolute
+    top: 0
+    left: 0
+
 
 #canvas
   position: absolute
@@ -37,6 +49,57 @@ a
   position: absolute
   left: 0
   top: 50px
+  img
+    display: block
+  #logoincmob
+    display: none
+    height: 77px
+    g
+      path
+        // fill: yellow
+
+  .marquesina
+    display: none
+  @media screen and (max-width: $break-small)
+    width: 100%
+    z-index: 10
+    // background-image: url('<%= asset_path("logobg.png")%>')
+    background-color: #FFF
+    left: auto
+    position: relative
+
+    top: auto
+    height: 60px
+    img
+      display: none
+    #logoincmob
+      display: block
+      height: 50px
+      margin-left: 10px
+      padding-top: 4px
+    img
+      content:url('<%= asset_path("logoincmob.png")%>')
+    .marquesina
+      display: block
+      height: 3px
+      width: 100%
+      position: absolute
+      bottom: 0
+      left: 0
+      .line
+        height: 3px
+        width: 25%
+        float: left
+      .amarillo
+        background-color: $amarillo
+      .rosa
+        background-color: $rosa
+      .morado
+        background-color: $morado
+      .verde
+        background-color: $verde
+
+
 
 p.centertitle
   position: relative
@@ -47,7 +110,8 @@ p.centertitle
   left: 50%
   margin-left: -315px
   margin-top: -112px
-  color: #add85e
+  // color: #add85e
+  color: yellow
   line-height: 50px
   span
     color: #fff
@@ -56,6 +120,19 @@ p.centertitle
     display: block
     float: right
     margin-right: 50px
+  @media screen and (max-width: $break-small)
+    position: relative
+    top: auto
+    left: auto
+    margin-left: 0
+    margin-top: 0
+    font-size: 220%
+    line-height: 100%
+    padding-top: 12%
+    text-align: center
+    #sign_in
+      margin-right: 11%
+      margin-top: 12%
 
 #nav-right
   position: fixed
@@ -154,6 +231,114 @@ p.centertitle
       background-color: #ffe65b
     #cat-8
       background-color: #f3b56d
+
+#footer-tangram
+  width: 100%
+  height: 25px
+  background-color: #FFF
+  position: fixed
+  bottom: 0
+  left: 0
+  // -webkit-filter: drop-shadow(0px -4px 5px rgba(0,0,0,0.45))
+  .left, .right
+    height: 20px
+    padding-top: 8px
+    padding-bottom: 2px
+    position: absolute
+    @media screen and (max-width: $break-small)
+      height: 15px
+    // background-color: red
+
+  .left
+    top: 0
+    left: 0
+    width: 200px
+    margin-left: 15px
+    @media screen and (max-width: $break-small)
+      margin-left: 10px
+      width: 70px
+      padding-top: 5px
+    a
+      text-decoration: none
+      float: left
+      display: block
+      width: 16px
+      height: 16px
+      margin-left: 15px
+      &.tw
+        background-image: url("<%= asset_path("tw.png")%>")
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        -webkit-transition: -webkit-transform 0.2s ease-in-out
+        margin-left: 0
+        &:hover
+          -webkit-transform: rotate(360deg)
+      &.fb
+        background-image: url("<%= asset_path("fb.png")%>")
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        -webkit-transition: -webkit-transform 0.2s ease-in-out
+        &:hover
+          -webkit-transform: rotate(360deg)
+      &.in
+        background-image: url("<%= asset_path("in.png")%>")
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        -webkit-transition: -webkit-transform 0.2s ease-in-out
+        &:hover
+          -webkit-transform: rotate(360deg)
+  .right
+    top: 0
+    right: 0
+    width: 370px
+    margin-right: 15px
+    @media screen and (max-width: $break-small)
+      width: 80%
+      margin-right: 8px
+    p
+      text-decoration: none
+      display: block
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -khtml-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      color: rgb(0, 203, 227)
+      float: right
+      font-family: 'Arial'
+      font-size: 11px
+      margin-right: 10px
+      text-align: right
+      @media screen and (max-width: $break-small)
+        font-size: 8px
+        margin-right: 6px
+
+
+    a
+      text-decoration: none
+      display: block
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -khtml-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      color: rgb(0, 203, 227)
+      float: right
+      font-family: 'Arial'
+      font-size: 11px
+      margin-right: 10px
+      text-align: right
+      @media screen and (max-width: $break-small)
+        font-size: 8px
+      &.prensa, &.inscribete
+        padding-left: 10px
+        border-left: 1px solid
+
 
 
 

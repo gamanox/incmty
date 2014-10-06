@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   resources :users
   resources :quiz
+  resources :welcome
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -65,6 +66,7 @@ Rails.application.routes.draw do
   #   end
   match 'quiz/update_user', to: 'quiz#update_user', via: [:post]
   root 'quiz#index'
+  match '/tangram', to: 'welcome#index', via: [:get, :post]
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/:provider/update', to: 'sessions#update', via: [:get, :post]
 
