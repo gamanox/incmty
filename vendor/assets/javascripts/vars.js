@@ -32,14 +32,14 @@ $(function () {
 
   
 });
-// var totalPercent = 0;
-// var currentCase = '.container-uno'; 
-// var pageView;
-// var case2result = '';
-// pageView = function(page) {
-//   // console.log('analytics: ' + page);
-//   return ga('send', 'pageview', '/' + page);
-// };
+var totalPercent = 0;
+var currentCase = '.container-uno'; 
+var pageView;
+var case2result = '';
+pageView = function(page) {
+  // console.log('analytics: ' + page);
+  return ga('send', 'pageview', '/' + page);
+};
 // var s;
 // var bounds;
 // var width;
