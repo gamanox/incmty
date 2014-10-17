@@ -24,7 +24,6 @@ gem 'jquery_mobile_rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-gem "rack-livereload", :group => :development
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
@@ -34,6 +33,7 @@ gem 'omniauth'
 
 gem 'omniauth-facebook', '1.4.0'
 gem 'rails_admin'
+gem 'thin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -64,6 +64,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  match 'getusers', to: 'users#index', via: [:post]
+  match 'update_user/:id', to: 'users#index', via: [:post]
   match 'quiz/update_user', to: 'quiz#update_user', via: [:post]
   root 'quiz#index'
   match '/tangram', to: 'welcome#index', via: [:get, :post]
@@ -71,6 +73,7 @@ Rails.application.routes.draw do
   match 'auth/:provider/update', to: 'sessions#update', via: [:get, :post]
 
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
+
 
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 end

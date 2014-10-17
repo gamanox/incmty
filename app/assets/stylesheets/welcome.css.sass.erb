@@ -7,6 +7,17 @@ $amarillo: rgb(255, 211, 30)
 $morado: rgb(109, 98, 176)
 $rosa: rgb(233, 29, 92)
 $verde: rgb(134, 197, 82)
+
+$startup: #FAD000
+$scaleup: #111E90
+$trends: #7664A0
+$launch: #80BD01
+$build: #EA094B
+$award: #FFA409
+$expo: #38B5E6
+$party: #D8006C
+
+
 html
   width: 100%
   height: 100%
@@ -18,7 +29,20 @@ body
   // background: #367aa2
   // background: #367aa2
   // background: #4397b7
-  background: rgb(0, 203, 227)
+  // background: rgb(0, 203, 227)
+  background: -moz-linear-gradient(top, rgb(0, 203, 227) 20%, yellow 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(0, 203, 227)), color-stop(100%, yellow))
+  background: -webkit-linear-gradient(top, rgb(0, 203, 227) 20%, yellow 100%)
+  background: -o-linear-gradient(top, rgb(0, 203, 227) 20%, yellow 100%)
+  background: -ms-linear-gradient(top, rgb(0, 203, 227) 20%, yellow 100%)
+  background: linear-gradient(top, rgb(0, 203, 227) 20%, yellow 100%)
+  // background: -moz-linear-gradient(top, #c1fef6 20%, #fafec1 100%)
+  // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c1fef6), color-stop(100%, #fafec1))
+  // background: -webkit-linear-gradient(top, #c1fef6 20%, #fafec1 100%)
+  // background: -o-linear-gradient(top, #c1fef6 20%, #fafec1 100%)
+  // background: -ms-linear-gradient(top, #c1fef6 20%, #fafec1 100%)
+  // background: linear-gradient(top, #c1fef6 20%, #fafec1 100%)
+  background-color: #c1fef6
 
 p
   margin: 0
@@ -27,9 +51,10 @@ a
   text-decoration: none
   outline: 0
 
-#svg
+#svg, #svgcircles
   width: 100%
   height: 100%
+  position: absolute
   @media screen and (max-width: $break-small)
     position: absolute
     top: 0
@@ -44,22 +69,44 @@ a
   margin-top: -200px
 
 .logo
-  width: 182px
+  width: 100%
   height: 77px
   position: absolute
   left: 0
-  top: 50px
+  top: 0px
+  z-index: 1000
+  // background-image: url('<%= asset_path("logobg.png")%>')
+  background-color: #fff
   img
-    display: block
-  #logoincmob
     display: none
-    height: 77px
+  #logoincmob
+    display: block
+    height: 60px
+    margin-left: auto
+    margin-right: auto
     g
       path
-        // fill: yellow
+        // fill: white
 
   .marquesina
-    display: none
+    display: block
+    height: 3px
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    .line
+      height: 3px
+      width: 25%
+      float: left
+    .amarillo
+      background-color: $amarillo
+    .rosa
+      background-color: $rosa
+    .morado
+      background-color: $morado
+    .verde
+      background-color: $verde
   @media screen and (max-width: $break-small)
     width: 100%
     z-index: 10
@@ -156,6 +203,10 @@ p.centertitle
   background-image: url('<%= asset_path("grid.png")%>')
   background-repeat: no-repeat
   background-position: 50% 50%
+  @media screen and (max-width: $break-small)
+    position: absolute
+    top: 0
+    left: 0
 
 #nav-category
   position: fixed
@@ -339,6 +390,55 @@ p.centertitle
         padding-left: 10px
         border-left: 1px solid
 
+#incmenu
+  width: 100%
+  height: auto
+  overflow: auto
+  position: absolute
+  bottom: 90px
+  left: 0
+  @media screen and (max-width: $break-small)
+    bottom: 10px
+
+  .catcont
+    width: 888px
+    padding-left: 6px
+    padding-right: 6px
+    height: auto
+    overflow: auto
+    position: relative
+    margin-left: auto
+    margin-right: auto
+    @media screen and (max-width: $break-small)
+
+
+
+    .cat
+      width: 90px
+      height: 90px
+      // padding-bottom: 50%
+      border-radius: 50%
+      background-color: #FAD000
+      float: left
+      margin-left: 24px
+      &:first-child
+        margin-left: 0
+      &#cat-startup
+        background-color: $startup
+      &#cat-scaleup
+        background-color: $scaleup
+      &#cat-trends
+        background-color: $trends
+      &#cat-launch
+        background-color: $launch
+      &#cat-build
+        background-color: $build
+      &#cat-award
+        background-color: $award
+      &#cat-expo
+        background-color: $expo
+      &#cat-party
+        background-color: $party
 
 
 
