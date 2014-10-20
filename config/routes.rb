@@ -67,7 +67,8 @@ Rails.application.routes.draw do
   match 'getusers', to: 'users#index', via: [:post]
   match 'update_user/:id', to: 'users#index', via: [:post]
   match 'quiz/update_user', to: 'quiz#update_user', via: [:post]
-  root 'quiz#index'
+  # root 'quiz#index'
+  match '/', to: 'quiz#index', as: 'root', via: [:get, :post]
   match '/tangram', to: 'welcome#index', via: [:get, :post]
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/:provider/update', to: 'sessions#update', via: [:get, :post]
