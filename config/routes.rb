@@ -68,6 +68,7 @@ Rails.application.routes.draw do
   match 'update_user/:id', to: 'users#index', via: [:post]
   match 'quiz/update_user', to: 'quiz#update_user', via: [:post]
   match 'award', to: 'quiz#award', via: [:post, :get]
+  match 'usuarios', to: 'quiz#user', via: [:post, :get]
   # root 'quiz#index'
   match '/', to: 'quiz#index', as: 'root', via: [:get, :post]
   match '/tangram', to: 'welcome#index', via: [:get, :post]

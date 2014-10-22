@@ -9,7 +9,8 @@ var build= "#EA094B";
 var award= "#FFA409";
 var expo= "#38B5E6";
 var party= "#D8006C";
-  
+var contador = 0;
+var fbids = [];
 $(function () {
   if(iphone4){
     // alert('iphone4');

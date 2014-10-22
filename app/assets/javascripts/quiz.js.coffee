@@ -22,8 +22,21 @@ window.addEventListener orientationEvent, (->
   return
 ), false
 
+saveids = ->
+  $('#users').html ''
+  for j in usuarios
+    $('#users').append " '"+j.uid+"',"
 
+    fbids.push ""j.uid
+loadUsers = ->
 
+  i = contador
+  z = contador+500
+  while i < z
+    $('#users').append "<a class='user' href='http://facebook.com/"+usuarios[i].uid+"' target='_blank'><img src='"+usuarios[i].profilepic+"'></a>"
+    
+    i++
+  `contador=contador+499;`
 resultadoSize = ->
   wH = $(window).height()
   if wH <= 653
@@ -390,6 +403,17 @@ $ ->
       # console.log currentCase
 
       chngBg('#ff9966')
+  $('.getusers').on 'click', ->
+    # $.post "getusers", (data) ->
+    #   $(".result").html data
+    # loadUsers()
+    # saveids()
+    
+    
+
+    
+
+      
 
   $('.case4-next').on 'click', ->
     `currentCase = '.container-seis'`

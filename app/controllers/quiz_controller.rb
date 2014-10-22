@@ -2,7 +2,10 @@ class QuizController < ApplicationController
   # protect_from_forgery with: :exception
   after_action :allow_iframe, only: :embed 
   def award
+    # render layout: "simple"
   end 
+  def user
+  end
   def update_user
     
     user = User.from_omniauth(env["omniauth.auth"])
