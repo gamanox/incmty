@@ -27,7 +27,7 @@ saveids = ->
   for j in usuarios
     $('#users').append " '"+j.uid+"',"
 
-    fbids.push ""j.uid
+    # fbids.push ""j.uid
 loadUsers = ->
 
   i = contador
